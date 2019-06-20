@@ -95,3 +95,5 @@ Kinzigstr. 26<br>
 10247 Berlin, Germany<br>
 HRB 204912<br>
 VAT ID: DE323279720<br>
+
+Get in touch: [contact@gaiwan.co](mailto:contact@gaiwan.co)
