@@ -17,7 +17,7 @@ past. Our job is to find a path from a business need to a technical solution,
 and we do so by working closely with customers to come up with pragmatic
 solutions that work.
 
-We are highly opinionated when it comes to chosing the software components we
+We are highly opinionated when it comes to choosing the software components we
 build on, to ensure we can deliver quality and reliability within time and
 budget.
 
@@ -66,7 +66,7 @@ of the cost.
 [Lambda Island](https://lambdaisland.com) is our technical brand, aimed at
 developers who want to become better at what they do. It forms a key part of the
 Gaiwan success formula. By constantly researching deep technical topics and
-making them easily digestable we build up a knowledge and expertise in-house,
+making them easily digestible we build up a knowledge and expertise in-house,
 which directly improves our client work.
 
 ### Lambda Island Open Source
@@ -83,7 +83,7 @@ of the technical community.
 ### Heart of Clojure
 
 Gaiwan GmbH is the initiator and legal entity backing the Heart of Clojure
-community conference. We provide the organizational infratructure to be able to
+community conference. We provide the organizational infrastructure to be able to
 pull off such an event, and manage a big chunk of the work that goes into
 organizing. We also provide a "parachute sponsorship", patching up any holes in
 the budget that may arise.
