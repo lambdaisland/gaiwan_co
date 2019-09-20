@@ -1,0 +1,24 @@
+{
+  "name": "gaiwan.co",
+  "version": "1.0.0",
+  "description": "Landing page for https://gaiwan.co",
+  "main": "/resources/public/js/index.js",
+  "scripts": {
+    "dev": "parcel ./resources/public/*.html",
+    "build": "parcel build ./resources/public/*.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lambdaisland/gaiwan_co.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/lambdaisland/gaiwan_co/issues"
+  },
+  "homepage": "https://gaiwan.co",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3",
+    "sass": "^1.22.12"
+  }
+}
