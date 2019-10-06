@@ -1,0 +1,13 @@
+/* Shower Grid */
+
+.shower.full.grid::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    content: '';
+    pointer-events: none;
+    background-image: url(../assets/571dd811eef6b5a478a688404e33eeae.svg);
+}

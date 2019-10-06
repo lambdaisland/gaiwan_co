@@ -1,0 +1,56 @@
+/* Types */
+
+@import '../assets/e5aecfafa5446389bca87b0f4e0f6bfd.css' screen;
+@import '../assets/54e3bcdbe53d870945bf1677a6f9edfd.css' screen;
+
+/* Content */
+
+@import '../assets/6695284ae26f761caf99246667c56026.css' ;
+@import '../assets/0d084ba89be30aee6b5431c3d2bd9d40.css' ;
+@import '../assets/079b6c93c39523482b49eae9e16c7da3.css' ;
+@import '../assets/46a2fefd6670507b7f6419c87cd547f5.css' ;
+@import '../assets/f39ef1b7e164ea2b4fe482afe1e55281.css' ;
+@import '../assets/7c34ca9f32a61ee48b6c5f7660ccc9f4.css' ;
+@import '../assets/1f91a52576700d17e40baa02f0b1943b.css' ;
+
+/* Elements */
+
+@import '../assets/3c88b72464efe774976cb469a7c0d942.css' ;
+@import '../assets/f5e2d0439c4b3b97b3465ea30d053289.css' ;
+@import '../assets/9a2c78bc97d31b79d78a08281ccd420d.css' ;
+@import '../assets/184bbb732e3577cf0639563451b5a2a3.css' ;
+@import '../assets/bcf1a35ee70cc4a75d9136f90d55823c.css' ;
+@import '../assets/c05f73200d07c2f464dca3944042eba6.css' ;
+
+/* Modifiers */
+
+@import '../assets/e272d0af5fb704ce944ec7ee19ff0ac3.css' ;
+@import '../assets/8c4f1a0875311c9bb6d9d671cb4cd22c.css' ;
+@import '../assets/b26dd0975cf21d3dd0e0e9fa4ee62c5e.css' ;
+
+/* Slide */
+
+.slide {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 80px 112px 0 96px;
+    width: var(--slide-width);
+    height: var(--slide-height);
+    background: white;
+}
+
+/* Number */
+
+.slide::after {
+    position: absolute;
+    right: 0;
+    bottom: 38px;
+    left: 0;
+    color: var(--color-light);
+    line-height: 18px;
+    text-align: center;
+    counter-increment: slide;
+    content: counter(slide);
+}
