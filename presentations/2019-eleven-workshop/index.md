@@ -578,6 +578,10 @@ Everyone puts up their ideas on post-its, we cluster them, discuss and make acti
 - Basecamp: Shape up [https://basecamp.com/shapeup](https://basecamp.com/shapeup)
 - The Tyranny of Structurelessness [https://www.jacobinmag.com/2019/09/tyranny-structurelessness-jo-freeman-consciousness-raising-women-liberation-feminism](https://www.jacobinmag.com/2019/09/tyranny-structurelessness-jo-freeman-consciousness-raising-women-liberation-feminism)
 - [ClojuTRE 2019: Dealing with Unanticipated Needs - Dave Snowden](https://www.youtube.com/watch?v=xYqWREPb3Lc&list=PLetHPRQvX4a-c3KDRTxxwGRmEMutL8Apf&index=19&t=0s)
+
+---
+## Resources
+
 - Thoughtworks blog: Workshop Wisdom [https://www.thoughtworks.com/insights/blog/workshop-wisdom](https://www.thoughtworks.com/insights/blog/workshop-wisdom)
 - Gamestorming: choose your words wisely [https://gamestorming.com/choose-your-words-wisely/](https://gamestorming.com/choose-your-words-wisely/)
 - [Badass: Making Users Awesome - Kathy Sierra](https://www.amazon.com/Badass-Making-Awesome-Kathy-Sierra/dp/1491919019)
