@@ -1,3 +1,5 @@
+@tailwind base;
+
 :root {
     box-sizing: border-box;
     font-family: acumin-pro, sans-serif;
@@ -8,11 +10,23 @@ html {
     font-size: 1rem;
     @media screen and (min-width: 768px) {
         font-size: 1.125rem;
+        // max-width: 1140px;
     }
 }
 
 body {
     margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display:flex;
+    flex-direction: column;
+    padding: 20px;
+    @media screen and (min-width: 768px) {
+        max-width: 1140px;
+    }
 }
 
 a {
@@ -32,16 +46,76 @@ a {
     }
 }
 
+.logo {
+    @media screen and (min-width: 768px) {
+        font-size: 180pt;
+        height: 300px;
+
+    }
+    @media screen and (max-width: 768px) {
+        font-size: 50pt;
+
+    }
+    line-height: 1.2;
+    font-family: trajan-sans-pro, serif;
+    font-weight: 400;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.description {
+
+    p {
+        line-height: 1.4;
+    }
+}
+
+.quote {
+    font-style: italic;
+}
+
+.client-cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.client-card {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    flex-grow: 1;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 2px 3px rgba(10,10,10,0.1), 0 0 0 1px rgba(10,10,10,0.1);
+    padding: 20px;
+}
+
+.client-logo {
+    width: 80%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .hero-grid {
     margin: 10% 5%;
-    .logo {
-        font-size: 22vw;
-        line-height: 1.2;
-        font-family: trajan-sans-pro, serif;
-        font-weight: 400;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
+
     .text-box {
         hyphens: manual;
         display: grid;
@@ -54,6 +128,7 @@ a {
                 margin-left: -0.35rem;
             }
             font-size: 1.125rem;
+            font-style: italic;
             font-weight: 300;
             line-height: 1.3;
             * {
@@ -66,18 +141,7 @@ a {
                 padding-right: 1rem;
             }
         }
-        .description {
-            p:first-child {
-                font-size: 1.125rem;
-                line-height: 1.4;
-                max-width: 29rem;
-                margin: 0;
-            }
-            p {
-                max-width: 28rem;
-                line-height: 1.4;
-            }
-        }
+
         .client-work-heading {
             place-self: end;
             font-size: 2.5rem;

@@ -1,24 +1,27 @@
 {
-  "name": "gaiwan.co",
-  "version": "1.0.0",
-  "description": "Landing page for https://gaiwan.co",
-  "main": "/resources/public/js/index.js",
-  "scripts": {
-    "dev": "parcel ./resources/public/*.html",
-    "build": "parcel build ./resources/public/*.html"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lambdaisland/gaiwan_co.git"
-  },
-  "keywords": [],
-  "author": "",
-  "bugs": {
-    "url": "https://github.com/lambdaisland/gaiwan_co/issues"
-  },
-  "homepage": "https://gaiwan.co",
-  "devDependencies": {
-    "parcel-bundler": "^1.12.3",
-    "sass": "^1.22.12"
-  }
+    "name": "gaiwan.co",
+    "version": "1.0.0",
+    "description": "Landing page for https://gaiwan.co",
+    "main": "/resources/public/js/index.js",
+    "scripts": {
+        "dev": "parcel ./resources/public/index.html -d dev --target browser --open",
+        "build": "parcel build ./resources/public/*.html"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/lambdaisland/gaiwan_co.git"
+    },
+    "keywords": [],
+    "author": "",
+    "bugs": {
+        "url": "https://github.com/lambdaisland/gaiwan_co/issues"
+    },
+    "homepage": "https://gaiwan.co",
+    "devDependencies": {
+        "@fullhuman/postcss-purgecss": "^1.3.0",
+        "cssnano": "^4.1.10",
+        "parcel-bundler": "^1.12.4",
+        "postcss-modules": "^1.4.1",
+        "tailwindcss": "^1.2.0"
+    }
 }
