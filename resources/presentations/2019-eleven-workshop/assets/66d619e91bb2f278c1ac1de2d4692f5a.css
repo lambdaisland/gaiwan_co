@@ -1,0 +1,64 @@
+/* Roboto */
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 100;
+    font-display: swap;
+    src:
+        local('Roboto Light'),
+        local('Roboto-Light'),
+        url(../assets/e4092969046f796ae584aca7816db455.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-display: swap;
+    src:
+        local('Roboto'),
+        local('Roboto-Regular'),
+        url(../assets/665b409ff1ae972ebccda128b3f00d46.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+    src:
+        local('Roboto Italic'),
+        local('Roboto-Italic'),
+        url(../assets/3b18064c95fb7ddb0e65fd169d042f62.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-display: swap;
+    src:
+        local('Roboto Bold'),
+        local('Roboto-Bold'),
+        url(../assets/213e41aeb76a491cf8833335585f79ae.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+    src:
+        local('Roboto Bold Italic'),
+        local('Roboto-BoldItalic'),
+        url(../assets/50021ef9c1ad2046f3cdc92b4f5540d3.woff2) format('woff2');
+}
+
+/* Roboto Mono */
+
+@font-face {
+    font-family: 'Roboto Mono';
+    font-display: swap;
+    src:
+        local('Roboto Mono'),
+        local('RobotoMono-Regular'),
+        url(../assets/a01fd0360bcddd4bcd2c41c51974011d.woff2) format('woff2');
+}

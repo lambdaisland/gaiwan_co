@@ -1,0 +1,175 @@
+require 'slippery'
+
+Slippery::RakeTasks.new do
+  title "Hackaton Workshop October 2019"
+  type :shower
+  add_highlighting :tomorrow
+
+  # shower
+  js_options theme: :material, ratio: '16x9'
+  #js_options theme: :material
+
+
+  # reveal_js
+  # js_options theme: 'sky', # beige default moon night serif simple sky solarized
+  #            transition: 'none',
+  #            backgroundTransition: 'none',
+  #            width: 1500,  #1680,
+  #            height: 1000,  #1050
+  #            loop: true
+
+  pack_assets
+
+  transform 'head' do |head|
+    head
+      .add_child(H[:link, rel: 'stylesheet', type: 'text/css', href: 'style.css'],)
+      .add_child(H[:link, rel: 'stylesheet', type: 'text/css', href: 'tomorrow.css'],)
+      .add_child(H[:link, rel: 'stylesheet', type: 'text/css', href: 'hljs.css'],)
+      .add_child(H[:link, rel: 'stylesheet', type: 'text/css', href: 'https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css'])
+  end
+
+  transform('body') do |body|
+    body.add_child(H[:script, {type: 'text/javascript', src: 'select_tab.js'}])
+  end
+
+  # transform('body') do |body|
+  #   body
+  #     .set_children(body.children.drop(1))
+  #     .add_child(H[:div, {id: "overlay"}, "@plexus"])
+  # end
+
+  transform 'section[fullscreen-img]' do |section|
+    H[:section, section.attributes, section.children + [
+        H[:img, src: section.attr('fullscreen-img'), class: 'cover']]]
+  end
+
+  def clojure_exec(src)
+    socket = TCPSocket.new('localhost', 5555)
+    puts src
+    socket.puts %[(require 'zipper-demo.core)
+                  (in-ns 'zipper-demo.core)
+                  (require '[zipper-demo.viz :as viz]
+                           '[clojure.java.io :as io]
+                           '[clojure.xml :as xml]
+                           '[clojure.zip :as z]
+                           '[clojure.pprint] :reload)]
+    socket.gets ; socket.gets
+    socket.puts(src)
+    socket.puts(":repl/quit")
+    result = ''
+    while l=socket.gets
+      result += l
+      puts "[clj] #{l}"
+    end
+    result
+  end
+
+  transform '.slide' do |slide|
+    code = slide.select('pre').first
+    if code && code.attr('viz')
+      source = code.text
+      digest = Digest::MD5.hexdigest(source)
+      type = "svg"
+      viz = code.attr('viz')
+      tree_filename = `pwd`.strip + "/assets/viz_tree_#{digest}.#{type}"
+      zip_filename = `pwd`.strip + "/assets/viz_zip_#{digest}.#{type}"
+
+      unless viz=='eval' || File.exist?(tree_filename)
+        clojure_exec("(do (def +res+ (do #{source})) :repl/ignore)\n (-> +res+ viz/tree->dot (viz/spit \"#{tree_filename}\" :#{type}))")
+      end
+
+      unless viz == 'eval' || File.exist?(zip_filename)
+        clojure_exec("(do (def +res+ (do #{source})) :repl/ignore)\n (-> +res+ viz/zipper->dot (viz/spit \"#{zip_filename}\" :#{type}))")
+      end
+
+      pprint = clojure_exec("(do (def +res+ (do #{source})) :repl/ignore)\n (binding [clojure.pprint/*print-miser-width* 35 clojure.pprint/*print-right-margin* 35] (clojure.pprint/pprint +res+))")
+
+      if viz == 'eval'
+        slide
+      else
+        slide
+          .set_children(slide.children.reject { |c| c.respond_to?(:tag?) && c.tag?(:pre)})
+          .add_child(H[:div,
+                       {class: "columns", style: "grid-template-columns: 50% 50%; grid-column-gap: 30px;"},
+                       code,
+                       H[:div, {class: "viz-tabs bg-white ba bw1 b--black-10 br2 overflow-hidden"},
+                         H[:div, {class: "f5 bb bw1 b--black-10 flex"},
+                           H[:a, {class: "ttu dib link pa3 black tab result #{'selected' if viz == 'result'}",
+                                  href: "javascript:selectTab('result')"},
+                             "Result"],
+                           H[:a, {class: "ttu dib link pa3 black tab tree #{'selected' if viz == 'tree'}",
+                                  href: "javascript:selectTab('tree')"},
+                             "Tree"],
+                           H[:a, {class: "ttu dib link pa3 black tab zipper #{'selected' if viz == 'zipper'}",
+                                  href: "javascript:selectTab('zipper')"},
+                             "Zipper"]],
+
+                         H[:div, {class: "tab-content result #{'dn' unless viz == 'result'}"},
+                           H[:pre, {class: "language-clojure"},
+                             H[:code, {style: "font-size: 80%;"}, pprint.lines[1..-2].join]]],
+
+                         H[:div, {class: "tab-content tree #{'dn' unless viz == 'tree'}", style: "min-height: 350px;"},
+                           H[:img, {class: "db center", src: tree_filename}]],
+
+                         H[:div, {class: "tab-content zipper #{'dn' unless viz == 'zipper'}", style: "min-height: 350px;"},
+                           H[:img, {class: "db center", src: zip_filename}]]]])
+      end
+    else
+      slide
+    end
+  end
+
+  # transform '.fragments, .fragments ul' do |section|
+  #   section.map_children do |ch|
+  #     if ch.text? || ch.tag?(:h2) || ch.tag?(:ul)
+  #       ch
+  #     else
+  #       ch.add_class('fragment')
+  #     end
+  #   end
+  # end
+
+  # transform '.hljs-attribute' do |attr|
+  #   if %w[_links _controls _embedded].include?(attr.text.strip)
+  #     H[:strong, attr]
+  #   else
+  #     attr
+  #   end
+  # end
+
+  # transform 'li' do |li|
+  #   H[:li, li.children.first.children]
+  # end
+
+  # transform '.slide.repl' do |section|
+  #   code=section.select('code').first.text.lines #.text.split(/^(?=\w+=>)/)
+  #   code_blocks = []
+  #   H[:div,
+  #     code.flat_map do |c|
+  #       code_blocks += [c]
+  #       if code_blocks.length > 6
+  #         code_blocks = code_blocks.drop(1)
+  #       end
+  #       section.replace('pre') do |pre|
+  #         code_blocks.map.with_index do |line, idx|
+  #           pre.replace('code') do |code|
+  #             if idx == (code_blocks.length-1)
+  #               H[:code, {class: "highlight"}, line]
+  #             else
+  #               H[:code, line]
+  #             end
+  #           end
+  #         end
+  #       end
+  #     end
+  #    ]
+  # end
+
+  # transform 'pre.linum' do |pre|
+  #   H[:pre, pre.text.lines.map{|l| H[:code, {class: "ruby"}, l]}]
+  # end
+
+end
+
+task :default => 'slippery:build:index'
+task :watch   => 'slippery:watch:index'
