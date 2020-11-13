@@ -1,10 +1,9 @@
 .PHONY: build dev
 
-dev:
+build:
 	bb src/gaiwan/build.clj
 	cp -r resources/* _site/
 
-build:
-	rm -rf _site
-	bb src/gaiwan/build.clj
-	cp -r resources/* _site/
+deploy: build
+	cd _site && git add --all && git commit -m "Publishing to gh-pages" && cd ..
+	git push origin gh-pages
