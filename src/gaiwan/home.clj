@@ -79,6 +79,3 @@
 (defn home-page [content]
   ["<!DOCTYPE html>\n"
    [:html (common/gen-head) body]])
-
-
-;; (spit "old.clj" (convert-to (slurp "old.html") :hiccup-seq))
