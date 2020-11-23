@@ -4,6 +4,10 @@
   color: #222
 }
 
+.secondary-font {
+  font-family: trajan-sans-pro, serif;
+}
+
 html {
   font-size: 1rem
 }
@@ -210,4 +214,43 @@ body>footer address .footer-email {
 
 body>footer address .footer-email:hover {
   -webkit-text-fill-color: #0ff
+}
+
+/* about page */
+.about-container {
+  max-width: 36rem;
+  margin: auto;
+  padding: 1rem;
+}
+
+.about-navbar__brand {
+  font-size: 1.5rem;
+  color: #333333;
+  font-weight: bold;
+}
+
+.about-summary {
+  margin: 3rem 0;
+  line-height: 1.75;
+}
+
+.team-member {
+  margin-bottom: 3rem;
+}
+
+.team-member__title {
+  font-family: trajan-sans-pro, serif;
+  font-weight: bold;
+}
+
+.team-member__subtitle {
+  font-size: 0.8rem;
+}
+
+.team-member__description {
+  margin-top: 1rem;
+}
+
+.team-member__photo {
+
 }

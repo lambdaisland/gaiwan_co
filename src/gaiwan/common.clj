@@ -22,7 +22,7 @@
    [:meta {:charset "utf-8"}]
    [:meta {:name "Description", :content description}]
    [:link {:href "https://use.typekit.net/oxk2nmu.css", :rel "stylesheet"}]
-   [:link {:href "css/main.css", :rel "stylesheet"}]
+   [:link {:href "/css/main.css", :rel "stylesheet"}]
    matamo-analytics-script])
 
 (def footer
