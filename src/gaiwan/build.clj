@@ -10,7 +10,12 @@
 (require '[pod.retrogradeorbit.bootleg.utils :as utils]
          '[pod.retrogradeorbit.bootleg.file :as blfile])
 
-(blfile/mkdir "_site")
-(blfile/mkdir "_site/about")
-(spit "_site/index.html" (utils/convert-to (home-page "") :html))
-(spit "_site/about/index.html" (utils/convert-to (about-page "") :html))
+(defn build []
+  (println "Building...")
+  (blfile/mkdir "_site")
+  (blfile/mkdir "_site/about")
+  (spit "_site/index.html" (utils/convert-to (home-page "") :html))
+  (spit "_site/about/index.html" (utils/convert-to (about-page "") :html))
+  (println "Build complete"))
+
+(build)
