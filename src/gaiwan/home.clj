@@ -14,7 +14,10 @@
      [:div {:class "description"}
       [:p
        [:strong "We are a provider of technological exper­tise"] " grown out of the consulting and de­vel­op­ment work of Arne Brasseur."]
-      [:p "Our job is to find a path from a business need to a technical solution that ensures we can deliver quality and reliability within time and budget. To do so we are highly opinionated when it comes to choosing the software components we build on, and we work closely with customers to come up with pragmatic solutions that work."]]
+      [:p "Our job is to find a path from a business need to a technical solution that ensures we can deliver quality and reliability within time and budget. To do so we are highly opinionated when it comes to choosing the software components we build on, and we work closely with customers to come up with pragmatic solutions that work."]
+      [:div.hero-nav
+       "Learn more about "
+       [:a {:href "/about"} "our team."]]]
      ]]])
 
 (def section-client-work

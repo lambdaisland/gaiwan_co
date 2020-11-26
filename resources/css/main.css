@@ -43,7 +43,7 @@ a::selection {
 
 .hero-grid {
   max-width: 1200px;
-  margin: 2rem auto;
+  margin: 4rem auto;
   padding: 0 1.5rem;
 }
 
@@ -52,6 +52,7 @@ a::selection {
   line-height: 1.2;
   font-family: trajan-sans-pro, serif;
   font-weight: 400;
+  margin-top: 0;
   margin-bottom: 1rem;
 }
 
@@ -59,6 +60,12 @@ a::selection {
     .hero-grid .logo {
         font-size: 8rem;
     }
+}
+
+.hero-nav a {
+  color: #333333;
+  font-weight: bold;
+  border-bottom: 2px solid #333333;
 }
 
 .hero-grid .text-box {
@@ -108,6 +115,10 @@ a::selection {
   font-size: 2.5rem;
   line-height: 1;
   font-weight: 600
+}
+
+#client-work {
+  margin-top: 8rem;
 }
 
 #client-work article {
@@ -177,14 +188,21 @@ a::selection {
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   grid-gap: 1rem;
   max-width: 1200px;
-  margin: 3rem auto;
+  margin: 5rem auto;
   padding: 0 1rem;
 }
 
 #portfolio h2 {
-  font-size: 6rem;
+  font-size: 3rem;
   margin-top: 0;
+  margin-bottom: 0;
   line-height: 1
+}
+
+@media screen and (min-width:768px) {
+    #portfolio h2 {
+        font-size: 6rem;
+    }
 }
 
 #portfolio article,
