@@ -3,6 +3,7 @@
 build:
 	bb src/gaiwan/build.clj
 	cp -r resources/* _site/
+	cp resources/.nojekyll _site/
 
 watch: build
 	while true; do \
