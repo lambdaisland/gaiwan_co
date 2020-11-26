@@ -209,7 +209,7 @@ body>footer address {
   font-weight: 600;
   font-style: normal;
   color: #000;
-  padding: 0.2rem 1rem;
+  padding: 0 ;
   margin: 0;
   line-height: 1.2;
   font-size: small
