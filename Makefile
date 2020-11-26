@@ -1,4 +1,4 @@
-.PHONY: build dev
+.PHONY: build watch deploy serve
 
 build:
 	bb src/gaiwan/build.clj
@@ -13,3 +13,6 @@ watch: build
 deploy: build
 	cd _site && git add --all && git commit -m "Publishing to gh-pages" && cd ..
 	git push origin gh-pages
+
+serve:
+	cd _site && python3 -m http.server --bin 0.0.0.0 8001

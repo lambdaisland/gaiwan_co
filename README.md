@@ -27,11 +27,21 @@ First make sure you have latest versions of `bb` (babshka) and `bootleg` install
 Then clone the repository and run:
 
 ```bash
-make build # this will generate a `_site` folder.
-cd _site
-# now run a simple http server
-python3 -m http.server --bin 0.0.0.0 8001
+sudo apt install inotify-tools
+make watch 
+# this will generate a `_site` folder
+# and watch the `src` and `resources` directory
+# and rebuild the site on any modifications
 ```
+
+Open up another terminal window and run
+
+```bash
+# cd to project directory
+make serve
+```
+
+This will run a local server serving the `_site` directory on http://localhost:8001
 
 The `resources` directory is copied to the final site as is.
 
