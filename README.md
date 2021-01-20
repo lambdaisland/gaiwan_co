@@ -22,7 +22,11 @@ Our Github repo has been configured to deploy the site directly from the `gh-pag
 
 ## Local development
 
-First make sure you have latest versions of `bb` (babshka) and `bootleg` installed.
+First install bootleg using
+
+```
+sudo bash bin/install_bootleg.sh
+```
 
 Then clone the repository and run:
 
@@ -33,6 +37,8 @@ make watch
 # and watch the `src` and `resources` directory
 # and rebuild the site on any modifications
 ```
+
+If you don't have `bb` installed, our wrapper script will automatically install babashka in the local project directory.
 
 Open up another terminal window and run
 

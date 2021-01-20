@@ -1,7 +1,7 @@
 .PHONY: build watch deploy serve
 
 build:
-	bb src/gaiwan/build.clj
+	bin/bb src/gaiwan/build.clj
 	cp -r resources/* _site/
 	cp resources/.nojekyll _site/
 
