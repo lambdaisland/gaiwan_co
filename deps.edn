@@ -1,1 +1,7 @@
-{:paths ["src"]}
+{:paths ["src" "resources" "posts"]
+ :deps {hiccup/hiccup {:mvn/version "1.0.5"}
+        ring/ring {:mvn/version "1.8.2"}
+        markdown-clj/markdown-clj {:mvn/version "1.10.5"}}
+ :aliases
+ {:build
+  {:exec-fn user/build}}}

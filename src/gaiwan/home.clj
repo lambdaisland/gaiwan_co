@@ -17,8 +17,7 @@
       [:p "Our job is to find a path from a business need to a technical solution that ensures we can deliver quality and reliability within time and budget. To do so we are highly opinionated when it comes to choosing the software components we build on, and we work closely with customers to come up with pragmatic solutions that work."]
       [:div.hero-nav
        "Learn more about "
-       [:a {:href "/about"} "our team."]]]
-     ]]])
+       [:a {:href "/about"} "our team."]]]]]])
 
 (def section-client-work
   [:section {:id "client-work"}
@@ -82,5 +81,4 @@
    common/footer])
 
 (defn home-page [content]
-  ["<!DOCTYPE html>\n"
-   [:html (common/gen-head) body]])
+  [:html (common/gen-head) body])

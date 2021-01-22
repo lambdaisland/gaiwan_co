@@ -1,4 +1,7 @@
-.PHONY: build watch deploy serve
+.PHONY: repl build watch deploy serve
+
+repl:
+	clj
 
 build:
 	bin/bb src/gaiwan/build.clj
