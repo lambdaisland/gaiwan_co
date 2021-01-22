@@ -1,7 +1,12 @@
-.PHONY: repl build watch deploy serve
+.PHONY: repl build build-action watch deploy serve
 
 repl:
 	clj
+
+build-action:
+	clojure -X:build
+	cp -r resources/* _site/
+	cp resources/.nojekyll _site/
 
 build:
 	clj -X:build
