@@ -61,8 +61,8 @@
 
 (def team
   [:div.team
-    [:h1.text-bold.secondary-font "Our Team"]
-    team-members])
+   [:h1.text-bold.secondary-font "Our Team"]
+   team-members])
 
 (def work-with-us
   [:div
@@ -74,5 +74,4 @@
    navbar summary team work-with-us])
 
 (defn about-page [content]
-  ["<!DOCTYPE html>\n"
-   [:html (common/gen-head) body]])
+  [:html (common/gen-head) body])
