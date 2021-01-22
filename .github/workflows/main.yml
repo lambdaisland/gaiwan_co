@@ -1,0 +1,29 @@
+name: Gaiwan-build
+on:
+  push:
+    branches:
+      - main
+jobs:
+  gaiwan-build:
+    name: Build the site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Setup JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: '11'
+      - name: Setup clojure
+        uses: DeLaGuardo/setup-clojure@master
+        with:
+          cli: '1.10.1.763'
+      - name: Run clj build
+        run: make build
+      - name: Deploy subtree
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: gh-pages
+          FOLDER: '_site'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
