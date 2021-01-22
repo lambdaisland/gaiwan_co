@@ -4,7 +4,7 @@ repl:
 	clj
 
 build:
-	bin/bb src/gaiwan/build.clj
+	clj -X:build
 	cp -r resources/* _site/
 	cp resources/.nojekyll _site/
 
