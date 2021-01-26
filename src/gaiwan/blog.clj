@@ -1,17 +1,34 @@
 (ns gaiwan.blog
   (:require [gaiwan.common :as common]
+            [gaiwan.utils :as utils]
             [clojure.java.io :as io]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [markdown.core :as m]
+            [hiccup.core :as hc])
+  (:import [java.io StringWriter]))
 
-(defn get-posts []
+(defn- get-files []
   (filter
    #(str/ends-with? (.getName %) ".md")
    (file-seq (io/file (io/resource "posts")))))
 
+(defn markdown [input]
+  (let [output (new StringWriter)
+        metadata (m/md-to-html input output :parse-meta? true)
+        html     (.toString output)
+        meta (if (nil? (:slug metadata))
+               (assoc metadata :slug (utils/slugify (:title metadata)))
+               metadata)]
+    {:meta meta :html html}))
+
+(defn get-posts []
+  (map markdown (get-files)))
+
 (def post-list
   [:ul
    (for [post (get-posts)]
-     [:li (.getName post)])])
+     [:li
+      [:a {:href (str "/blog/" (get-in post [:meta :slug]) "/")} (get-in post [:meta :title])]])])
 
 (def body
   [:body
@@ -23,3 +40,6 @@
 (defn blog-page [content]
   [:html (common/gen-head) body])
 
+(defn blog-post [post]
+  [:html (common/gen-head)
+   [:div (:html post)]])
