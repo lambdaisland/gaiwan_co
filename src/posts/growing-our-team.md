@@ -1,5 +1,5 @@
 ---
-date: 2020-10-18
+date: 2020-11-01
 title: "Growing the Gaiwan team"
 slug: "growing-our-team"
 author: "Mitesh"
