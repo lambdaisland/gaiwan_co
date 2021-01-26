@@ -28,11 +28,14 @@
   [:ul
    (for [post (get-posts)]
      [:li
-      [:a {:href (str "/blog/" (get-in post [:meta :slug]) "/")} (get-in post [:meta :title])]])])
+      [:a {:href (str "/blog/" (get-in post [:meta :slug]) "/")} (get-in post [:meta :title])]
+      " - "
+      [:span (.format (java.text.SimpleDateFormat. "DD MMM, ''yy") (get-in post [:meta :date]))]])])
 
 (def body
   [:body
-   [:main
+   [:main.post
+    common/navbar
     [:h2 "Blog posts"]
     post-list]
    common/footer])
@@ -42,6 +45,10 @@
 
 (defn blog-post [post]
   [:html {:style "font-size: 62.5%;"} (common/gen-head)
-   [:div.sakura.post
-    [:h1 (get-in post [:meta :title])]
-    (:html post)]])
+   [:body
+    [:main.post
+     common/navbar
+     [:div.sakura
+      [:h1 (get-in post [:meta :title])]
+      (:html post)]]
+    common/footer]])

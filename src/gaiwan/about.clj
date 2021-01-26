@@ -1,10 +1,6 @@
 (ns gaiwan.about
   (:require [gaiwan.common :as common]))
 
-(def navbar
-  [:header.about-navbar
-   [:a.secondary-font.about-navbar__brand {:href "/"} "Gaiwan"]])
-
 (def summary
   [:div.about-summary
    [:p "Far from the valleys of silicon we’re a small remote-first and highly distributed company with 5 members situated in 5 different countries. Experts at Clojure, Clojurescript, Datomic, and Emacs &mdash; we have built and launched multiple products around these technologies."]
@@ -71,7 +67,7 @@
 
 (def body
   [:div.about-container
-   navbar summary team work-with-us])
+   common/navbar summary team work-with-us])
 
 (defn about-page [content]
   [:html (common/gen-head) body])

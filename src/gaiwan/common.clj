@@ -26,6 +26,10 @@
    [:link {:href "/css/sakura-ink-embed.css", :rel "stylesheet"}]
    matamo-analytics-script])
 
+(def navbar
+  [:header.top-navbar
+   [:a.secondary-font.top-navbar__brand {:href "/"} "Gaiwan"]])
+
 (def footer
   [:footer
    [:address
