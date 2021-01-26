@@ -22,7 +22,7 @@
     {:meta meta :html html}))
 
 (defn get-posts []
-  (map markdown (get-files)))
+  (mapv markdown (get-files)))
 
 (def post-list
   [:ul

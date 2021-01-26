@@ -6,7 +6,7 @@
             [gaiwan.blog :refer [blog-page get-posts blog-post]]))
 
 (defn build-blog-posts []
-  (for [post (get-posts)]
+  (doseq [post (get-posts)]
     (let [path (str "_site/blog/" (get-in post [:meta :slug]) "/index.html")]
       (io/make-parents path)
       (spit path (hc/html (blog-post post))))))
