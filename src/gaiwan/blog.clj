@@ -50,5 +50,10 @@
      common/navbar
      [:div.sakura
       [:h1 (get-in post [:meta :title])]
+      [:div.post-meta
+       "Posted on "
+       [:span (.format (java.text.SimpleDateFormat. "MMM dd, yyyy") (get-in post [:meta :date]))]
+       " by "
+       [:span (get-in post [:meta :author])]]
       (:html post)]]
     common/footer]])

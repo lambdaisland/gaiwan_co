@@ -295,3 +295,10 @@ body>footer address .footer-email:hover {
   margin: auto;
   padding: 15px;
 }
+
+.post-meta {
+  font-size: 1.5rem;
+  color: #3c3c3c;
+  text-align: center;
+  margin-bottom: 4rem;
+}
