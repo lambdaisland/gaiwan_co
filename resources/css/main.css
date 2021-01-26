@@ -250,7 +250,7 @@ body>footer address .footer-email:hover {
 .about-container {
   max-width: 36rem;
   margin: auto;
-  padding: 1rem;
+  padding: 15px;
 }
 
 .about-summary {
@@ -293,5 +293,5 @@ body>footer address .footer-email:hover {
 .post {
   max-width: 760px;
   margin: auto;
-  padding: 1rem;
+  padding: 15px;
 }

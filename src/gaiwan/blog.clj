@@ -29,14 +29,14 @@
    (for [post (get-posts)]
      [:li
       [:a {:href (str "/blog/" (get-in post [:meta :slug]) "/")} (get-in post [:meta :title])]
-      " - "
-      [:span (.format (java.text.SimpleDateFormat. "DD MMM, ''yy") (get-in post [:meta :date]))]])])
+      " &mdash; "
+      [:span (.format (java.text.SimpleDateFormat. "MMM dd") (get-in post [:meta :date]))]])])
 
 (def body
   [:body
    [:main.post
     common/navbar
-    [:h2 "Blog posts"]
+    [:h2 "Blog"]
     post-list]
    common/footer])
 
