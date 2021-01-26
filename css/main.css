@@ -253,12 +253,6 @@ body>footer address .footer-email:hover {
   padding: 1rem;
 }
 
-.about-navbar__brand {
-  font-size: 1.5rem;
-  color: #333333;
-  font-weight: bold;
-}
-
 .about-summary {
   margin: 3rem 0;
   line-height: 1.75;
@@ -283,6 +277,19 @@ body>footer address .footer-email:hover {
 
 .team-member__photo {}
 
+/* Common */
+.top-navbar {
+  max-width: 760px;
+  margin: auto;
+}
+
+.top-navbar__brand {
+  font-size: 24px;
+  color: #333333;
+  font-weight: bold;
+}
+
+/* Blog posts */
 .post {
   max-width: 760px;
   margin: auto;
