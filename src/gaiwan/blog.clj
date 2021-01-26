@@ -41,5 +41,7 @@
   [:html (common/gen-head) body])
 
 (defn blog-post [post]
-  [:html (common/gen-head)
-   [:div (:html post)]])
+  [:html {:style "font-size: 62.5%;"} (common/gen-head)
+   [:div.sakura.post
+    [:h1 (get-in post [:meta :title])]
+    (:html post)]])

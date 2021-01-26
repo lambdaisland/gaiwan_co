@@ -57,9 +57,9 @@ a::selection {
 }
 
 @media screen and (min-width:768px) {
-    .hero-grid .logo {
-        font-size: 8rem;
-    }
+  .hero-grid .logo {
+    font-size: 8rem;
+  }
 }
 
 .hero-nav a {
@@ -200,9 +200,9 @@ a::selection {
 }
 
 @media screen and (min-width:768px) {
-    #portfolio h2 {
-        font-size: 6rem;
-    }
+  #portfolio h2 {
+    font-size: 6rem;
+  }
 }
 
 #portfolio article,
@@ -281,6 +281,10 @@ body>footer address .footer-email:hover {
   margin-top: 1rem;
 }
 
-.team-member__photo {
+.team-member__photo {}
 
+.post {
+  max-width: 760px;
+  margin: auto;
+  padding: 1rem;
 }
