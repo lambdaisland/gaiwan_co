@@ -5,7 +5,7 @@
   [:section {:id "hero"}
    [:article {:class "hero-grid"}
     [:h1 {:class "logo"} "Gai"
-     [:spam {:class "gaiwan-kerning"} "w"] "an"]
+     [:span {:class "gaiwan-kerning"} "w"] "an"]
     [:div {:class "text-box"}
      [:aside {:class "quote"}
       [:blockquote {:class "blockquote"}
@@ -48,7 +48,7 @@
        [:a {:lang "de", :href "https://www.mein-grundeinkommen.de/"} "Mein Grundeinkommen"] " strives for the introduction of basic income. The money they collect through fund-raising is used to provide people with basic income for a year through a lottery system."]
       [:p "The selection of new beneficiaries is preceded by large on-line campaigns where people register for the lottery, and possible become patrons."]
       [:p "We assisted "
-       [:spam {:lang "de"} "Mein Grundeinkommen"] " with the construction and load testing of these campaign workflows. We also created an internal tool for them called Marimba, which allowed them to run their mass email campaigns efficiently with a fraction of the cost."]]]]])
+       [:span {:lang "de"} "Mein Grundeinkommen"] " with the construction and load testing of these campaign workflows. We also created an internal tool for them called Marimba, which allowed them to run their mass email campaigns efficiently with a fraction of the cost."]]]]])
 
 (def section-portfolio
   [:section {:id "portfolio"}
