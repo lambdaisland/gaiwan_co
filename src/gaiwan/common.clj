@@ -38,4 +38,4 @@
     [:p "HRB 204912"]
     [:p "VAT ID: DE323279720"]
     [:p "Get in touch: "
-     [:a {:class "footer-email", :href "email:contact@gaiwan.co"} "contact@gaiwan.co"]]]])
+     [:a {:class "footer-email", :href "mailto:contact@gaiwan.co"} "contact@gaiwan.co"]]]])
