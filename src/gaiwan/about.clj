@@ -3,16 +3,24 @@
 
 (def summary
   [:div.about-summary
-   [:p "Far from the valleys of silicon we’re a small remote-first and highly distributed company with 5 members situated in 5 different countries. Experts at Clojure, Clojurescript, Datomic, and Emacs &mdash; we have built and launched multiple products around these technologies."]
-   [:p "Simplicity, and honesty are our core values. Our globally diverse team gives us a huge advantage, as every single member brings a different perspective to the table."]])
+   [:p "Gaiwan is a software agency with a team that spans continents and
+ cultures. We build opinionated products and systems that serve the people that
+ use them."]
+   [:p "Simplicity, and honesty are our core values. Our globally diverse team
+   gives us a huge advantage, as every single member brings a different
+   perspective to the table."]])
 
 (def member-data
   [{:title "Arne Brasseur - Berlin"
     :subtitle "(@plexus)"
-    :description '([:p "Arne has been programming for over a decade in several different industries and programming languages."]
-                   [:p "Since 2013 he's been coaching and consulting companies solve complicated real world problems. He has a natural instinct to break down highly complex problems and explain them as a series of simple solutions."]
-                   [:p "He's well regarded in the Clojure community for making web development easy with Chestnut, for creating the Kaocha test runner, for running the ClojureVerse community forum, and for organizing the Heart of Clojure conference."]
-                   [:p "He loves drinking tea, and taking long runs in the nature!"])}
+    :description '([:p "Arne has been delivering software solutions for well
+    over a decade, as well as coaching individuals and teams on topics both
+    technical and organizational."]
+                   [:p "Since 2013 he's been coaching and consulting companies
+                   solve complicated real world problems. He has a natural
+                   instinct to break down highly complex problems and explain
+                   them as a series of simple solutions."]
+                   [:p "He loves a nice cup of tea, and likes to to go for runs."])}
    {:title "Felipe Barros - Recife"
     :subtitle "(@barrosfelipe)"
     :description '([:p "While still at school, GNU/Linux liberated Felipe from
@@ -28,20 +36,27 @@
                    handcrafted, artisanal work."])}
    {:title "Ariel Alexi - Rosh HaAyin"
     :subtitle "(@ArielA147)"
-    :description '([:p "Ariel is currently a 4th year Computer Science student.
-                    Having built numerous projects with C++, Java, Javascript,
-                    and Go, her thirst for knowledge has not stopped growing.
-                    She is now progressing her way through Clojure."]
+    :description '([:p "Ariel is finishing up her last year as a Computer
+                    Science student, where she built numerous projects with C++,
+                    Java, Javascript, and Go. We introduced her to Clojure,
+                    which she took to like fish takes to water. Her thirst for
+                    knowledge has not stopped growing. "]
                    [:p "In her free time she likes to develop video games."])}
    {:title "Alys Brooks - Madison"
     :subtitle "(@alyssbrooks)"
-    :description '([:p "Alyss is a professional writer and editor by day and a programmer by night. She has worked as a techncial writer at Epic."]
+    :description '([:p "Alyss is a professional writer and editor by day and a programmer by night. She has worked as a technical writer at Epic."]
                    [:p "She loves open source and photography."])}
    {:title "Mitesh Shah - Mumbai"
     :subtitle "(@oxalorg)"
     :description '([:p "Mitesh learnt coding because of his desire to hack video games. This slowly turned to a passion for all things computer."]
                    [:p "Since then he's launched multiple online products, co-founded his own e-grocery vegan startup, and consulted on various technologies and projects."]
-                   [:p "He loves video games, dabbles in moral philosophy, and is trying to go vegan."])}])
+                   [:p "He loves video games, dabbles in moral philosophy, and is trying to go vegan."])}
+   {:title "Laurence Chen - Taipei"
+    :subtitle "(@laurencechen)"
+    :description '([:p "Laurence is an experienced developer with a knack for
+    understanding the needs of the customer, and delivering pragmatic solutions.
+    He has created bespoke systems for Taiwan-based SMBs, and offers consulting
+    to the LINE corporation."])}])
 
 (defn- team-member [data]
   (let [{:keys [title subtitle description]} data]
