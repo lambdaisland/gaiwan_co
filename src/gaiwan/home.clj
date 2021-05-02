@@ -1,6 +1,7 @@
 (ns gaiwan.home
   (:require [gaiwan.common :as common]
             [gaiwan.components.hero-home :as hero-home]
+            [gaiwan.components.features-home :as features-home]
             [gaiwan.components.features-world :as features-world]))
 
 (def section-hero
@@ -77,6 +78,7 @@
 (def body
   [:div
    (hero-home/hero-home)
+   (features-home/features-home)
    (features-world/features-world)
    section-hero
    section-client-work
