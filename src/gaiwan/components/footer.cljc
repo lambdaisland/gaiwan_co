@@ -1,4 +1,5 @@
-(ns gaiwan.components.footer)
+(ns gaiwan.components.footer
+  (:require [gaiwan.components.logo :as logo]))
 
 (defn footer []
   [:footer
@@ -9,27 +10,10 @@
       "grid sm:grid-cols-12 gap-8 py-8 md:py-12 border-t border-gray-200"}
      #_[:comment " 1st block "]
      [:div {:class "sm:col-span-12 lg:col-span-3"}
-      [:div {:class "mb-2"} #_[:comment " Logo "]
+      [:div {:class "mb-2"}
+       #_[:comment " Logo "]
        [:a {:aria-label "Cruip", :class "inline-block", :href "index.html"}
-        [:svg
-         {:class "w-8 h-8",
-          :viewbox "0 0 32 32",
-          :xmlns "http://www.w3.org/2000/svg"}
-         [:defs
-          [:radialgradient#footer-logo
-           {:cx "21.152%",
-            :cy "86.063%",
-            :fx "21.152%",
-            :fy "86.063%",
-            :r "79.941%"} [:stop {:offset "0%", :stop-color "#4FD1C5"}]
-           [:stop {:offset "25.871%", :stop-color "#81E6D9"}]
-           [:stop {:offset "100%", :stop-color "#338CF5"}]]]
-         [:rect
-          {:fill "url(#footer-logo)",
-           :fill-rule "nonzero",
-           :height "32",
-           :rx "16",
-           :width "32"}]]]]
+        logo/small-circle]]
       [:div {:class "text-sm text-gray-600"}
        [:a
         {:class
@@ -164,7 +148,7 @@
         {:aria-label "Twitter",
          :class
          "flex justify-center items-center text-gray-600 hover:text-gray-900 bg-white hover:bg-white-100 rounded-full shadow transition duration-150 ease-in-out",
-         :href "#0"}
+         :href "https://twitter.com/lambdaisland"}
         [:svg
          {:class "w-8 h-8 fill-current",
           :viewbox "0 0 32 32",
@@ -177,7 +161,7 @@
         {:aria-label "Github",
          :class
          "flex justify-center items-center text-gray-600 hover:text-gray-900 bg-white hover:bg-white-100 rounded-full shadow transition duration-150 ease-in-out",
-         :href "#0"}
+         :href "https://github.com/lambdaisland"}
         [:svg
          {:class "w-8 h-8 fill-current",
           :viewbox "0 0 32 32",
@@ -185,7 +169,7 @@
          [:path
           {:d
            "M16 8.2c-4.4 0-8 3.6-8 8 0 3.5 2.3 6.5 5.5 7.6.4.1.5-.2.5-.4V22c-2.2.5-2.7-1-2.7-1-.4-.9-.9-1.2-.9-1.2-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.3 1.9.9 2.3.7.1-.5.3-.9.5-1.1-1.8-.2-3.6-.9-3.6-4 0-.9.3-1.6.8-2.1-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8.6-.2 1.3-.3 2-.3s1.4.1 2 .3c1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.1 0 3.1-1.9 3.7-3.7 3.9.3.4.6.9.6 1.6v2.2c0 .2.1.5.6.4 3.2-1.1 5.5-4.1 5.5-7.6-.1-4.4-3.7-8-8.1-8z"}]]]]
-      [:li {:class "ml-4"}
+      #_[:li {:class "ml-4"}
        [:a
         {:aria-label "Facebook",
          :class

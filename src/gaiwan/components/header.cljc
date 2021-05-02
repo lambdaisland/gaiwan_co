@@ -1,8 +1,5 @@
-(ns gaiwan.components.header)
-
-(def logo
-  [:img {:class "w-8 h-8 rounded-full"
-         :src "/imgs/gaiwan-logo.jpeg"}])
+(ns gaiwan.components.header
+  (:require [gaiwan.components.logo :as logo]))
 
 (defn top []
   [:html
@@ -17,7 +14,7 @@
        [:div {:class "flex-shrink-0 mr-4"}
         #_[:comment " Logo "]
         [:a {:aria-label "Cruip", :class "block", :href "index.html"}
-         logo]]
+         logo/small-circle]]
        #_[:comment " Desktop navigation "]
        [:nav {:class "hidden md:flex md:flex-grow"}
         #_[:comment " Desktop menu links "]
