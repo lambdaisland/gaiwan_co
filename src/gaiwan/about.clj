@@ -85,4 +85,4 @@
    common/navbar summary team work-with-us])
 
 (defn about-page [content]
-  [:html (common/gen-head) body])
+  (common/base-layout body))

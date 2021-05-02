@@ -1,5 +1,6 @@
 (ns gaiwan.common
-  (:require [gaiwan.components.header :as header]))
+  (:require [gaiwan.components.header :as header]
+            [gaiwan.components.footer :as footer]))
 
 (def matamo-analytics-script
   [:script {:type "text/javascript"}
@@ -32,7 +33,7 @@
   [:header.top-navbar
    [:a.secondary-font.top-navbar__brand {:href "/"} "Gaiwan"]])
 
-(def footer
+#_(def footer
   [:footer
    [:address
     [:div
@@ -52,4 +53,4 @@
      (header/top)
      [:main {:class "flex-grow"}
       content]
-     footer]]])
+     (footer/footer)]]])
