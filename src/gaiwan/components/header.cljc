@@ -14,7 +14,7 @@
        [:div {:class "flex-shrink-0 mr-4"}
         #_[:comment " Logo "]
         [:a {:aria-label "Cruip", :class "block", :href "index.html"}
-         logo/small-circle]]
+         logo/circle-medium]]
        #_[:comment " Desktop navigation "]
        [:nav {:class "hidden md:flex md:flex-grow"}
         #_[:comment " Desktop menu links "]

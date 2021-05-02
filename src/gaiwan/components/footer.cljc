@@ -13,8 +13,8 @@
       [:div {:class "mb-2"}
        #_[:comment " Logo "]
        [:a {:aria-label "Cruip", :class "inline-block", :href "index.html"}
-        logo/small-circle]]
-      [:div {:class "text-sm text-gray-600"}
+        logo/circle-medium]]
+      #_[:div {:class "text-sm text-gray-600"}
        [:a
         {:class
          "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
@@ -30,29 +30,14 @@
         [:a
          {:class
           "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
-          :href "#0"} "Web Studio"]]
+          :href "#0"} "Lambda Island"]]
        [:li {:class "mb-2"}
         [:a
          {:class
           "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
-          :href "#0"} "DynamicBox Flex"]]
-       [:li {:class "mb-2"}
-        [:a
-         {:class
-          "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
-          :href "#0"} "Programming Forms"]]
-       [:li {:class "mb-2"}
-        [:a
-         {:class
-          "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
-          :href "#0"} "Integrations"]]
-       [:li {:class "mb-2"}
-        [:a
-         {:class
-          "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
-          :href "#0"} "Command-line"]]]] #_[:comment " 3rd block "]
+          :href "#0"} "Kaocha"]]]] #_[:comment " 3rd block "]
      [:div {:class "sm:col-span-6 md:col-span-3 lg:col-span-2"}
-      [:h6 {:class "text-gray-800 font-medium mb-2"} "Resources"]
+      [:h6 {:class "text-gray-800 font-medium mb-2"} "Projects"]
       [:ul {:class "text-sm"}
        [:li {:class "mb-2"}
         [:a
