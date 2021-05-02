@@ -1,5 +1,9 @@
 (ns gaiwan.components.header)
 
+(def logo
+  [:img {:class "w-8 h-8 rounded-full"
+         :src "/imgs/gaiwan-logo.jpeg"}])
+
 (defn top []
   [:html
    [:body
@@ -10,27 +14,10 @@
      [:div {:class "max-w-6xl mx-auto px-5 sm:px-6"}
       [:div {:class "flex items-center justify-between h-16 md:h-20"}
        #_[:comment " Site branding "]
-       [:div {:class "flex-shrink-0 mr-4"} [:comment " Logo "]
+       [:div {:class "flex-shrink-0 mr-4"}
+        #_[:comment " Logo "]
         [:a {:aria-label "Cruip", :class "block", :href "index.html"}
-         [:svg
-          {:class "w-8 h-8",
-           :viewbox "0 0 32 32",
-           :xmlns "http://www.w3.org/2000/svg"}
-          [:defs
-           [:radialgradient#header-logo
-            {:cx "21.152%",
-             :cy "86.063%",
-             :fx "21.152%",
-             :fy "86.063%",
-             :r "79.941%"} [:stop {:offset "0%", :stop-color "#4FD1C5"}]
-            [:stop {:offset "25.871%", :stop-color "#81E6D9"}]
-            [:stop {:offset "100%", :stop-color "#338CF5"}]]]
-          [:rect
-           {:fill "url(#header-logo)",
-            :fill-rule "nonzero",
-            :height "32",
-            :rx "16",
-            :width "32"}]]]]
+         logo]]
        #_[:comment " Desktop navigation "]
        [:nav {:class "hidden md:flex md:flex-grow"}
         #_[:comment " Desktop menu links "]
