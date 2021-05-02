@@ -1,4 +1,5 @@
-(ns gaiwan.common)
+(ns gaiwan.common
+  (:require [gaiwan.components.header :as header]))
 
 (def matamo-analytics-script
   [:script {:type "text/javascript"}
@@ -40,3 +41,15 @@
     [:p "VAT ID: DE323279720"]
     [:p "Get in touch: "
      [:a {:class "footer-email", :href "mailto:contact@gaiwan.co"} "contact@gaiwan.co"]]]])
+
+(defn base-layout [content]
+  [:html
+   (gen-head)
+   [:body
+    {:class "font-inter antialiased bg-white text-gray-900 tracking-tight"}
+    [:div
+     {:class "flex flex-col min-h-screen overflow-hidden"}
+     (header/top)
+     [:main {:class "flex-grow"}
+      content]
+     footer]]])

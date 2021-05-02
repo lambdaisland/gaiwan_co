@@ -1,5 +1,6 @@
 (ns gaiwan.home
-  (:require [gaiwan.common :as common]))
+  (:require [gaiwan.common :as common]
+            [gaiwan.components.hero-home :as hero-home]))
 
 (def section-hero
   [:section {:id "hero"}
@@ -73,12 +74,11 @@
      " community conference. We provide the organizational infrastructure to be able to pull off such an event, and manage a big chunk of the work that goes into organizing. We also provide a “parachute sponsorship”, patching up any holes in the budget that may arise."]]])
 
 (def body
-  [:body
-   [:main
-    section-hero
-    section-client-work
-    section-portfolio]
-   common/footer])
+  [:div
+   (hero-home/hero-home)
+   section-hero
+   section-client-work
+   section-portfolio])
 
 (defn home-page [content]
-  [:html (common/gen-head) body])
+  (common/base-layout body))
