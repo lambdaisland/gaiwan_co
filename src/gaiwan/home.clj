@@ -79,10 +79,7 @@
   [:div
    (hero-home/hero-home)
    (features-home/features-home)
-   (features-world/features-world)
-   section-hero
-   section-client-work
-   section-portfolio])
+   (features-world/features-world)])
 
 (defn home-page [content]
   (common/base-layout body))
