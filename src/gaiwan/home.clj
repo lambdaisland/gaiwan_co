@@ -1,6 +1,7 @@
 (ns gaiwan.home
   (:require [gaiwan.common :as common]
-            [gaiwan.components.hero-home :as hero-home]))
+            [gaiwan.components.hero-home :as hero-home]
+            [gaiwan.components.features-world :as features-world]))
 
 (def section-hero
   [:section {:id "hero"}
@@ -76,6 +77,7 @@
 (def body
   [:div
    (hero-home/hero-home)
+   (features-world/features-world)
    section-hero
    section-client-work
    section-portfolio])
