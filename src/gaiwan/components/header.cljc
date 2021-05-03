@@ -6,15 +6,15 @@
    [:body
     [:header
      {:class
-      "w-full z-30 bg-white blur shadow-lg transition duration-300 ease-in-out",
+      "relative w-full z-30 bg-white blur shadow-lg transition duration-300 ease-in-out",
       :x-data "{ top: true }"}
      [:div {:class "max-w-6xl mx-auto px-5 sm:px-6"}
       [:div {:class "flex items-center justify-between h-16 md:h-20"}
        #_[:comment " Site branding "]
        [:div {:class "flex-shrink-0 mr-4"}
         #_[:comment " Logo "]
-        [:a {:aria-label "Cruip", :class "block", :href "/"}
-         logo/circle-medium]]
+        [:a {:aria-label "Cruip", :class "text-xl block secondary-font", :href "/"}
+         "GAIWAN"]]
        #_[:comment " Desktop navigation "]
        [:nav {:class "hidden md:flex md:flex-grow"}
         #_[:comment " Desktop menu links "]
@@ -120,7 +120,7 @@
         #_[:comment " Mobile navigation "]
         [:nav#mobile-nav
          {:class
-          "absolute top-full h-screen pb-16 z-20 left-0 w-full overflow-scroll bg-white transition-all duration-300 ease-in-out",
+          "hidden absolute top-full h-screen pb-16 z-20 left-0 w-full overflow-scroll bg-white transition-all duration-300 ease-in-out",
           :x-show "expanded",
           :x-transition:enter "transition ease-out duration-200 transform",
           :x-transition:enter-end "opacity-100 translate-y-0",
