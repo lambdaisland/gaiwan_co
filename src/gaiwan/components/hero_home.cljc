@@ -25,7 +25,7 @@
         [:circle {:cx "155", :cy "443", :r "64"}]]]]
      [:div {:class "max-w-6xl mx-auto px-4 sm:px-6"}
       #_[:comment " Hero content "]
-      [:div {:class "pt-32 pb-12 md:pt-40 md:pb-20"}
+      [:div {:class "pt-16 pb-12 md:pt-24 md:pb-20"}
        #_[:comment " Section header "]
        [:div {:class "text-center pb-12 md:pb-16"}
         [:h1
