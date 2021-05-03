@@ -24,7 +24,7 @@
          "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
          :href "#0"} "Privacy Policy"]]] #_[:comment " 2nd block "]
      [:div {:class "sm:col-span-6 md:col-span-3 lg:col-span-2"}
-      [:h6 {:class "text-gray-800 font-medium mb-2"} "Products"]
+      [:h6 {:class "text-gray-800 font-medium mb-2"} "Our projects"]
       [:ul {:class "text-sm"}
        [:li {:class "mb-2"}
         [:a
@@ -35,35 +35,41 @@
         [:a
          {:class
           "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
-          :href "#0"} "Kaocha"]]]] #_[:comment " 3rd block "]
+          :href "#0"} "Lambda Island OSS"]]
+       [:li {:class "mb-2"}
+        [:a
+         {:class
+          "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
+          :href "#0"} "Heart of Clojure"]]
+       [:li {:class "mb-2"}
+        [:a
+         {:class
+          "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
+          :href "#0"} "Clojureverse"]]]] #_[:comment " 3rd block "]
      [:div {:class "sm:col-span-6 md:col-span-3 lg:col-span-2"}
-      [:h6 {:class "text-gray-800 font-medium mb-2"} "Projects"]
+      [:h6 {:class "text-gray-800 font-medium mb-2"} "Open source"]
       [:ul {:class "text-sm"}
        [:li {:class "mb-2"}
         [:a
          {:class
           "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
-          :href "#0"} "Documentation"]]
+          :href "#0"} "Kaocha"]]
        [:li {:class "mb-2"}
         [:a
          {:class
           "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
-          :href "#0"} "Tutorials & Guides"]]
+          :href "#0"} "Deep diff 2"]]
        [:li {:class "mb-2"}
         [:a
          {:class
           "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
-          :href "#0"} "Blog"]]
+          :href "#0"} "regal"]]
        [:li {:class "mb-2"}
         [:a
          {:class
           "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
-          :href "#0"} "Support Center"]]
-       [:li {:class "mb-2"}
-        [:a
-         {:class
-          "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
-          :href "#0"} "Partners"]]]] #_[:comment " 4th block "]
+          :href "#0"} "uri"]]]]
+     #_[:comment " 4th block "]
      [:div {:class "sm:col-span-6 md:col-span-3 lg:col-span-2"}
       [:h6 {:class "text-gray-800 font-medium mb-2"} "Company"]
       [:ul {:class "text-sm"}
@@ -81,17 +87,8 @@
         [:a
          {:class
           "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
-          :href "#0"} "Company values"]]
-       [:li {:class "mb-2"}
-        [:a
-         {:class
-          "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
-          :href "#0"} "Pricing"]]
-       [:li {:class "mb-2"}
-        [:a
-         {:class
-          "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
-          :href "#0"} "Privacy Policy"]]]] #_[:comment " 5th block "]
+          :href "#0"} "Company values"]]]]
+     #_[:comment " 5th block "]
      [:div {:class "sm:col-span-6 md:col-span-3 lg:col-span-3"}
       [:h6 {:class "text-gray-800 font-medium mb-2"} "Subscribe"]
       [:p {:class "text-sm text-gray-600 mb-4"}
