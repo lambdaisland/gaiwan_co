@@ -36,10 +36,10 @@ Open up another terminal window and run
 
 ```bash
 # cd to project directory
-make serve
+npm run dev
 ```
 
-This will run a local server serving the `_site` directory on http://localhost:8001
+This will start postcss watches and run a local server serving the `_site` directory on http://localhost:8001
 
 The `resources` directory is copied to the final site as is.
 
