@@ -3,6 +3,7 @@
     "postcss:build": "cross-env TAILWIND_MODE=build postcss src/css/style.css -o ./_site/css/style.css --verbose",
     "postcss:watch": "cross-env TAILWIND_MODE=watch postcss src/css/style.css -o ./_site/css/style.css --verbose -w",
     "postcss:release": "cross-env NODE_ENV=production postcss src/css/**/*.css -o ./_site/css/style.css --verbose",
+    "server:watch": "make serve",
     "dev": "run-p -l *:watch",
     "release": "run-s *:release"
   },
