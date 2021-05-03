@@ -6,14 +6,14 @@
    [:body
     [:header
      {:class
-      "fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out",
+      "w-full z-30 bg-white blur shadow-lg transition duration-300 ease-in-out",
       :x-data "{ top: true }"}
      [:div {:class "max-w-6xl mx-auto px-5 sm:px-6"}
       [:div {:class "flex items-center justify-between h-16 md:h-20"}
        #_[:comment " Site branding "]
        [:div {:class "flex-shrink-0 mr-4"}
         #_[:comment " Logo "]
-        [:a {:aria-label "Cruip", :class "block", :href "index.html"}
+        [:a {:aria-label "Cruip", :class "block", :href "/"}
          logo/circle-medium]]
        #_[:comment " Desktop navigation "]
        [:nav {:class "hidden md:flex md:flex-grow"}
@@ -28,17 +28,17 @@
           [:a
            {:class
             "text-gray-600 hover:text-gray-900 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out",
-            :href "about.html"} "About us"]]
+            :href "/about/"} "About us"]]
+         #_[:li
+          [:a
+           {:class
+            "text-gray-600 hover:text-gray-900 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out",
+            :href "#"} "Tutorials"]]
          [:li
           [:a
            {:class
             "text-gray-600 hover:text-gray-900 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out",
-            :href "tutorials.html"} "Tutorials"]]
-         [:li
-          [:a
-           {:class
-            "text-gray-600 hover:text-gray-900 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out",
-            :href "blog.html"} "Blog"]]
+            :href "/blog/"} "Blog"]]
          #_[:comment " 1st level: hover "]
          #_[:li {:class "relative", :x-data "{ open: false }"}
           [:a
@@ -88,11 +88,12 @@
           [:a
            {:class
             "font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out",
-            :href "signin.html"} "LambdaIsland.com"]]
+            :target "_blank"
+            :href "https://lambdaisland.com"} "LambdaIsland.com"]]
          [:li
           [:a
            {:class "btn-sm text-gray-200 bg-gray-900 hover:bg-gray-800 ml-3",
-            :href "signup.html"} [:span "Say hi"]
+            :href "mailto:contact@gaiwan.co"} [:span "Say hi"]
            [:svg
             {:class "w-3 h-3 fill-current text-gray-400 flex-shrink-0 ml-2 -mr-1",
              :viewbox "0 0 12 12",
@@ -128,23 +129,23 @@
           :x-transition:leave-end "opacity-0",
           :x-transition:leave-start "opacity-100"}
          [:ul {:class "px-5 py-2"}
-          [:li
+          #_[:li
            [:a
             {:class "flex text-gray-600 hover:text-gray-900 py-2",
              :href "#"} "Our clients"]]
           [:li
            [:a
             {:class "flex text-gray-600 hover:text-gray-900 py-2",
-             :href "about.html"} "About us"]]
+             :href "/about/"} "About us"]]
+          #_[:li
+           [:a
+            {:class "flex text-gray-600 hover:text-gray-900 py-2",
+             :href ""} "Tutorials"]]
           [:li
            [:a
             {:class "flex text-gray-600 hover:text-gray-900 py-2",
-             :href "tutorials.html"} "Tutorials"]]
-          [:li
-           [:a
-            {:class "flex text-gray-600 hover:text-gray-900 py-2",
-             :href "blog.html"} "Blog"]]
-          [:li {:class "py-2 my-2 border-t border-b border-gray-200"}
+             :href "/blog/"} "Blog"]]
+          #_[:li {:class "py-2 my-2 border-t border-b border-gray-200"}
            [:span {:class "flex text-gray-600 hover:text-gray-900 py-2"}
             "Resources"]
            [:ul {:class "pl-4"}
@@ -167,12 +168,13 @@
            [:a
             {:class
              "flex font-medium w-full text-gray-600 hover:text-gray-900 py-2 justify-center",
+             :target "_blank"
              :href "https://lambdaisland.com"} "LambdaIsland.com"]]
           [:li
            [:a
             {:class
              "btn-sm text-gray-200 bg-gray-900 hover:bg-gray-800 w-full my-2",
-             :href "signup.html"} [:span "Say hi"]
+             :href "mailto:contact@gaiwan.co"} [:span "Say hi"]
             [:svg
              {:class
               "w-3 h-3 fill-current text-gray-400 flex-shrink-0 ml-2 -mr-1",
