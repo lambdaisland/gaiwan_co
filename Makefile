@@ -19,6 +19,9 @@ watch: build
 		make build ; \
 	done
 
+stage: build
+	rsync -a _site/ ark:/srv/ox/gaiwan.co
+
 deploy: build
 	cd _site && git add --all && git commit -m "Publishing to gh-pages" && cd ..
 	git push origin gh-pages

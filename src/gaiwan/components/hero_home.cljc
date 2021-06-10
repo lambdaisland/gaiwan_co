@@ -34,7 +34,7 @@
           :data-aos "zoom-y-out"} "Clojure & ClojureScript "
          [:span
           {:class
-           "bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-400"}
+           "bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-green-400"}
           "consultancy"]]
         [:div {:class "max-w-3xl mx-auto"}
          [:p
