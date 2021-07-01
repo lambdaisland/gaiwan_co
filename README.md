@@ -32,7 +32,8 @@ make watch
 # and rebuild the site on any modifications
 ```
 
-Open up another terminal window and run
+Make sure you have latest npm deps installed using `npm install` and then open
+up another terminal window and run:
 
 ```bash
 # cd to project directory
