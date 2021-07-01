@@ -1,3 +1,4 @@
 _site/
 .store
 .cpcache
+node_modules/

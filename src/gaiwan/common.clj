@@ -1,4 +1,6 @@
-(ns gaiwan.common)
+(ns gaiwan.common
+  (:require [gaiwan.components.header :as header]
+            [gaiwan.components.footer :as footer]))
 
 (def matamo-analytics-script
   [:script {:type "text/javascript"}
@@ -24,13 +26,17 @@
    [:link {:href "https://use.typekit.net/oxk2nmu.css", :rel "stylesheet"}]
    [:link {:href "/css/main.css", :rel "stylesheet"}]
    [:link {:href "/css/sakura-ink-embed.css", :rel "stylesheet"}]
+   [:link {:href "/css/style.css", :rel "stylesheet"}]
+   (when (= (System/getenv "BUILD_ENV") "development")
+     (println "Injecting live.js")
+     [:script {:src "https://livejs.com/live.js"}])
    matamo-analytics-script])
 
 (def navbar
   [:header.top-navbar
    [:a.secondary-font.top-navbar__brand {:href "/"} "Gaiwan"]])
 
-(def footer
+#_(def footer
   [:footer
    [:address
     [:div
@@ -39,3 +45,15 @@
     [:p "VAT ID: DE323279720"]
     [:p "Get in touch: "
      [:a {:class "footer-email", :href "mailto:contact@gaiwan.co"} "contact@gaiwan.co"]]]])
+
+(defn base-layout [content]
+  [:html
+   (gen-head)
+   [:body
+    {:class "font-inter antialiased bg-white text-gray-900 tracking-tight"}
+    [:div
+     {:class "flex flex-col min-h-screen overflow-hidden"}
+     (header/top)
+     [:main {:class "flex-grow"}
+      content]
+     (footer/footer)]]])

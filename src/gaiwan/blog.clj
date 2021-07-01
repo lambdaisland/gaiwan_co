@@ -1,6 +1,7 @@
 (ns gaiwan.blog
   (:require [gaiwan.common :as common]
             [gaiwan.utils :as utils]
+            [gaiwan.components.blog-list :as blog-list]
             [clojure.java.io :as io]
             [clojure.string :as str]
             [markdown.core :as m]
@@ -34,14 +35,14 @@
 
 (def body
   [:body
+   (blog-list/section (get-posts))
    [:main.post
     common/navbar
     [:h2 "Blog"]
-    post-list]
-   common/footer])
+    post-list]])
 
 (defn blog-page [content]
-  [:html (common/gen-head) body])
+  (common/base-layout body))
 
 (defn blog-post [post]
   [:html {:style "font-size: 62.5%;"} (common/gen-head)
@@ -55,5 +56,4 @@
        [:span (.format (java.text.SimpleDateFormat. "MMM dd, yyyy") (get-in post [:meta :date]))]
        " by "
        [:span (get-in post [:meta :author])]]
-      (:html post)]]
-    common/footer]])
+      (:html post)]]]])
