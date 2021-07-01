@@ -2,6 +2,7 @@
   (:require [gaiwan.data :as data]
             [gaiwan.common :as common]
             [gaiwan.components.hero-home :as hero-home]
+            [gaiwan.components.projects :as projects]
             [gaiwan.components.team :as team]
             [gaiwan.components.features-home :as features-home]
             [gaiwan.components.features-world :as features-world]))
@@ -80,9 +81,10 @@
 (def body
   [:div
    (hero-home/hero-home)
+   (projects/section)
    (team/section data/team-members)
-   (features-home/features-home)
-   (features-world/features-world)])
+   #_(features-home/features-home)
+   #_(features-world/features-world)])
 
 (defn home-page [content]
   (common/base-layout body))
