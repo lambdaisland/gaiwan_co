@@ -1,6 +1,7 @@
 (ns gaiwan.blog
   (:require [gaiwan.common :as common]
             [gaiwan.utils :as utils]
+            [gaiwan.components.blog-list :as blog-list]
             [clojure.java.io :as io]
             [clojure.string :as str]
             [markdown.core :as m]
@@ -34,6 +35,7 @@
 
 (def body
   [:body
+   (blog-list/section (get-posts))
    [:main.post
     common/navbar
     [:h2 "Blog"]
