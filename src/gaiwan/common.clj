@@ -27,6 +27,9 @@
    [:link {:href "/css/main.css", :rel "stylesheet"}]
    [:link {:href "/css/sakura-ink-embed.css", :rel "stylesheet"}]
    [:link {:href "/css/style.css", :rel "stylesheet"}]
+   (when (= (System/getenv "BUILD_ENV") "development")
+     (println "Injecting live.js")
+     [:script {:src "https://livejs.com/live.js"}])
    matamo-analytics-script])
 
 (def navbar

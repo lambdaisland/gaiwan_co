@@ -15,8 +15,8 @@ build:
 
 watch: build
 	while true; do \
+		BUILD_ENV=development make build ; \
 		inotifywait -r -e modify src/gaiwan resources; \
-		make build ; \
 	done
 
 stage: build
