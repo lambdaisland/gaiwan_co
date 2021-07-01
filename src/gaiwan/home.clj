@@ -5,6 +5,7 @@
             [gaiwan.components.projects :as projects]
             [gaiwan.components.clients :as clients]
             [gaiwan.components.team :as team]
+            [gaiwan.components.cta :as cta]
             [gaiwan.components.features-home :as features-home]
             [gaiwan.components.features-world :as features-world]))
 
@@ -85,6 +86,11 @@
    (clients/testimonial)
    (projects/section)
    (team/section data/team-members)
+   [:div {:class "mt-12 lg:mt-32"}
+    (cta/section {:title "Ready to get started?"
+                  :subtitle "Let's grab a cup of e-tea and figure out how to relieve you of your business stress!"
+                  :link "/contact/"
+                  :button-text "Contact me!"})]
    #_(features-home/features-home)
    #_(features-world/features-world)])
 
