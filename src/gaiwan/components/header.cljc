@@ -17,73 +17,17 @@
          "GAIWAN"]]
        #_[:comment " Desktop navigation "]
        [:nav {:class "hidden md:flex md:flex-grow"}
-        #_[:comment " Desktop menu links "]
         [:ul {:class "flex flex-grow justify-end flex-wrap items-center"}
          [:li
           [:a
            {:class
-            "text-gray-600 hover:text-gray-900 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out",
-            :href "#"} "Our clients"]]
+            "text-gray-800 font-bold hover:text-gray-900 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out",
+            :href "#"} "OUR WORK"]]
          [:li
           [:a
            {:class
-            "text-gray-600 hover:text-gray-900 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out",
-            :href "/about/"} "About us"]]
-         #_[:li
-          [:a
-           {:class
-            "text-gray-600 hover:text-gray-900 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out",
-            :href "#"} "Tutorials"]]
-         [:li
-          [:a
-           {:class
-            "text-gray-600 hover:text-gray-900 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out",
-            :href "/blog/"} "Blog"]]
-         #_[:comment " 1st level: hover "]
-         #_[:li {:class "relative", :x-data "{ open: false }"}
-          [:a
-           {:aria-haspopup "true",
-            :class
-            "text-gray-600 hover:text-gray-900 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out",
-            ::aria-expanded "open",
-            :href "#0"}
-           " Resources "
-           [:svg
-            {:class
-             "w-3 h-3 fill-current text-gray-400 cursor-pointer ml-1 flex-shrink-0",
-             :viewbox "0 0 12 12",
-             :xmlns "http://www.w3.org/2000/svg"}
-            [:path
-             {:d
-              "M10.28 4.305L5.989 8.598 1.695 4.305A1 1 0 00.28 5.72l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z"}]]]
-          #_[:comment " 2nd level: hover "]
-          [:ul
-           {:class
-            "origin-top-right absolute top-full right-0 w-40 bg-white py-2 ml-4 rounded shadow-lg",
-            :x-show "open",
-            :x-transition:enter "transition ease-out duration-200 transform",
-            :x-transition:enter-end "opacity-100 translate-y-0",
-            :x-transition:enter-start "opacity-0 -translate-y-2",
-            :x-transition:leave "transition ease-out duration-200",
-            :x-transition:leave-end "opacity-0",
-            :x-transition:leave-start "opacity-100"}
-           [:li
-            [:a
-             {:class
-              "font-medium text-sm text-gray-600 hover:text-gray-900 flex py-2 px-5 leading-tight",
-              :href "documentation.html"} "Documentation"]]
-           [:li
-            [:a
-             {:class
-              "font-medium text-sm text-gray-600 hover:text-gray-900 flex py-2 px-5 leading-tight",
-              :href "support.html"} "Support center"]]
-           [:li
-            [:a
-             {:class
-              "font-medium text-sm text-gray-600 hover:text-gray-900 flex py-2 px-5 leading-tight",
-              :href "404.html"} "404"]]]]]
-        #_[:comment " Desktop sign in links "]
-        [:ul {:class "flex flex-grow justify-end flex-wrap items-center"}
+            "text-gray-800 font-bold hover:text-gray-900 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out",
+            :href "/blog/"} "BLOG"]]
          [:li
           [:a
            {:class
@@ -130,40 +74,40 @@
           :x-transition:leave-start "opacity-100"}
          [:ul {:class "px-5 py-2"}
           #_[:li
-           [:a
-            {:class "flex text-gray-600 hover:text-gray-900 py-2",
-             :href "#"} "Our clients"]]
+             [:a
+              {:class "flex text-gray-600 hover:text-gray-900 py-2",
+               :href "#"} "Our clients"]]
           [:li
            [:a
             {:class "flex text-gray-600 hover:text-gray-900 py-2",
              :href "/about/"} "About us"]]
           #_[:li
-           [:a
-            {:class "flex text-gray-600 hover:text-gray-900 py-2",
-             :href ""} "Tutorials"]]
+             [:a
+              {:class "flex text-gray-600 hover:text-gray-900 py-2",
+               :href ""} "Tutorials"]]
           [:li
            [:a
             {:class "flex text-gray-600 hover:text-gray-900 py-2",
              :href "/blog/"} "Blog"]]
           #_[:li {:class "py-2 my-2 border-t border-b border-gray-200"}
-           [:span {:class "flex text-gray-600 hover:text-gray-900 py-2"}
-            "Resources"]
-           [:ul {:class "pl-4"}
-            [:li
-             [:a
-              {:class
-               "text-sm flex font-medium text-gray-600 hover:text-gray-900 py-2",
-               :href "documentation.html"} "Documentation"]]
-            [:li
-             [:a
-              {:class
-               "text-sm flex font-medium text-gray-600 hover:text-gray-900 py-2",
-               :href "support.html"} "Support center"]]
-            [:li
-             [:a
-              {:class
-               "text-sm flex font-medium text-gray-600 hover:text-gray-900 py-2",
-               :href "404.html"} "404"]]]]
+             [:span {:class "flex text-gray-600 hover:text-gray-900 py-2"}
+              "Resources"]
+             [:ul {:class "pl-4"}
+              [:li
+               [:a
+                {:class
+                 "text-sm flex font-medium text-gray-600 hover:text-gray-900 py-2",
+                 :href "documentation.html"} "Documentation"]]
+              [:li
+               [:a
+                {:class
+                 "text-sm flex font-medium text-gray-600 hover:text-gray-900 py-2",
+                 :href "support.html"} "Support center"]]
+              [:li
+               [:a
+                {:class
+                 "text-sm flex font-medium text-gray-600 hover:text-gray-900 py-2",
+                 :href "404.html"} "404"]]]]
           [:li
            [:a
             {:class
