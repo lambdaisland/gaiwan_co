@@ -40,7 +40,7 @@
          [:a
           {:class
            "btn text-white bg-gray-900 hover:bg-gray-800 w-full sm:w-auto sm:ml-4",
-           :href "#0"} "Meet the team"]]]]]
+           :href "#team"} "Meet the team"]]]]]
      #_[:comment " Hero image "]
      #_[:div {:x-data "{ modalExpanded: false }"}
         [:div

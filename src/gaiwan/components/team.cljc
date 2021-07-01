@@ -23,7 +23,7 @@
         description)]]]]])
 
 (defn section [members]
-  [:div {:class "bg-white"}
+  [:div#team {:class "bg-white"}
    [:div {:class "mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8"}
     [:div {:class "space-y-12"}
      [:h2 {:class "text-3xl font-extrabold tracking-tight sm:text-4xl"}
