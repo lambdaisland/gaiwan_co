@@ -27,7 +27,7 @@
    [:div {:class "mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8"}
     [:div {:class "space-y-12"}
      [:h2 {:class "text-3xl font-extrabold tracking-tight sm:text-4xl"}
-      "Meet our team"]
+      "Meet the Gaiwan team"]
      [:ul
       {:class
        "space-y-12 lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8 lg:gap-y-12 lg:space-y-0"}
