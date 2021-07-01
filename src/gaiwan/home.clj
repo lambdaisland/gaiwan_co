@@ -1,6 +1,8 @@
 (ns gaiwan.home
-  (:require [gaiwan.common :as common]
+  (:require [gaiwan.data :as data]
+            [gaiwan.common :as common]
             [gaiwan.components.hero-home :as hero-home]
+            [gaiwan.components.team :as team]
             [gaiwan.components.features-home :as features-home]
             [gaiwan.components.features-world :as features-world]))
 
@@ -78,6 +80,7 @@
 (def body
   [:div
    (hero-home/hero-home)
+   (team/section data/team-members)
    (features-home/features-home)
    (features-world/features-world)])
 

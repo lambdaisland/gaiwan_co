@@ -1,63 +1,48 @@
-(ns gaiwan.components.hero-home)
+(ns gaiwan.components.hero-home
+  (:require [gaiwan.utils :as utils]))
 
 (defn hero-home []
-  [:html
-   [:body
-    [:section {:class "relative"}
-     #_[:comment " Illustration behind hero content "]
-     #_[:div
-      {:aria-hidden "true",
-       :class
-       "absolute left-1/2 transform -translate-x-1/2 bottom-0 pointer-events-none"}
-      [:svg
-       {:height "578",
-        :viewbox "0 0 1360 578",
-        :width "1360",
-        :xmlns "http://www.w3.org/2000/svg"}
-       [:defs
-        [:lineargradient#illustration-01
-         {:x1 "50%", :x2 "50%", :y1 "0%", :y2 "100%"}
-         [:stop {:offset "0%", :stop-color "#FFF"}]
-         [:stop {:offset "77.402%", :stop-color "#EAEAEA"}]
-         [:stop {:offset "100%", :stop-color "#DFDFDF"}]]]
-       [:g {:fill "url(#illustration-01)", :fill-rule "evenodd"}
-        [:circle {:cx "1232", :cy "128", :r "128"}]
-        [:circle {:cx "155", :cy "443", :r "64"}]]]]
-     [:div {:class "max-w-6xl mx-auto px-4 sm:px-6"}
-      #_[:comment " Hero content "]
-      [:div {:class "pt-16 pb-12 md:pt-24 md:pb-20"}
-       #_[:comment " Section header "]
-       [:div {:class "text-center pb-12 md:pb-16"}
-        [:h1
-         {:class
-          "text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4",
-          :data-aos "zoom-y-out"} "Clojure & ClojureScript "
-         [:span
+  [:section {:class "relative z-10"}
+   [:div {:style (str "background-image: url(" (utils/img "pattern.svg")");")
+          :class "bg-repeat z-0 absolute w-full h-full top-0 pointer-events-none opacity-10"}]
+   [:div {:class "max-w-6xl mx-auto px-4 sm:px-6 z-10"}
+    #_[:comment " Hero content "]
+    [:div {:class "pt-16 pb-12 md:pt-32 md:pb-24"}
+     #_[:comment " Section header "]
+     [:div {:class "text-center pb-12 md:pb-16 relative"}
+      [:h1
+       {:class
+        "text-4xl md:text-5xl font-extrabold leading-tighter tracking-tighter mb-4",
+        :data-aos "zoom-y-out"} "Clojure & ClojureScript "
+       [:span
+        {:class
+         "bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-green-400"}
+        "consultancy"]]
+      [:div {:class "max-w-3xl mx-auto"}
+       [:p
+        {:class "text-xl text-gray-600 mb-8",
+         :data-aos "zoom-y-out",
+         :data-aos-delay "150"}
+        "We partner with Startups & SME's to help reap new opportunities
+          without distracting you from your core business. We provide our
+          technical expertise in building MVPs, quick prototyping, building API
+          & 3rd party integrations."]
+       [:div
+        {:class "max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center",
+         :data-aos "zoom-y-out",
+         :data-aos-delay "300"}
+        [:div
+         [:a
           {:class
-           "bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-green-400"}
-          "consultancy"]]
-        [:div {:class "max-w-3xl mx-auto"}
-         [:p
-          {:class "text-xl text-gray-600 mb-8",
-           :data-aos "zoom-y-out",
-           :data-aos-delay "150"}
-          "We build, ship, and provide high-quality I.T. solutions to clients all over the world"]
-         [:div
-          {:class "max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center",
-           :data-aos "zoom-y-out",
-           :data-aos-delay "300"}
-          [:div
-           [:a
-            {:class
-             "btn text-white bg-blue-600 hover:bg-blue-700 w-full mb-4 sm:w-auto sm:mb-0",
-             :href "#0"} "Get in touch"]]
-          [:div
-           [:a
-            {:class
-             "btn text-white bg-gray-900 hover:bg-gray-800 w-full sm:w-auto sm:ml-4",
-             :href "#0"} "Meet the team"]]]]]
-       #_[:comment " Hero image "]
-       [:div {:x-data "{ modalExpanded: false }"}
+           "btn text-white bg-blue-600 hover:bg-blue-700 w-full mb-4 sm:w-auto sm:mb-0",
+           :href "#team"} "Get in touch"]]
+        [:div
+         [:a
+          {:class
+           "btn text-white bg-gray-900 hover:bg-gray-800 w-full sm:w-auto sm:ml-4",
+           :href "#0"} "Meet the team"]]]]]
+     #_[:comment " Hero image "]
+     #_[:div {:x-data "{ modalExpanded: false }"}
         [:div
          {:class "relative flex justify-center mb-8",
           :data-aos "zoom-y-out",
@@ -128,33 +113,33 @@
           [:span {:class "ml-3"} "Watch the full video (2 min)"]]]
         #_[:comment " Modal backdrop "]
         #_[:div
-         {:aria-hidden "true",
-          :class
-          "fixed inset-0 z-50 bg-white bg-opacity-75 transition-opacity blur",
-          :x-show "modalExpanded",
-          :x-transition:enter "transition ease-out duration-200",
-          :x-transition:enter-end "opacity-100",
-          :x-transition:enter-start "opacity-0",
-          :x-transition:leave "transition ease-out duration-100",
-          :x-transition:leave-end "opacity-0",
-          :x-transition:leave-start "opacity-100"}]
+           {:aria-hidden "true",
+            :class
+            "fixed inset-0 z-50 bg-white bg-opacity-75 transition-opacity blur",
+            :x-show "modalExpanded",
+            :x-transition:enter "transition ease-out duration-200",
+            :x-transition:enter-end "opacity-100",
+            :x-transition:enter-start "opacity-0",
+            :x-transition:leave "transition ease-out duration-100",
+            :x-transition:leave-end "opacity-0",
+            :x-transition:leave-start "opacity-100"}]
         #_[:comment " Modal dialog "]
         #_[:div#modal
-         {:aria-labelledby "modal-headline",
-          :aria-modal "true",
-          :class
-          "fixed inset-0 z-50 overflow-hidden flex items-center justify-center transform px-4 sm:px-6",
-          :role "dialog",
-          :x-show "modalExpanded",
-          :x-transition:enter "transition ease-out duration-200",
-          :x-transition:enter-end "opacity-100 scale-100",
-          :x-transition:enter-start "opacity-0 scale-95",
-          :x-transition:leave "transition ease-out duration-200",
-          :x-transition:leave-end "opacity-0 scale-95",
-          :x-transition:leave-start "opacity-100 scale-100"}
-         [:div {:class "bg-white overflow-auto max-w-6xl w-full max-h-full"}
-          [:div {:class "relative pb-9/16"}
-           [:iframe
-            {:class "absolute w-full h-full",
-             :src "https://www.youtube.com/embed/qz4F1uMzihY",
-             :title "Video"}]]]]]]]]]])
+           {:aria-labelledby "modal-headline",
+            :aria-modal "true",
+            :class
+            "fixed inset-0 z-50 overflow-hidden flex items-center justify-center transform px-4 sm:px-6",
+            :role "dialog",
+            :x-show "modalExpanded",
+            :x-transition:enter "transition ease-out duration-200",
+            :x-transition:enter-end "opacity-100 scale-100",
+            :x-transition:enter-start "opacity-0 scale-95",
+            :x-transition:leave "transition ease-out duration-200",
+            :x-transition:leave-end "opacity-0 scale-95",
+            :x-transition:leave-start "opacity-100 scale-100"}
+           [:div {:class "bg-white overflow-auto max-w-6xl w-full max-h-full"}
+            [:div {:class "relative pb-9/16"}
+             [:iframe
+              {:class "absolute w-full h-full",
+               :src "https://www.youtube.com/embed/qz4F1uMzihY",
+               :title "Video"}]]]]]]]])
