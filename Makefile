@@ -20,9 +20,11 @@ watch: build
 	done
 
 stage: build
+	npm run release
 	rsync -a _site/ ark:/srv/ox/gaiwan.co
 
 deploy: build
+	npm run release
 	cd _site && git add --all && git commit -m "Publishing to gh-pages" && cd ..
 	git push origin gh-pages
 
