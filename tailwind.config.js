@@ -5,6 +5,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        nextjournal: '#369cb6',
+        eleven: '#fcbf31',
         gray: {
           100: '#FBFBFB',
           200: '#EAEAEA',
