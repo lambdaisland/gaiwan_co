@@ -47,7 +47,7 @@
                    [:p "Since then he's launched multiple online products, co-founded his own e-grocery vegan startup, and consulted on various technologies and projects."]
                    [:p "He loves video games, dabbles in moral philosophy, and is trying to go vegan."])}
    {:title "Laurence Chen - Taipei"
-    :subtitle "@laurencechen"
+    :subtitle "@humorless"
     :image "https://avatars.githubusercontent.com/u/3061798?v=4"
     :description '([:p "Laurence is an experienced developer with a knack for
     understanding the needs of the customer, and delivering pragmatic solutions.
