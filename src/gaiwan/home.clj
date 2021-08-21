@@ -90,7 +90,7 @@
     (cta/section {:title "Ready to get started?"
                   :subtitle "Let's grab a cup of e-tea and figure out how to relieve you of your business stress!"
                   :link "/contact/"
-                  :button-text "Contact me!"})]
+                  :button-text "Contact us!"})]
    #_(features-home/features-home)
    #_(features-world/features-world)])
 

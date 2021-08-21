@@ -19,6 +19,9 @@ watch: build
 		inotifywait -r -e modify src/gaiwan resources; \
 	done
 
+dev:
+	npm run dev
+
 stage: build
 	npm run release
 	rsync -a _site/ ark:/srv/ox/gaiwan.co
