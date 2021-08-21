@@ -36,8 +36,8 @@
      up any holes in the budget that may arise."]]})
 
 (defn card [{:keys [title description svg image]}]
-  [:div {:class "mx-auto bg-white border rounded-lg shadow-xl h-full"}
-   [:div {:class "flex flex-col items-start p-4 rounded-lg lg:flex-row h-full"}
+  [:div {:class "mx-auto bg-white border rounded-lg shadow-xl"}
+   [:div {:class "flex flex-col items-start p-4 rounded-lg lg:flex-row"}
     [:div {:class "flex flex-col w-full text-blueGray-500 lg:ml-4"}
      [:h2
       {:class
@@ -47,7 +47,7 @@
       description]]
     [:div
      {:class
-      "flex items-center justify-center w-full lg:justify-start lg:w-1/2 h-full"}
+      "flex items-center justify-center w-full lg:justify-start lg:w-1/2"}
      (if svg
        svg
        [:img
