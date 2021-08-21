@@ -87,9 +87,9 @@
    (projects/section)
    (team/section data/team-members)
    [:div {:class "mt-12 lg:mt-32"}
-    (cta/section {:title "Ready to get started?"
+    (cta/section {:title "Get a free 20 minute consultation!"
                   :subtitle "Let's grab a cup of e-tea and figure out how to relieve you of your business stress!"
-                  :link "/contact/"
+                  :link "mailto:contact@gaiwan.co"
                   :button-text "Contact us!"})]
    #_(features-home/features-home)
    #_(features-world/features-world)])
