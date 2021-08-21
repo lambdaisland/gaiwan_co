@@ -2,7 +2,7 @@
 
 (defn section [{:keys [title subtitle link button-text]}]
   [:section
-   [:div {:class "max-w-6xl mx-auto px-4 sm:px-6"}
+   [:div {:class "max-w-7xl mx-auto px-4 sm:px-6"}
     [:div {:class "pb-12 md:pb-20"}
      [:div
       {:class "bg-gradient-to-br from-blue-600 to-green-400 rounded py-10 px-8 md:py-16 md:px-12 shadow-2xl",
