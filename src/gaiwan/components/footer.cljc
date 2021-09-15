@@ -10,10 +10,7 @@
       "grid sm:grid-cols-12 gap-8 py-8 md:py-12 border-t border-gray-200"}
      #_[:comment " 1st block "]
      [:div {:class "sm:col-span-12 lg:col-span-3"}
-      [:div {:class "mb-2"}
-       #_[:comment " Logo "]
-       [:a {:aria-label "Cruip", :class "inline-block", :href "index.html"}
-        logo/circle-medium]]
+      (logo/gaiwan-semibold "w-28")
       #_[:div {:class "text-sm text-gray-600"}
        [:a
         {:class

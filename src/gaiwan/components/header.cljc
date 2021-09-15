@@ -7,12 +7,9 @@
     "relative w-full z-30 bg-white blur shadow-lg transition duration-300 ease-in-out",
     :x-data "{ top: true }"}
    [:div {:class "max-w-6xl mx-auto px-5 sm:px-6"}
-    [:div {:class "flex items-center justify-between h-16 md:h-20"}
+    [:div {:class "flex items-center justify-between h-16 md:h-20 text-gray-800"}
      #_[:comment " Site branding "]
-     [:div {:class "flex-shrink-0 mr-4"}
-      #_[:comment " Logo "]
-      [:a {:aria-label "Cruip", :class "text-xl block secondary-font", :href "/"}
-       "GAIWAN"]]
+     (logo/gaiwan-semibold "w-28 stroke-current")
      #_[:comment " Desktop navigation "]
      [:nav {:class "hidden md:flex md:flex-grow"}
       [:ul {:class "flex flex-grow justify-end flex-wrap items-center"}
