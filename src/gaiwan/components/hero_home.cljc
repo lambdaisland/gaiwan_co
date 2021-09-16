@@ -16,17 +16,18 @@
         :data-aos "zoom-y-out"} "Clojure & ClojureScript "
        [:span
         {:class
-         "bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-green-400"}
+         "block bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-green-400"}
         "consultancy"]]
-      [:div {:class "max-w-3xl mx-auto"}
+      [:div {:class "max-w-xl mx-auto"}
        [:p
-        {:class "text-xl text-gray-600 mb-8",
+        {:class "text-xl text-gray-600 mt-8 mb-12",
          :data-aos "zoom-y-out",
          :data-aos-delay "150"}
-        "We partner with Startups & SME's to help reap new opportunities
-          without distracting you from your core business. We provide our
-          technical expertise in building MVPs, quick prototyping, building API
-          & 3rd party integrations."]
+        "We partner with startups and SMEs to provide technical
+          expertise in quick prototyping and building MVPs, APIs
+          and " [:span.whitespace-nowrap "3rd-party integrations"] ".
+          Reap new opportunities without distractions from your core
+          business."]
        [:div
         {:class "max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center",
          :data-aos "zoom-y-out",
