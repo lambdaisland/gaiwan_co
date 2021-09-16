@@ -84,6 +84,7 @@
   [:div
    (hero-home/hero-home)
    (clients/testimonial)
+   ;; (clients/logo-cloud)
    (projects/section)
    (team/section data/team-members)
    [:div {:class "mt-12 lg:mt-32"}

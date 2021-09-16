@@ -14,6 +14,35 @@
       "M-2.45,75.95 C129.61,193.43 379.04,-8.67 500.93,105.82 L500.00,150.33 L0.00,150.33 Z",
       :style "stroke: none;"}]]])
 
+(defn logo-cloud []
+  [:div {:class "bg-blue-100"}
+   [:div {:class "max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8"}
+    [:div {:class "grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5"}
+     [:div
+      {:class "col-span-1 flex justify-center md:col-span-2 lg:col-span-1"}
+      [:img
+       {:alt "MGE",
+        :class "h-12",
+        :src (utils/img "mge-logo.svg")}]]
+     [:div
+      {:class "col-span-1 flex justify-center md:col-span-2 lg:col-span-1"}
+      [:img
+       {:alt "PITCH",
+        :class "h-12",
+        :src (utils/img "pitch-logo.png")}]]
+     [:div
+      {:class "col-span-1 flex justify-center md:col-span-2 lg:col-span-1"}
+      [:img
+       {:alt "ITREV",
+        :class "h-12",
+        :src (utils/img "itrev-logo.png")}]]
+     [:div
+      {:class "col-span-1 flex justify-center md:col-span-3 lg:col-span-1"}
+      [:img
+       {:alt "DOES",
+        :class "h-12",
+        :src (utils/img "does-logo.png")}]]]]])
+
 (defn testimonial []
   [:div {:class ""}
    (wave)
