@@ -25,14 +25,14 @@
       [:div {:class "md:flex-shrink-0"}
        [:img
         {:alt "Tuple",
-         :class "h-12 pt-2",
+         :class "h-12 pt-2 mx-6",
          :src (utils/img "nextjournal-logo.svg")}]]
-      [:blockquote {:class "mt-6 md:flex-grow md:flex md:flex-col"}
-       [:div {:class "relative text-lg font-medium text-black md:flex-grow"}
+      [:blockquote {:class "mt-6 md:flex-grow md:flex md:flex-col mx-6"}
+       [:div {:class "relative text-lg text-black md:flex-grow"}
         [:svg
          {:aria-hidden "true",
           :class
-          "absolute top-0 left-0 transform -translate-x-3 -translate-y-2 h-8 w-8 text-nextjournal",
+          "absolute top-0 left-0 transform -translate-x-10 -translate-y-2 h-8 w-8 text-nextjournal",
           :fill "currentColor",
           :viewbox "0 0 32 32"}
          [:path
@@ -63,13 +63,13 @@
       [:div {:class "md:flex-shrink-0"}
        [:img
         {:alt "Workcation",
-         :class "h-12 pb-2",
+         :class "h-12 pb-2 mx-6",
          :src (utils/img "eleven-logo.svg")}]]
-      [:blockquote {:class "mt-6 md:flex-grow md:flex md:flex-col"}
-       [:div {:class "relative text-lg font-medium text-black md:flex-grow"}
+      [:blockquote {:class "mt-6 md:flex-grow md:flex md:flex-col mx-6"}
+       [:div {:class "relative text-lg text-black md:flex-grow"}
         [:svg
          {:class
-          "absolute top-0 left-0 transform -translate-x-3 -translate-y-2 h-8 w-8 text-eleven",
+          "absolute top-0 left-0 transform -translate-x-10 -translate-y-2 h-8 w-8 text-eleven",
           :fill "currentColor",
           :viewbox "0 0 32 32"}
          [:path
