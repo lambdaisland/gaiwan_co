@@ -39,12 +39,12 @@
           {:d
            "M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z"}]]
         [:p {:class "relative"}
-         "We have worked with the NextJournal team for a large part of their
-         journey, providing consulting to make sure their team could stay on
-         track. This has included tooling improvements, architectural feedback,
-         improvements to our testing approaches, and one-on-one coaching
-         sessions with our developers."]]
-       #_[:footer {:class "mt-8"}
+         "We have worked with the Gaiwan team for a large part of our
+         journey. This has included tooling improvements,
+         architectural feedback, improvements to our testing
+         approaches, and one-on-one coaching sessions with our
+         developers."]]
+       [:footer {:class "mt-8"}
           [:div {:class "flex items-start"}
            [:div
             {:class "flex-shrink-0 inline-flex rounded-full border-2 border-white"}
@@ -76,11 +76,12 @@
           {:d
            "M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z"}]]
         [:p {:class "relative"}
-         "Gaiwan was comissioned to create the Datomic database driver for
-         Metabase, and worked with Eleven to integrate Metabase into their system.
-         We helped their developer team focus on their core product while we did
-         the RND and integrations independently."]]
-       #_[:footer {:class "mt-8"}
+         "Gaiwan was comissioned to create the Datomic database driver
+         for Metabase, and worked with Eleven to integrate Metabase
+         into our system. They completely took the pain away from us
+         and let us focus on our core product."
+         ]]
+       [:footer {:class "mt-8"}
           [:div {:class "flex items-start"}
            [:div
             {:class "flex-shrink-0 inline-flex rounded-full border-2 border-white"}
