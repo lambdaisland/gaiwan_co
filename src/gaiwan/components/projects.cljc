@@ -37,7 +37,7 @@
 
 (defn card [{:keys [title description svg image]}]
   [:div {:class "mx-auto bg-white border rounded-lg shadow-xl"}
-   [:div {:class "flex flex-col items-start p-4 rounded-lg lg:flex-row"}
+   [:div {:class "flex flex-col items-center p-4 rounded-lg lg:flex-row"}
     [:div {:class "flex flex-col w-full text-blueGray-500 lg:ml-4"}
      [:h2
       {:class
@@ -65,5 +65,4 @@
       {:class
        "space-y-12 lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8 lg:gap-y-12 lg:space-y-0"}
       (card lioss-data)
-      (card heart-of-clojure-data)]
-     ]]])
+      (card heart-of-clojure-data)]]]])
