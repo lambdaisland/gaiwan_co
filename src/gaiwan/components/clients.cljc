@@ -73,7 +73,7 @@
          architectural feedback, improvements to our testing
          approaches, and one-on-one coaching sessions with our
          developers."]]
-       [:footer {:class "mt-8"}
+       #_[:footer {:class "mt-8"}
           [:div {:class "flex items-start"}
            [:div
             {:class "flex-shrink-0 inline-flex rounded-full border-2 border-white"}
@@ -110,7 +110,7 @@
          into our system. They completely took the pain away from us
          and let us focus on our core product."
          ]]
-       [:footer {:class "mt-8"}
+       #_[:footer {:class "mt-8"}
           [:div {:class "flex items-start"}
            [:div
             {:class "flex-shrink-0 inline-flex rounded-full border-2 border-white"}
