@@ -1,5 +1,13 @@
 (ns gaiwan.home
-  (:require [gaiwan.common :as common]))
+  (:require [gaiwan.data :as data]
+            [gaiwan.common :as common]
+            [gaiwan.components.hero-home :as hero-home]
+            [gaiwan.components.projects :as projects]
+            [gaiwan.components.clients :as clients]
+            [gaiwan.components.team :as team]
+            [gaiwan.components.cta :as cta]
+            [gaiwan.components.features-home :as features-home]
+            [gaiwan.components.features-world :as features-world]))
 
 (def section-hero
   [:section {:id "hero"}
@@ -73,12 +81,19 @@
      " community conference. We provide the organizational infrastructure to be able to pull off such an event, and manage a big chunk of the work that goes into organizing. We also provide a “parachute sponsorship”, patching up any holes in the budget that may arise."]]])
 
 (def body
-  [:body
-   [:main
-    section-hero
-    section-client-work
-    section-portfolio]
-   common/footer])
+  [:div
+   (hero-home/hero-home)
+   (clients/testimonial)
+   ;; (clients/logo-cloud)
+   (projects/section)
+   (team/section data/team-members)
+   [:div {:class "mt-12 lg:mt-32"}
+    (cta/section {:title "Get a free 20 minute consultation!"
+                  :subtitle "Let's grab a cup of e-tea and figure out how to relieve you of your business stress!"
+                  :link "mailto:contact@gaiwan.co"
+                  :button-text "Contact us!"})]
+   #_(features-home/features-home)
+   #_(features-world/features-world)])
 
 (defn home-page [content]
-  [:html (common/gen-head) body])
+  (common/base-layout body))

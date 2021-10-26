@@ -6,3 +6,6 @@
          clojure.string/lower-case
          clojure.string/trim)
    string))
+
+(defn img [path]
+  (str "/imgs/" path))
