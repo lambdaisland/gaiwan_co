@@ -5,6 +5,7 @@ repl:
 
 build-action:
 	clojure -X:build
+	npm run release
 	cp -r resources/* _site/
 	cp resources/.nojekyll _site/
 
