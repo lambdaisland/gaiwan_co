@@ -13,7 +13,7 @@
      #_[:comment " Desktop navigation "]
      [:nav {:class "hidden md:flex md:flex-grow"}
       [:ul {:class "flex flex-grow justify-end flex-wrap items-center"}
-       [:li
+       #_[:li
         [:a
          {:class
           "text-gray-800 font-bold hover:text-gray-900 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out",
