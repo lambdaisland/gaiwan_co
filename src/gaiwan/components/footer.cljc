@@ -27,22 +27,22 @@
         [:a
          {:class
           "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
-          :href "#0"} "Lambda Island"]]
+          :href "https://lambdaisland.com/"} "Lambda Island"]]
        [:li {:class "mb-2"}
         [:a
          {:class
           "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
-          :href "#0"} "Lambda Island OSS"]]
+          :href "https://github.com/lambdaisland/"} "Lambda Island OSS"]]
        [:li {:class "mb-2"}
         [:a
          {:class
           "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
-          :href "#0"} "Heart of Clojure"]]
+          :href "https://heartofclojure.eu/"} "Heart of Clojure"]]
        [:li {:class "mb-2"}
         [:a
          {:class
           "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
-          :href "#0"} "Clojureverse"]]]] #_[:comment " 3rd block "]
+          :href "https://clojureverse.org"} "Clojureverse"]]]] #_[:comment " 3rd block "]
      [:div {:class "sm:col-span-6 md:col-span-3 lg:col-span-2"}
       [:h6 {:class "text-gray-800 font-medium mb-2"} "Open source"]
       [:ul {:class "text-sm"}
@@ -50,22 +50,22 @@
         [:a
          {:class
           "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
-          :href "#0"} "Kaocha"]]
+          :href "https://github.com/lambdaisland/kaocha"} "Kaocha"]]
        [:li {:class "mb-2"}
         [:a
          {:class
           "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
-          :href "#0"} "Deep diff 2"]]
+          :href "https://github.com/lambdaisland/deep-diff2"} "Deep diff 2"]]
        [:li {:class "mb-2"}
         [:a
          {:class
           "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
-          :href "#0"} "regal"]]
+          :href "https://github.com/lambdaisland/regal"} "regal"]]
        [:li {:class "mb-2"}
         [:a
          {:class
           "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
-          :href "#0"} "uri"]]]]
+          :href "https://github.com/lambdaisland/uri"} "uri"]]]]
      #_[:comment " 4th block "]
      [:div {:class "sm:col-span-6 md:col-span-3 lg:col-span-2"}
       [:h6 {:class "text-gray-800 font-medium mb-2"} "Company"]
@@ -74,23 +74,28 @@
         [:a
          {:class
           "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
-          :href "#0"} "Home"]]
+          :href "/"} "Home"]]
        [:li {:class "mb-2"}
         [:a
          {:class
           "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
-          :href "#0"} "About us"]]
+          :href "/about/"} "About us"]]
        [:li {:class "mb-2"}
         [:a
          {:class
           "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
-          :href "#0"} "Company values"]]]]
+          :href "https://gaiwan.notion.site/Gaiwan-Strategic-Objective-d40123054382433fb75422b77cc4b25e"} "Company objectives"]]
+       [:li {:class "mb-2"}
+        [:a
+         {:class
+          "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
+          :href "https://gaiwan.notion.site/Gaiwan-operating-principles-3f74a7fd1ee2425eb918879fc55dbfb8"} "Company values"]]]]
      #_[:comment " 5th block "]
      [:div {:class "sm:col-span-6 md:col-span-3 lg:col-span-3"}
       [:h6 {:class "text-gray-800 font-medium mb-2"} "Subscribe"]
       [:p {:class "text-sm text-gray-600 mb-4"}
        "Get the latest news and articles to your inbox every month."]
-      [:form
+      [:form {:action "https://tinyletter.com/gaiwanteam" :method "post"}
        [:div {:class "flex flex-wrap mb-4"}
         [:div {:class "w-full"}
          [:label {:class "block text-sm sr-only", :for "newsletter"} "Email"]
@@ -98,6 +103,7 @@
           [:input#newsletter
            {:class "form-input w-full text-gray-800 px-3 py-2 pr-12 text-sm",
             :placeholder "Your email",
+            :name "email"
             :type "email"}]
           [:button
            {:aria-label "Subscribe",
