@@ -41,7 +41,7 @@
    {:class
     "relative mt-12 md:mt-0 md:w-64 md:ml-12 lg:ml-20 md:flex-shrink-0"}
    #_[:comment " Topics "]
-   [:div
+   #_[:div
     [:h4 {:class "text-lg font-bold leading-snug tracking-tight mb-4"}
      "Topics"]
     [:ul {:class "-my-2"}

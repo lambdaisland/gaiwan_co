@@ -35,11 +35,7 @@
 
 (def body
   [:body
-   (blog-list/section (get-posts))
-   [:main.post
-    common/navbar
-    [:h2 "Blog"]
-    post-list]])
+   (blog-list/section (get-posts))])
 
 (defn blog-page [content]
   (common/base-layout body))
