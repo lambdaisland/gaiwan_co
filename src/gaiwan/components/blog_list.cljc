@@ -10,10 +10,10 @@
       [:a {:class "hover:underline", :href (str "/blog/" slug "/")}
        title]]]
     [:div {:class "text-lg text-gray-600 mb-4"}
-     "In this post, you will learn how to deploy a blog using Simple custom asset source plugin that uses the webcam to insert a photo in the image field."]
+     ""]
     [:footer {:class "text-sm"}
      [:div {:class "flex items-center"}
-      [:div {:class "flex flex-shrink-0 mr-3"}
+      #_[:div {:class "flex flex-shrink-0 mr-3"}
        [:a {:class "relative", :href "#0"}
         [:span {:aria-hidden "true", :class "absolute inset-0 -m-px"}
          [:span {:class "absolute inset-0 -m-px bg-white rounded-full"}]]
@@ -24,7 +24,7 @@
           :src "/imgs/pattern.svg",
           :width "32"}]]]
       [:div [:span {:class "text-gray-600"} "By "]
-       [:a {:class "font-medium hover:underline", :href "#0"}
+       [:span {:class "text-gray-600 font-medium hover:underline2", :href ""}
         author]
        [:span {:class "text-gray-600"} " · July 20, 2020"]]]]]
    [:a {:class "block flex-shrink-0 ml-6", :href "blog-post.html"}
