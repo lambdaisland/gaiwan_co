@@ -1,6 +1,5 @@
 (ns gaiwan.home
   (:require [gaiwan.data :as data]
-            [gaiwan.common :as common]
             [gaiwan.components.hero-home :as hero-home]
             [gaiwan.components.projects :as projects]
             [gaiwan.components.clients :as clients]
@@ -94,6 +93,3 @@
                   :button-text "Contact us!"})]
    #_(features-home/features-home)
    #_(features-world/features-world)])
-
-(defn home-page [content]
-  (common/base-layout body))
