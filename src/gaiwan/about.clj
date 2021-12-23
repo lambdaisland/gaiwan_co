@@ -1,6 +1,5 @@
 (ns gaiwan.about
-  (:require [gaiwan.data :as data]
-            [gaiwan.common :as common]))
+  (:require [gaiwan.data :as data]))
 
 (def summary
   [:div.about-summary
@@ -35,7 +34,4 @@
 
 (def body
   [:div.about-container
-   common/navbar summary team work-with-us])
-
-(defn about-page [content]
-  (common/base-layout body))
+   summary team work-with-us])
