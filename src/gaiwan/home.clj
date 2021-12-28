@@ -31,7 +31,7 @@
    [:div.nextjournal
     [:article
      [:header
-      [:img {:alt "Nextjournal", :src "./imgs/nextjournal-logo.svg", :class "logo"}]]
+      [:img {:alt "Nextjournal", :src "/assets/imgs/nextjournal-logo.svg", :class "logo"}]]
      [:div {:class "client-description-wrapper"}
       [:p
        [:a {:href "https://nextjournal.com/"} "Nextjournal"] " is offering a Data Science product that aims to solve some of the issues faced by scientific publishing."]
@@ -39,7 +39,7 @@
    [:div.eleven
     [:article
      [:header
-      [:img {:src "./imgs/eleven-logo.svg", :alt "Eleven", :itemprop "logo", :class "logo"}]]
+      [:img {:src "/assets/imgs/eleven-logo.svg", :alt "Eleven", :itemprop "logo", :class "logo"}]]
      [:div {:class "client-description-wrapper"}
       [:p
        [:a {:href "http://runeleven.com/"} "Eleven"] " is on a mission to end suffering in the world of accounting. They are building an ambitious new accounting product that needs to lift accounting practices into the 21st century."]
@@ -49,7 +49,7 @@
    [:div {:class "mein-grundeinkommen"}
     [:article
      [:header
-      [:img {:alt "Mein Grundeinkommen", :src "./imgs/mge-logo.svg", :class "logo"}]]
+      [:img {:alt "Mein Grundeinkommen", :src "/assets/imgs/mge-logo.svg", :class "logo"}]]
      [:div
       [:p "The German non-profit "
        [:a {:lang "de", :href "https://www.mein-grundeinkommen.de/"} "Mein Grundeinkommen"] " strives for the introduction of basic income. The money they collect through fund-raising is used to provide people with basic income for a year through a lottery system."]

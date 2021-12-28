@@ -9,15 +9,16 @@
    [:div {:class "max-w-6xl mx-auto px-5 sm:px-6"}
     [:div {:class "flex items-center justify-between h-16 md:h-20 text-gray-800"}
      #_[:comment " Site branding "]
-     (logo/gaiwan-semibold "w-28 stroke-current")
+     [:a {:href "/"}
+      (logo/gaiwan-semibold "w-28 stroke-current")]
      #_[:comment " Desktop navigation "]
      [:nav {:class "hidden md:flex md:flex-grow"}
       [:ul {:class "flex flex-grow justify-end flex-wrap items-center"}
        #_[:li
-        [:a
-         {:class
-          "text-gray-800 font-bold hover:text-gray-900 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out",
-          :href "#"} "OUR WORK"]]
+          [:a
+           {:class
+            "text-gray-800 font-bold hover:text-gray-900 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out",
+            :href "#"} "OUR WORK"]]
        [:li
         [:a
          {:class
