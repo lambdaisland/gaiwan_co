@@ -22,12 +22,11 @@
 
         ;; HTTP / CSS (Server-side)
         lambdaisland/webstuff {:git/url "https://github.com/lambdaisland/webstuff"
-                               :sha     "3d08d43fea1ef3c9cfbe7ceee88b53aaf3aae3a7"}
+                               :sha     "5d5669e7f7829c65fdd00b19ef826565ce41b7ea"}
         lambdaisland/ornament {:git/url "https://github.com/lambdaisland/ornament"
                                :sha     "11c9954ec85e5efc886c4c9b7707db3246f9cfee"}
 
         ;; Data
-        hiccup/hiccup {:mvn/version "1.0.5"}
         markdown-clj/markdown-clj {:mvn/version "1.10.5"}
         org.clojure/data.json {:mvn/version "2.4.0"}
 

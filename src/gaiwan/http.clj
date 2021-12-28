@@ -11,7 +11,7 @@
 
 (defn default-handler []
   (ring/routes
-   (ring/create-resource-handler {:path "/"})
+   (ring/create-resource-handler {:path "/assets"})
    (ring/redirect-trailing-slash-handler {:method :strip})
    (ring/create-default-handler nil)))
 

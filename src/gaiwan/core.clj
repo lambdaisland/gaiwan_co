@@ -1,6 +1,5 @@
 (ns gaiwan.core
-  (:require [clojure.java.io :as io]
-            [hiccup.core :as hc]))
+  (:require [clojure.java.io :as io]))
 
 ;; (defn build-blog-posts []
 ;;   (doseq [post (get-posts)]

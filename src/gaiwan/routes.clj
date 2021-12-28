@@ -10,7 +10,8 @@
             [clojure.edn :as edn]
             [clojure.string :as str])
   (:import (java.time Instant)
-           (java.time.format DateTimeFormatter)))
+           (java.time.format DateTimeFormatter)
+           (java.text SimpleDateFormat)))
 
 (defn get-version [_]
   (let [commit (-> (sh/sh "git" "rev-parse" "HEAD") :out str/trim)]
@@ -31,14 +32,15 @@
 (defn get-blog [_]
   {:status 200
    :body {:posts @db/posts}
-   :view (fn [posts]
+   :view (fn [{:keys [posts]}]
            [layout/layout
             (og/social-tags {:image ""})
             [:div
              (blog-list/section posts)]])})
 
-(defn get-blog-item [{:keys [{:keys [slug] :as path-params}]}]
-  (let [post ()]
+(defn get-blog-item [request]
+  (let [{:keys [slug]} (:path-params request)
+        post (first @db/posts)]
     {:status 200
      :body {:slug slug
             :post post}
@@ -54,7 +56,7 @@
                   [:span (.format (java.text.SimpleDateFormat. "MMM dd, yyyy") (:date meta))]
                   " by "
                   [:span (:author meta)]]
-                 html]]))}))
+                 [:lambdaisland.hiccup/unsafe-html html]]]))}))
 
 (defn routes []
   [["/"
@@ -62,14 +64,14 @@
      :get {:handler get-home}}]
    ["/blog"
     {:name :blog
-     :get {:handler video-item}
+     :get {:handler get-blog}
      :freeze-data-fn (fn []
-                       (map #(assoc {} :id (:video.item/id %)) @db/videos))}]
+                       [])}]
    ["/blog/:slug"
     {:name :blog-item
-     :get {:handler video-item}
+     :get {:handler get-blog-item}
      :freeze-data-fn (fn []
-                       (map #(assoc {} :slug (get-in post [:meta :slug] "")) @db/posts))}]
+                       (map #(assoc {} :slug (get-in % [:meta :slug] "")) @db/posts))}]
    ["/version"
     {:name :version
      :get {:handler get-version}}]])

@@ -2,8 +2,7 @@
   (:require [gaiwan.utils :as utils]
             [clojure.java.io :as io]
             [clojure.string :as str]
-            [markdown.core :as m]
-            [hiccup.core :as hc])
+            [markdown.core :as m])
   (:import [java.io StringWriter]))
 
 (defn- get-files []

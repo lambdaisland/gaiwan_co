@@ -41,14 +41,14 @@
     [:head
      [:meta {:charset "UTF-8"}]
      [:meta {:content "width=device-width, initial-scale=1" :name "viewport"}]
-     [:link {:href "/css/main.css", :rel "stylesheet"}]
-     [:link {:href "/css/sakura-ink-embed.css", :rel "stylesheet"}]
-     [:link {:href "/css/style.css", :rel "stylesheet"}]
+     [:link {:href "/assets/css/main.css", :rel "stylesheet"}]
+     [:link {:href "/assets/css/sakura-ink-embed.css", :rel "stylesheet"}]
+     [:link {:href "/assets/css/style.css", :rel "stylesheet"}]
      [:link {:rel "icon" :href "/favicon.ico" :type "image/png"}]
      matamo-analytics-script
      [:link {:href "https://use.typekit.net/oxk2nmu.css", :rel "stylesheet"}]
      (if (io/resource "public/ui/main.css")
-       [:link {:rel "stylesheet" :href "/ui/main.css"}]
+       [:link {:rel "stylesheet" :href "/assets/ui/main.css"}]
        [:style {:type "text/css" :id "ornament"} (ornament/defined-styles {:preflight? true})])
      head]
     [:body
@@ -57,4 +57,4 @@
      [:main {:class "flex-grow"}
       body]
      (footer/footer)
-     [:script {:type "application/javascript" :src (str "/ui/" (get-script-name :main))}]]]))
+     [:script {:type "application/javascript" :src (str "/assets/ui/" (get-script-name :main))}]]]))
