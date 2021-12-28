@@ -1,6 +1,8 @@
 (ns gaiwan.layout
   (:require [clojure.java.io :as io]
             [clojure.data.json :as json]
+            [gaiwan.components.header :as header]
+            [gaiwan.components.footer :as footer]
             [lambdaisland.ornament :as ornament]))
 
 (defn get-script-name
