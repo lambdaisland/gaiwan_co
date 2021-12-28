@@ -49,7 +49,7 @@
                [layout/layout
                 (og/social-tags {:title "Post title"
                                  :description "Post desc"})
-                [:div.sakura
+                [:div {:class "post my-8 mx-auto px-2 container prose lg:prose-lg"}
                  [:h1 (:title meta)]
                  [:div.post-meta
                   "Posted on "

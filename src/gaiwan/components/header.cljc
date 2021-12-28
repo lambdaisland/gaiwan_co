@@ -4,7 +4,7 @@
 (defn top []
   [:header
    {:class
-    "relative w-full z-30 bg-white blur shadow-lg transition duration-300 ease-in-out",
+    "relative w-full z-30 bg-white shadow-lg transition duration-300 ease-in-out",
     :x-data "{ top: true }"}
    [:div {:class "max-w-6xl mx-auto px-5 sm:px-6"}
     [:div {:class "flex items-center justify-between h-16 md:h-20 text-gray-800"}
