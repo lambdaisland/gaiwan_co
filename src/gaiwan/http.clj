@@ -7,7 +7,7 @@
             [clojure.java.io :as io]
             [integrant.core :as ig]))
 
-(bootstrap/set-config! (io/resource "config.edn"))
+(bootstrap/set-config! "config.edn")
 
 (defn default-handler []
   (ring/routes
