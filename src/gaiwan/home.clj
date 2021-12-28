@@ -79,7 +79,7 @@
      [:a {:href "https://heartofclojure.eu/"} "Heart of Clojure"]
      " community conference. We provide the organizational infrastructure to be able to pull off such an event, and manage a big chunk of the work that goes into organizing. We also provide a “parachute sponsorship”, patching up any holes in the budget that may arise."]]])
 
-(def body
+(defn body []
   [:div
    (hero-home/hero-home)
    (clients/testimonial)

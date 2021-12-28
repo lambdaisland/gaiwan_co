@@ -26,7 +26,7 @@
    :view (fn [data]
            [layout/layout
             (og/social-tags {:image ""})
-            (home/body)])})
+            [home/body]])})
 
 (defn get-blog [_]
   {:status 200
