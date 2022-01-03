@@ -6,7 +6,7 @@
    [:div {:class "flex flex-col lg:flex-row"}
     [:div {:class "w-full lg:w-1/2"}
      [:div
-      {:class "mx-4 mt-12 text-center about-image"}
+      {:class "mx-4 mt-12 text-center p-4"}
       [:img {:alt "" :class "rounded" :src image-url}]]]
     [:div {:class "w-full lg:w-1/2"}
      [:div
@@ -49,4 +49,13 @@
                  :cta-text "Read in-depth of how we built it"
                  :cta-url "https://itrevolution.com"
                  :image-url (utils/img "work/itrev-video-editor.png")}]
+       [project {:client "Pitch"
+                 :title "Integration with a popular chatting service"
+                 :description
+                 "We helped Pitch in building a complex ClojureScript test
+                 runner suited to their codebase. We also helped in integrating
+                 the Pitch app into an extremely popular chatting service."
+                 :cta-text nil
+                 :cta-url nil
+                 :image-url (utils/img "work/pitch.png")}]
        ]]]]])
