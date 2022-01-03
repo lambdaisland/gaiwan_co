@@ -76,9 +76,7 @@
      :get {:handler get-home}}]
    ["/blog"
     {:name :blog
-     :get {:handler get-blog}
-     :freeze-data-fn (fn []
-                       [])}]
+     :get {:handler get-blog}}]
    ["/blog/:slug"
     {:name :blog-item
      :get {:handler get-blog-item}
