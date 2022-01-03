@@ -35,4 +35,4 @@
                                     :sha     "7564dcc81285327e1119a1e81d24e95387b4c683"}}
  :aliases
  {:build
-  {:exec-fn user/build}}}
+  {:exec-fn gaiwan.core/build}}}

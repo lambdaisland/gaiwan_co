@@ -9,7 +9,7 @@
   "Read the manifest.edn file, and get the current main.HASHCODE.js filename
    (get-script-name :main) => main.HASHCODE.js "
   [module-id-k]
-  (some->> (io/resource "public/ui/manifest.edn")
+  (some->> (io/resource "assets/ui/manifest.edn")
            slurp
            read-string
            (filter #(= module-id-k (:module-id %)))
@@ -47,7 +47,7 @@
      [:link {:rel "icon" :href "/favicon.ico" :type "image/png"}]
      matamo-analytics-script
      [:link {:href "https://use.typekit.net/oxk2nmu.css", :rel "stylesheet"}]
-     (if (io/resource "public/ui/main.css")
+     (if (io/resource "assets/ui/main.css")
        [:link {:rel "stylesheet" :href "/assets/ui/main.css"}]
        [:style {:type "text/css" :id "ornament"} (ornament/defined-styles {:preflight? true})])
      head]
