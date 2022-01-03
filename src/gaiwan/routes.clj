@@ -65,7 +65,7 @@
    :view (fn [_]
            [layout/layout
             (og/social-tags {:title "Our Work - Gaiwan Team"
-                             :description "Projects built by the Gaiwain team.
+                             :description "Projects built by the Gaiwan team.
                              We use clojure and clojurescript to solve critical
                              problems for our clients."})
             [work/body]])})
