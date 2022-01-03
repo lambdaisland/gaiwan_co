@@ -51,6 +51,17 @@
                  :cta-text "Read in-depth of how we built it"
                  :cta-url "https://itrevolution.com"
                  :image-url (utils/img "work/itrev-video-editor.png")}]
+       [project {:client "re:Clojure Conf"
+                 :title "Built & Redesigned the reclojure.org website"
+                 :description
+                 "Gaiwan loves Clojure, which is why we love supporting
+                 community events like re:Clojure. You may have seen the amazing
+                 event website? That was us. A lightweight design, leveraging
+                 web standards for maximum accessibility, and a responsive
+                 experience across devices, all in an appealing package."
+                 :cta-text nil
+                 :cta-url nil
+                 :image-url (utils/img "work/reclojure.png")}]
        [project {:client "Pitch"
                  :title "Integration with a popular chatting service"
                  :description
