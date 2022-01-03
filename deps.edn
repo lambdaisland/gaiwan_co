@@ -1,6 +1,6 @@
 {:paths ["src" "resources"]
  :deps {org.clojure/clojure        {:mvn/version "1.10.3"}
-        lambdaisland/data-printers {:mvn/version "0.0.22"}
+        lambdaisland/data-printers {:mvn/version "0.7.47"}
 
         ;; App setup & config
         integrant/integrant {:mvn/version "0.8.0"}
@@ -8,26 +8,26 @@
         aero/aero           {:mvn/version "1.1.6"}
 
         ;; Logging
-        com.lambdaisland/glogi         {:mvn/version "1.0.128"}
-        io.pedestal/pedestal.log       {:mvn/version "0.5.8"}
-        ch.qos.logback/logback-classic {:mvn/version "1.2.3"}
+        com.lambdaisland/glogi         {:mvn/version "1.1.144"}
+        io.pedestal/pedestal.log       {:mvn/version "0.5.9"}
+        ch.qos.logback/logback-classic {:mvn/version "1.2.10"}
 
         ;; HTTP
-        ring/ring {:mvn/version "1.8.2"}
-        ring/ring-defaults          {:mvn/version "0.3.2"}
-        metosin/reitit-ring         {:mvn/version "0.5.12"}
-        metosin/reitit-http         {:mvn/version "0.5.12"}
-        metosin/reitit-interceptors {:mvn/version "0.5.12"}
-        ring/ring-jetty-adapter     {:mvn/version "1.9.0"}
+        ring/ring {:mvn/version "1.9.4"}
+        ring/ring-defaults          {:mvn/version "0.3.3"}
+        metosin/reitit-ring         {:mvn/version "0.5.15"}
+        metosin/reitit-http         {:mvn/version "0.5.15"}
+        metosin/reitit-interceptors {:mvn/version "0.5.15"}
+        ring/ring-jetty-adapter     {:mvn/version "1.9.4"}
 
         ;; HTTP / CSS (Server-side)
         lambdaisland/webstuff {:git/url "https://github.com/lambdaisland/webstuff"
                                :sha     "5d5669e7f7829c65fdd00b19ef826565ce41b7ea"}
         lambdaisland/ornament {:git/url "https://github.com/lambdaisland/ornament"
-                               :sha     "11c9954ec85e5efc886c4c9b7707db3246f9cfee"}
+                               :sha     "3ba6767e00117c2f5a0a931586c41781ea2490e6"}
 
         ;; Data
-        markdown-clj/markdown-clj {:mvn/version "1.10.5"}
+        markdown-clj/markdown-clj {:mvn/version "1.10.8"}
         org.clojure/data.json {:mvn/version "2.4.0"}
 
         ;; Static site generation
