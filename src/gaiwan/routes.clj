@@ -4,6 +4,7 @@
             [gaiwan.open-graph :as og]
             [gaiwan.home :as home]
             [gaiwan.about :as about]
+            [gaiwan.work :as work]
             [gaiwan.components.blog-list :as blog-list]
             [clojure.java.shell :as sh]
             [clojure.java.io :as io]
@@ -58,6 +59,17 @@
                   [:span (:author meta)]]
                  [:lambdaisland.hiccup/unsafe-html html]]]))}))
 
+(defn get-work [_]
+  {:status 200
+   :body {}
+   :view (fn [_]
+           [layout/layout
+            (og/social-tags {:title "Our Work - Gaiwan Team"
+                             :descpription "Projects built by the Gaiwain team.
+                             We use clojure and clojurescript to solve critical
+                             problems for our clients."})
+            [work/body]])})
+
 (defn routes []
   [["/"
     {:name :home
@@ -72,6 +84,9 @@
      :get {:handler get-blog-item}
      :freeze-data-fn (fn []
                        (map #(assoc {} :slug (get-in % [:meta :slug] "")) @db/posts))}]
+   ["/work"
+    {:name :work
+     :get {:handler get-work}}]
    ["/version"
     {:name :version
      :get {:handler get-version}}]])

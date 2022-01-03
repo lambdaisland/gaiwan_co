@@ -23,7 +23,12 @@
         [:a
          {:class
           "text-gray-800 font-bold hover:text-gray-900 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out",
-          :href "/blog/"} "BLOG"]]
+          :href "/blog/"} "Blog"]]
+       [:li
+        [:a
+         {:class
+          "text-gray-800 font-bold hover:text-gray-900 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out",
+          :href "/work/"} "Work"]]
        [:li
         [:a
          {:class
