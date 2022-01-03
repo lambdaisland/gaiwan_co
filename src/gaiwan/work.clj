@@ -71,4 +71,14 @@
                  :cta-text nil
                  :cta-url nil
                  :image-url (utils/img "work/pitch.png")}]
+       [project {:client "Eleven"
+                 :title "Metabase integration and financial queries"
+                 :description
+                 "We created the metabase driver for Datomic for Eleven and also
+                 open-sourced it. We then helped create and integrate their
+                 complicated financial reporting with metabase resulting in some
+                 pretty sweet graphs for their clients!."
+                 :cta-text nil
+                 :cta-url nil
+                 :image-url (utils/img "work/pitch.png")}]
        ]]]]])
