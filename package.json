@@ -1,8 +1,8 @@
 {
   "scripts": {
-    "postcss:build": "cross-env TAILWIND_MODE=build postcss src/css/style.css -o ./resources/public/ui/main.css --verbose",
-    "postcss:watch": "cross-env TAILWIND_MODE=watch postcss src/css/style.css -o ./resources/public/ui/main.css --verbose -w",
-    "postcss:release": "cross-env NODE_ENV=production postcss src/css/style.css -o ./resources/public/ui/main.css --verbose",
+    "postcss:build": "cross-env TAILWIND_MODE=build postcss src/css/style.css -o ./resources/assets/ui/main.css --verbose",
+    "postcss:watch": "cross-env TAILWIND_MODE=watch postcss src/css/style.css -o ./resources/assets/ui/main.css --verbose -w",
+    "postcss:release": "cross-env NODE_ENV=production postcss src/css/style.css -o ./resources/assets/ui/main.css --verbose",
     "dev": "run-p -l *:watch",
     "release": "run-s *:release"
   },
