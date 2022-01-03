@@ -12,8 +12,10 @@
      [:div
       {:class "mt-12 about-content wow fadeInLeftBig"}
       [:p
-       [:span {:class "bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-green-400
- text-green-400 font-bold text-upper"} client]
+       [:span
+        {:class "bg-clip-text text-transparent bg-gradient-to-r from-blue-500
+                to-green-400 font-bold text-upper"}
+        client]
        [:h3 {:class "text-xl font-bold mb-2"} title]]
       [:p {:class "mb-8"}
        description]
