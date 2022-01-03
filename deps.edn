@@ -1,7 +1,33 @@
 {:paths ["src" "resources"]
- :deps {hiccup/hiccup {:mvn/version "1.0.5"}
-        ring/ring {:mvn/version "1.8.2"}
-        markdown-clj/markdown-clj {:mvn/version "1.10.5"}}
+ :deps {org.clojure/clojure        {:mvn/version "1.10.3"}
+        lambdaisland/data-printers {:mvn/version "0.7.47"}
+
+        ;; Logging
+        com.lambdaisland/glogi         {:mvn/version "1.1.144"}
+        io.pedestal/pedestal.log       {:mvn/version "0.5.9"}
+        ch.qos.logback/logback-classic {:mvn/version "1.2.10"}
+
+        ;; HTTP
+        ring/ring {:mvn/version "1.9.4"}
+        ring/ring-defaults          {:mvn/version "0.3.3"}
+        metosin/reitit-ring         {:mvn/version "0.5.15"}
+        metosin/reitit-http         {:mvn/version "0.5.15"}
+        metosin/reitit-interceptors {:mvn/version "0.5.15"}
+        ring/ring-jetty-adapter     {:mvn/version "1.9.4"}
+
+        ;; HTTP / CSS (Server-side)
+        lambdaisland/webstuff {:git/url "https://github.com/lambdaisland/webstuff"
+                               :sha     "5d5669e7f7829c65fdd00b19ef826565ce41b7ea"}
+        lambdaisland/ornament {:git/url "https://github.com/lambdaisland/ornament"
+                               :sha     "3ba6767e00117c2f5a0a931586c41781ea2490e6"}
+
+        ;; Data
+        markdown-clj/markdown-clj {:mvn/version "1.10.8"}
+        org.clojure/data.json {:mvn/version "2.4.0"}
+
+        ;; Static site generation
+        lambdaisland/reitit-jaatya {:git/url "https://github.com/lambdaisland/reitit-jaatya"
+                                    :sha     "7564dcc81285327e1119a1e81d24e95387b4c683"}}
  :aliases
  {:build
-  {:exec-fn user/build}}}
+  {:exec-fn gaiwan.core/build}}}

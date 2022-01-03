@@ -1,7 +1,5 @@
 module.exports = {
-  purge: [
-    '_site/**/*.html',
-  ],
+  content: ["./src/**/*.{cljs,clj,cljc,css,js}"],
   theme: {
     extend: {
       colors: {
@@ -158,6 +156,7 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/typography'),
     // require('@tailwindcss/custom-forms'),
   ],
 };

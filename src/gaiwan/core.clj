@@ -1,25 +1,18 @@
 (ns gaiwan.core
-  (:require [clojure.java.io :as io]
-            [hiccup.core :as hc]
-            [gaiwan.home :refer [home-page]]
-            [gaiwan.about :refer [about-page]]
-            [gaiwan.blog :refer [blog-page get-posts blog-post]]))
+  (:require [gaiwan.http :as http]
+            [lambdaisland.ornament :as ornament]
+            [lambdaisland.reitit-jaatya.freeze :as freeze]))
 
-(defn build-blog-posts []
-  (doseq [post (get-posts)]
-    (let [path (str "_site/blog/" (get-in post [:meta :slug]) "/index.html")]
-      (io/make-parents path)
-      (spit path (hc/html (blog-post post))))))
-
-(defn build []
-  (println "Building...")
-  (io/make-parents "_site/about/index.html")
-  (io/make-parents "_site/blog/index.html")
-  (spit "_site/index.html" (hc/html (home-page "")))
-  (spit "_site/about/index.html" (hc/html (about-page "")))
-  (spit "_site/blog/index.html" (hc/html (blog-page "")))
-  (build-blog-posts)
-  (println "Build complete"))
+(defn build [& args]
+  #_(let [css-file "resources/public/ui/main.css"]
+      (io/make-parents css-file)
+      (spit css-file (ornament/defined-styles {:preflight? true})))
+  (freeze/iced (http/build-handler) {:sitemap-path "/sitemap.xml"
+                                     :sitemap-trailing-slash true
+                                     :base-url "https://gaiwan.co"}))
 
 (comment
+  ;; this will create a `_site` folder in `does-library`
+  ;; to browse it locally run
+  ;; cd _site && python3 -m http.server
   (build))

@@ -1,0 +1,3 @@
+{:gaiwan.http/server
+ {:port 9000
+  :rebuild-on-request? true}}
