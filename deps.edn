@@ -2,11 +2,6 @@
  :deps {org.clojure/clojure        {:mvn/version "1.10.3"}
         lambdaisland/data-printers {:mvn/version "0.7.47"}
 
-        ;; App setup & config
-        integrant/integrant {:mvn/version "0.8.0"}
-        integrant/repl      {:mvn/version "0.3.2"}
-        aero/aero           {:mvn/version "1.1.6"}
-
         ;; Logging
         com.lambdaisland/glogi         {:mvn/version "1.1.144"}
         io.pedestal/pedestal.log       {:mvn/version "0.5.9"}
