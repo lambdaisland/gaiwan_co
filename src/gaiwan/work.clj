@@ -80,5 +80,5 @@
                  pretty sweet graphs for their clients!."
                  :cta-text nil
                  :cta-url nil
-                 :image-url (utils/img "work/pitch.png")}]
+                 :image-url (utils/img "work/eleven.png")}]
        ]]]]])
