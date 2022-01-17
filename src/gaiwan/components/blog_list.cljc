@@ -14,19 +14,22 @@
     [:footer {:class "text-sm"}
      [:div {:class "flex items-center"}
       #_[:div {:class "flex flex-shrink-0 mr-3"}
-       [:a {:class "relative", :href "#0"}
-        [:span {:aria-hidden "true", :class "absolute inset-0 -m-px"}
-         [:span {:class "absolute inset-0 -m-px bg-white rounded-full"}]]
-        [:img
-         {:alt author
-          :class "relative rounded-full",
-          :height "32",
-          :src "/imgs/pattern.svg",
-          :width "32"}]]]
+         [:a {:class "relative", :href "#0"}
+          [:span {:aria-hidden "true", :class "absolute inset-0 -m-px"}
+           [:span {:class "absolute inset-0 -m-px bg-white rounded-full"}]]
+          [:img
+           {:alt author
+            :class "relative rounded-full",
+            :height "32",
+            :src "/imgs/pattern.svg",
+            :width "32"}]]]
       [:div [:span {:class "text-gray-600"} "By "]
        [:span {:class "text-gray-600 font-medium hover:underline2", :href ""}
         author]
-       [:span {:class "text-gray-600"} " · July 20, 2020"]]]]]
+       " "
+       [:span {:class "text-gray-600"} (.format (java.text.SimpleDateFormat. "MMM dd, yyyy")
+                                                date)]
+       ]]]]
    [:a {:class "block flex-shrink-0 ml-6", :href "blog-post.html"}
     [:span {:class "sr-only"} "Read more"]
     [:svg

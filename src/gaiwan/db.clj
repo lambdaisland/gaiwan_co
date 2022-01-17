@@ -20,6 +20,10 @@
     {:meta meta :html html}))
 
 (defn- get-posts []
-  (mapv meta-markdown (get-files)))
+  (into {}
+        (comp
+         (map meta-markdown)
+         (map (juxt #(get-in % [:meta :slug]) identity)))
+        (get-files)))
 
 (def posts (delay (get-posts)))

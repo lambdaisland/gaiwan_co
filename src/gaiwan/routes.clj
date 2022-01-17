@@ -32,7 +32,7 @@
 
 (defn get-blog [_]
   {:status 200
-   :body {:posts @db/posts}
+   :body {:posts (vals @db/posts)}
    :view (fn [{:keys [posts]}]
            [layout/layout
             (og/social-tags {:image ""})
@@ -41,15 +41,15 @@
 
 (defn get-blog-item [request]
   (let [{:keys [slug]} (:path-params request)
-        post (first @db/posts)]
+        post (get @db/posts slug)]
     {:status 200
      :body {:slug slug
             :post post}
      :view (fn [{:keys [slug post] :as data}]
              (let [{:keys [meta html]} post]
                [layout/layout
-                (og/social-tags {:title "Post title"
-                                 :description "Post desc"})
+                (og/social-tags {:title (:title meta)
+                                 :description ""})
                 [:div {:class "post my-8 mx-auto px-2 container prose lg:prose-lg"}
                  [:h1 (:title meta)]
                  [:div.post-meta
@@ -81,7 +81,7 @@
     {:name :blog-item
      :get {:handler get-blog-item}
      :freeze-data-fn (fn []
-                       (map #(assoc {} :slug (get-in % [:meta :slug] "")) @db/posts))}]
+                       (map #(assoc {} :slug (get-in % [:meta :slug] "")) (vals @db/posts)))}]
    ["/work"
     {:name :work
      :get {:handler get-work}}]
