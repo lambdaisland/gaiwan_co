@@ -26,7 +26,8 @@
         org.clojure/data.json {:mvn/version "2.4.0"}
 
         ;; Static site generation
-        lambdaisland/reitit-jaatya {:git/url "https://github.com/lambdaisland/reitit-jaatya"
+        com.lambdaisland/reitit-jaatya {:mvn/version "0.0.24"
+                                    #_#_#_#_:git/url "https://github.com/lambdaisland/reitit-jaatya"
                                     :sha     "7564dcc81285327e1119a1e81d24e95387b4c683"}}
  :aliases
  {:build
