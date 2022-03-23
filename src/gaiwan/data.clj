@@ -1,4 +1,5 @@
-(ns gaiwan.data)
+(ns gaiwan.data
+  (:require [gaiwan.utils :as utils]))
 
 (def team-members
   [{:title "Arne Brasseur (Berlin)"
@@ -52,7 +53,16 @@
     :description '([:p "Laurence is an experienced developer with a knack for
     understanding the needs of the customer, and delivering pragmatic solutions.
     He has created bespoke systems for Taiwan-based SMBs, and offers consulting
-    to the LINE corporation."])}])
+    to the LINE corporation."])}
+   {:title "Joshua Ballanco"
+    :subtitle "@jballanc"
+    :image (utils/img "avatars/jballanc.jpg")
+    :description
+    '([:p "Josh has built operating systems with Apple , local
+       news sites with AOL , and served as the Chief Scientist for a
+       world-wide distributed team of programming and design consultants."]
+      [:p "He even managed to complete his Ph.D. in Computational Evolutionary Dynamics along the way."]
+      [:p "He currently works remotely from his home in Miami where he lives with his beautiful wife and two young kids."])}])
 
 (def faqs [{:question ""}])
 
