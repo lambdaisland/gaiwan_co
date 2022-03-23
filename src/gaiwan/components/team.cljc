@@ -18,7 +18,7 @@
        [:h3 title]
        [:p {:class "text-indigo-600"} subtitle]]
       [:div {:class "text-sm"}
-       (into 
+       (into
         [:div {:class "text-gray-700 flex flex-col gap-y-1"}]
         description)]]]]])
 
@@ -31,5 +31,5 @@
      [:ul
       {:class
        "space-y-12 lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8 lg:gap-y-12 lg:space-y-0"}
-      (map item members)
+      (map item (into [(first members)] (shuffle (rest members))))
       ]]]])
