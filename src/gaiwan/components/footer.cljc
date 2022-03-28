@@ -12,14 +12,14 @@
      [:div {:class "sm:col-span-12 lg:col-span-3"}
       (logo/gaiwan-semibold "w-28")
       #_[:div {:class "text-sm text-gray-600"}
-       [:a
-        {:class
-         "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
-         :href "#0"} "Terms"] " · "
-       [:a
-        {:class
-         "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
-         :href "#0"} "Privacy Policy"]]] #_[:comment " 2nd block "]
+         [:a
+          {:class
+           "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
+           :href "#0"} "Terms"] " · "
+         [:a
+          {:class
+           "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
+           :href "#0"} "Privacy Policy"]]] #_[:comment " 2nd block "]
      [:div {:class "sm:col-span-6 md:col-span-3 lg:col-span-2"}
       [:h6 {:class "text-gray-800 font-medium mb-2"} "Our projects"]
       [:ul {:class "text-sm"}
@@ -70,26 +70,15 @@
      [:div {:class "sm:col-span-6 md:col-span-3 lg:col-span-2"}
       [:h6 {:class "text-gray-800 font-medium mb-2"} "Company"]
       [:ul {:class "text-sm"}
-       [:li {:class "mb-2"}
-        [:a
-         {:class
-          "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
-          :href "/"} "Home"]]
-       [:li {:class "mb-2"}
-        [:a
-         {:class
-          "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
-          :href "/about/"} "About us"]]
-       [:li {:class "mb-2"}
-        [:a
-         {:class
-          "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
-          :href "https://gaiwan.notion.site/Gaiwan-Strategic-Objective-d40123054382433fb75422b77cc4b25e"} "Company objectives"]]
-       [:li {:class "mb-2"}
-        [:a
-         {:class
-          "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out",
-          :href "https://gaiwan.notion.site/Gaiwan-operating-principles-3f74a7fd1ee2425eb918879fc55dbfb8"} "Company values"]]]]
+       (for [[link caption] [["/" "Home"]
+                             ["/About/" "About us"]
+                             ["https://gaiwan.notion.site/Gaiwan-Strategic-Objective-d40123054382433fb75422b77cc4b25e" "Company objectives"]
+                             ["https://gaiwan.notion.site/Gaiwan-operating-principles-3f74a7fd1ee2425eb918879fc55dbfb8" "Company values"]
+                             ["https://gaiwan.co/assets/imgs/Gaiwan-logo-transparent-bg.png" "Logo transparent"]
+                             ["https://gaiwan.co/assets/imgs/Gaiwan-logo-white-bg-with-border.png" "Logo white"]]]
+         [:li {:class "mb-2"}
+          [:a {:class "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out" :href link}
+           caption]])]]
      #_[:comment " 5th block "]
      [:div {:class "sm:col-span-6 md:col-span-3 lg:col-span-3"}
       [:h6 {:class "text-gray-800 font-medium mb-2"} "Subscribe"]
@@ -155,18 +144,18 @@
           {:d
            "M16 8.2c-4.4 0-8 3.6-8 8 0 3.5 2.3 6.5 5.5 7.6.4.1.5-.2.5-.4V22c-2.2.5-2.7-1-2.7-1-.4-.9-.9-1.2-.9-1.2-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.3 1.9.9 2.3.7.1-.5.3-.9.5-1.1-1.8-.2-3.6-.9-3.6-4 0-.9.3-1.6.8-2.1-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8.6-.2 1.3-.3 2-.3s1.4.1 2 .3c1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.1 0 3.1-1.9 3.7-3.7 3.9.3.4.6.9.6 1.6v2.2c0 .2.1.5.6.4 3.2-1.1 5.5-4.1 5.5-7.6-.1-4.4-3.7-8-8.1-8z"}]]]]
       #_[:li {:class "ml-4"}
-       [:a
-        {:aria-label "Facebook",
-         :class
-         "flex justify-center items-center text-gray-600 hover:text-gray-900 bg-white hover:bg-white-100 rounded-full shadow transition duration-150 ease-in-out",
-         :href "#0"}
-        [:svg
-         {:class "w-8 h-8 fill-current",
-          :viewbox "0 0 32 32",
-          :xmlns "http://www.w3.org/2000/svg"}
-         [:path
-          {:d
-           "M14.023 24L14 17h-3v-3h3v-2c0-2.7 1.672-4 4.08-4 1.153 0 2.144.086 2.433.124v2.821h-1.67c-1.31 0-1.563.623-1.563 1.536V14H21l-1 3h-2.72v7h-3.257z"}]]]]]
+         [:a
+          {:aria-label "Facebook",
+           :class
+           "flex justify-center items-center text-gray-600 hover:text-gray-900 bg-white hover:bg-white-100 rounded-full shadow transition duration-150 ease-in-out",
+           :href "#0"}
+          [:svg
+           {:class "w-8 h-8 fill-current",
+            :viewbox "0 0 32 32",
+            :xmlns "http://www.w3.org/2000/svg"}
+           [:path
+            {:d
+             "M14.023 24L14 17h-3v-3h3v-2c0-2.7 1.672-4 4.08-4 1.153 0 2.144.086 2.433.124v2.821h-1.67c-1.31 0-1.563.623-1.563 1.536V14H21l-1 3h-2.72v7h-3.257z"}]]]]]
      #_[:comment " Copyrights note "]
      [:div {:class "text-sm text-gray-600 mr-4"}
-      "© Gaiwan GmbH Kinzigstr. 26 - 10247 - Berlin, Germany | HRB 204912 | VAT ID: DE323279720"]]]])
+      "© Gaiwan GmbH, Akazienstraße 3A - 10823 Berlin - Germany | HRB 204912 | VAT ID: DE323279720"]]]])
