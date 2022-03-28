@@ -12,11 +12,15 @@ We're using simple, standard, clojure tools and libraries to build this. Nothing
 
 ##  Architechture
 
-All the source files are located in `src/gaiwan` directory and static resources in the `resources` directory.
+All the source files are located in `src/gaiwan` directory and static resources
+in the `resources` directory.
 
-The site gets generated inside a `_site` directory. This directory is added to gitingore because we don't want to mix the build and source history. Therefore we commit the `_site` directory to a `gh-pages` branch using a nifty feature of git called as worktrees.
+The site gets generated inside a `_site` directory. This directory is added to
+gitingore because we don't want to mix the build and source history. Therefore
+we commit the `_site` directory to a `gh-pages` branch using a nifty feature of
+git called as worktrees.
 
-Our Github repo has been configured to deploy the site directly from the `gh-pages` branch. Therefore by commiting and pushing changes to this branch would cause Github to deploy the new version of the site.
+Building and deploying happens automatically by pushing to `main`.
 
 ## Local development
 
@@ -46,24 +50,28 @@ The `resources` directory is copied to the final site as is.
 
 ## Deployment
 
-For first time deployment there is an extra step involved where you need to run the following commands:
+The site is automatically deployed via a Github Actions workflow. Simply push
+your changes to `main`, and the result will end up on the `gh-pages` branch,
+which is what Github displays.
 
-```bash
-rm -rf _site
-git worktree add -B gh-pages public origin/gh-pages
-```
+<!-- For first time deployment there is an extra step involved where you need to run the following commands: -->
 
-Once you're satisfied with the changes, deploy the site live by running:
+<!-- ```bash -->
+<!-- rm -rf _site -->
+<!-- git worktree add -B gh-pages public origin/gh-pages -->
+<!-- ``` -->
 
-```
-make deploy
-```
+<!-- Once you're satisfied with the changes, deploy the site live by running: -->
+
+<!-- ``` -->
+<!-- make deploy -->
+<!-- ``` -->
 
 ## Enhancements
 
 Currently the setup is extremely simple and minimal. Everytime you make a change you need to rerun the build command. This is tiresome and we need to find a way to autobuild on file changes.
 
-Another problem is that the css/js assets are not being hashed. This can lead to caching issues. We can use `sha1sum` utility present on linux systems to build on this.
+A problem is that the css/js assets are not being hashed. This can lead to caching issues. We can use `sha1sum` utility present on linux systems to build on this.
 
 ## License
 
