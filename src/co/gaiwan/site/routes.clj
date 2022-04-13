@@ -42,17 +42,15 @@
 
 (defn get-blog-rss [_]
   {:status 200
-   :body {:posts (vals @db/posts)}
-   :view (fn [{:keys [posts]}]
-           (apply rss/channel-xml
-                  {:title "Gaiwan Blog" :link "https://gaiwan.co/blog" :description "The Gaiwan Blog"}
-                  (for [{:keys [meta html]} posts
-                        :let [{:keys [title slug author date]} meta]]
-                    {:title title
-                     :link (str "https://gaiwan.co/blog/" slug)
-                     :description html
-                     :author author
-                     :pubDate (.toInstant date)})))})
+   :body (apply rss/channel-xml
+                {:title "Gaiwan Blog" :link "https://gaiwan.co/blog" :description "The Gaiwan Blog"}
+                (for [{:keys [meta html]} (vals @db/posts)
+                      :let [{:keys [title slug author date]} meta]]
+                  {:title title
+                   :link (str "https://gaiwan.co/blog/" slug)
+                   :description html
+                   :author author
+                   :pubDate (.toInstant date)}))})
 
 (defn get-blog-item [request]
   (let [{:keys [slug]} (:path-params request)
@@ -93,8 +91,9 @@
     {:name :blog
      :get {:handler get-blog}}]
    ["/blog.xml"
-    {:blog :blog-rss
-     :get {:handler get-blog-rss}}]
+    {:name :blog-rss
+     :get {:handler get-blog-rss}
+     :freeze-content-type :xml}]
    ["/blog/:slug"
     {:name :blog-item
      :get {:handler get-blog-item}
