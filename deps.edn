@@ -19,6 +19,7 @@
         lambdaisland/webstuff {:git/url "https://github.com/lambdaisland/webstuff"
                                :sha     "5d5669e7f7829c65fdd00b19ef826565ce41b7ea"}
         com.lambdaisland/ornament {:mvn/version "0.4.34"}
+        clj-rss/clj-rss {:mvn/version "0.3.0"}
 
         ;; Data
         markdown-clj/markdown-clj {:mvn/version "1.11.0"}

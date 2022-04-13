@@ -1,11 +1,12 @@
 (ns co.gaiwan.site.http
-  (:require [lambdaisland.webstuff.http :as http]
-            [lambdaisland.webstuff.bootstrap :as bootstrap]
-            [lambdaisland.glogc :as log]
+  (:require [clojure.java.io :as io]
             [co.gaiwan.site.routes :as routes]
+            [integrant.core :as ig]
+            [lambdaisland.glogc :as log]
+            [lambdaisland.webstuff.bootstrap :as bootstrap]
+            [lambdaisland.webstuff.http :as http]
             [reitit.ring :as ring]
-            [clojure.java.io :as io]
-            [integrant.core :as ig]))
+            [ring.middleware.resource :as resource]))
 
 (bootstrap/set-config! "config.edn")
 
@@ -17,6 +18,7 @@
 
 (defn build-handler []
   (http/ring-handler {:routes (routes/routes)
+                      :middleware [[resource/wrap-resource ""]]
                       :default-handler (default-handler)}))
 
 (defmethod ig/init-key ::server [_ {:keys [port rebuild-on-request?] :as config}]

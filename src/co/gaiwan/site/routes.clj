@@ -1,18 +1,19 @@
 (ns co.gaiwan.site.routes
-  (:require [co.gaiwan.site.layout :as layout]
-            [co.gaiwan.site.db :as db]
-            [co.gaiwan.site.open-graph :as og]
-            [co.gaiwan.site.home :as home]
-            [co.gaiwan.site.about :as about]
-            [co.gaiwan.site.work :as work]
-            [co.gaiwan.site.components.blog-list :as blog-list]
-            [clojure.java.shell :as sh]
-            [clojure.java.io :as io]
+  (:require [clj-rss.core :as rss]
             [clojure.edn :as edn]
-            [clojure.string :as str])
-  (:import (java.time Instant)
-           (java.time.format DateTimeFormatter)
-           (java.text SimpleDateFormat)))
+            [clojure.java.io :as io]
+            [clojure.java.shell :as sh]
+            [clojure.string :as str]
+            [co.gaiwan.site.about :as about]
+            [co.gaiwan.site.components.blog-list :as blog-list]
+            [co.gaiwan.site.db :as db]
+            [co.gaiwan.site.home :as home]
+            [co.gaiwan.site.layout :as layout]
+            [co.gaiwan.site.open-graph :as og]
+            [co.gaiwan.site.work :as work])
+  (:import (java.text SimpleDateFormat)
+           (java.time Instant)
+           (java.time.format DateTimeFormatter)))
 
 (defn get-version [_]
   (let [commit (-> (sh/sh "git" "rev-parse" "HEAD") :out str/trim)]
@@ -38,6 +39,20 @@
             (og/social-tags {:image ""})
             [:div
              (blog-list/section posts)]])})
+
+(defn get-blog-rss [_]
+  {:status 200
+   :body {:posts (vals @db/posts)}
+   :view (fn [{:keys [posts]}]
+           (apply rss/channel-xml
+                  {:title "Gaiwan Blog" :link "https://gaiwan.co/blog" :description "The Gaiwan Blog"}
+                  (for [{:keys [meta html]} posts
+                        :let [{:keys [title slug author date]} meta]]
+                    {:title title
+                     :link (str "https://gaiwan.co/blog/" slug)
+                     :description html
+                     :author author
+                     :pubDate (.toInstant date)})))})
 
 (defn get-blog-item [request]
   (let [{:keys [slug]} (:path-params request)
@@ -77,6 +92,9 @@
    ["/blog"
     {:name :blog
      :get {:handler get-blog}}]
+   ["/blog.xml"
+    {:blog :blog-rss
+     :get {:handler get-blog-rss}}]
    ["/blog/:slug"
     {:name :blog-item
      :get {:handler get-blog-item}
