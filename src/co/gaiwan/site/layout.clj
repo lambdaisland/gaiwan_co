@@ -55,6 +55,7 @@
          [:link {:rel "stylesheet" :href "/assets/css/ornament.css"}]
          [:style {:type "text/css" :id "ornament"}
           (ornament/defined-styles {:preflight? true})])
+     [:link {:rel "alternate" :type "application/rss+xml" :title "RSS Feed for the Gaiwan Blog" :href "/blog.xml"}]
      head]
     [:body
      {:class "font-inter antialiased bg-white text-gray-900 tracking-tight"}
