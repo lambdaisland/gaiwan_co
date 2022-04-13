@@ -1,5 +1,5 @@
-(ns gaiwan.components.footer
-  (:require [gaiwan.components.logo :as logo]))
+(ns co.gaiwan.site.components.footer
+  (:require [co.gaiwan.site.components.logo :as logo]))
 
 (defn footer []
   [:footer

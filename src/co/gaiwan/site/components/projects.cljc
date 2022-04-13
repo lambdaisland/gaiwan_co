@@ -1,4 +1,4 @@
-(ns gaiwan.components.projects)
+(ns co.gaiwan.site.components.projects)
 
 (def lioss-data
   {:title "Lambda Island Open Source",

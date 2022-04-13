@@ -1,4 +1,4 @@
-(ns gaiwan.components.logo)
+(ns co.gaiwan.site.components.logo)
 
 (defn gaiwan-semibold [classes]
   [:svg {:xmlns "http://www.w3.org/2000/svg" :width "390.239" :height "75.264" :viewBox "0 0 103.251 19.914" :class classes}

@@ -1,4 +1,4 @@
-(ns gaiwan.components.features-world)
+(ns co.gaiwan.site.components.features-world)
 
 (defn features-world []
   [:section

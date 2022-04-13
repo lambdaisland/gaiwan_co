@@ -1,8 +1,8 @@
-(ns gaiwan.http
+(ns co.gaiwan.site.http
   (:require [lambdaisland.webstuff.http :as http]
             [lambdaisland.webstuff.bootstrap :as bootstrap]
             [lambdaisland.glogc :as log]
-            [gaiwan.routes :as routes]
+            [co.gaiwan.site.routes :as routes]
             [reitit.ring :as ring]
             [clojure.java.io :as io]
             [integrant.core :as ig]))

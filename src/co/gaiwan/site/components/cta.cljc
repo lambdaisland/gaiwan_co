@@ -1,4 +1,4 @@
-(ns gaiwan.components.cta)
+(ns co.gaiwan.site.components.cta)
 
 (defn section [{:keys [title subtitle link button-text]}]
   [:section

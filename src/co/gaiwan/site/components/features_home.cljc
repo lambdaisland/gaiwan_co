@@ -1,4 +1,4 @@
-(ns gaiwan.components.features-home)
+(ns co.gaiwan.site.components.features-home)
 
 (defn features-home []
   [:html

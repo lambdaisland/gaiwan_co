@@ -1,5 +1,5 @@
-(ns gaiwan.work
-  (:require [gaiwan.utils :as utils]))
+(ns co.gaiwan.site.work
+  (:require [co.gaiwan.site.utils :as utils]))
 
 (defn project [{:keys [client title description cta-text cta-url image-url]}]
   [:div {:class "w-full"}

@@ -1,5 +1,5 @@
-(ns gaiwan.components.clients
-  (:require [gaiwan.utils :as utils]))
+(ns co.gaiwan.site.components.clients
+  (:require [co.gaiwan.site.utils :as utils]))
 
 (defn wave
   []

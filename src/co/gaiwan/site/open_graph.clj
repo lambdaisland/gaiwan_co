@@ -1,4 +1,4 @@
-(ns gaiwan.open-graph
+(ns co.gaiwan.site.open-graph
   (:require [clojure.data.json :as json]))
 
 ;; defaults

@@ -1,5 +1,5 @@
-(ns gaiwan.components.header
-  (:require [gaiwan.components.logo :as logo]))
+(ns co.gaiwan.site.components.header
+  (:require [co.gaiwan.site.components.logo :as logo]))
 
 (defn top []
   [:header

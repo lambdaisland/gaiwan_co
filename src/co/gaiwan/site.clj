@@ -1,5 +1,5 @@
-(ns gaiwan.core
-  (:require [gaiwan.http :as http]
+(ns co.gaiwan.site
+  (:require [co.gaiwan.site.http :as http]
             [lambdaisland.ornament :as ornament]
             [lambdaisland.reitit-jaatya.freeze :as freeze]))
 
