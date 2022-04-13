@@ -1,7 +1,7 @@
 (ns user
-  (:require [gaiwan.core :as core]
+  (:require [co.gaiwan.site :as core]
             [lambdaisland.webstuff.bootstrap :as bootstrap]
-            [gaiwan.http :as http]))
+            [co.gaiwan.site.http :as http]))
 
 (defn build [& args]
   (core/build))

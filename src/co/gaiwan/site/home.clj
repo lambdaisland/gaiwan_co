@@ -1,12 +1,12 @@
-(ns gaiwan.home
-  (:require [gaiwan.data :as data]
-            [gaiwan.components.hero-home :as hero-home]
-            [gaiwan.components.projects :as projects]
-            [gaiwan.components.clients :as clients]
-            [gaiwan.components.team :as team]
-            [gaiwan.components.cta :as cta]
-            [gaiwan.components.features-home :as features-home]
-            [gaiwan.components.features-world :as features-world]))
+(ns co.gaiwan.site.home
+  (:require [co.gaiwan.site.data :as data]
+            [co.gaiwan.site.components.hero-home :as hero-home]
+            [co.gaiwan.site.components.projects :as projects]
+            [co.gaiwan.site.components.clients :as clients]
+            [co.gaiwan.site.components.team :as team]
+            [co.gaiwan.site.components.cta :as cta]
+            [co.gaiwan.site.components.features-home :as features-home]
+            [co.gaiwan.site.components.features-world :as features-world]))
 
 (def section-hero
   [:section {:id "hero"}

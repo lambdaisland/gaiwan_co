@@ -1,4 +1,4 @@
-(ns gaiwan.utils)
+(ns co.gaiwan.site.utils)
 
 (defn slugify
   [string]

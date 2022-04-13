@@ -1,4 +1,4 @@
-(ns gaiwan.components.team)
+(ns co.gaiwan.site.components.team)
 
 (defn item [{:keys [title subtitle image description] :as member}]
   [:li

@@ -1,4 +1,4 @@
-(ns gaiwan.components.blog-list)
+(ns co.gaiwan.site.components.blog-list)
 
 (defn list-item [{:keys [html]
                   {:keys [title slug author date] :or {slug ""}} :meta

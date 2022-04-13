@@ -1,5 +1,5 @@
-(ns gaiwan.db
-  (:require [gaiwan.utils :as utils]
+(ns co.gaiwan.site.db
+  (:require [co.gaiwan.site.utils :as utils]
             [clojure.java.io :as io]
             [clojure.string :as str]
             [markdown.core :as m])

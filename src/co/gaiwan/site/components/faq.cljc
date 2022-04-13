@@ -1,4 +1,4 @@
-(ns gaiwan.components.faq)
+(ns co.gaiwan.site.components.faq)
 
 (defn item [faq]
   {})

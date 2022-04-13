@@ -8,12 +8,12 @@ build-action:
 	npm install
 	npm run release
 	cp -r resources/* _site/
-	cp resources/.nojekyll _site/
+	touch _site/.nojekyll
 
 build:
 	clj -X:build
 	cp -r resources/* _site/
-	cp resources/.nojekyll _site/
+	touch _site/.nojekyll
 
 watch: build
 	while true; do \

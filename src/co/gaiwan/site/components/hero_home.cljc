@@ -1,5 +1,5 @@
-(ns gaiwan.components.hero-home
-  (:require [gaiwan.utils :as utils]))
+(ns co.gaiwan.site.components.hero-home
+  (:require [co.gaiwan.site.utils :as utils]))
 
 (defn hero-home []
   [:section {:class "relative"}

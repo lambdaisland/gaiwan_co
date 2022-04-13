@@ -1,5 +1,5 @@
-(ns gaiwan.data
-  (:require [gaiwan.utils :as utils]))
+(ns co.gaiwan.site.data
+  (:require [co.gaiwan.site.utils :as utils]))
 
 (def team-members
   [{:title "Arne Brasseur (Berlin)"

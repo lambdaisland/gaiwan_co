@@ -2,3 +2,4 @@ _site/
 .store
 .cpcache
 node_modules/
+.nrepl-port

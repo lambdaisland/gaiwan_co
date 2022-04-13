@@ -1,5 +1,5 @@
-(ns gaiwan.about
-  (:require [gaiwan.data :as data]))
+(ns co.gaiwan.site.about
+  (:require [co.gaiwan.site.data :as data]))
 
 (def summary
   [:div.about-summary
