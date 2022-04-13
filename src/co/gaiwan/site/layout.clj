@@ -47,9 +47,10 @@
      [:link {:rel "icon" :href "/favicon.ico" :type "image/png"}]
      matamo-analytics-script
      [:link {:href "https://use.typekit.net/oxk2nmu.css", :rel "stylesheet"}]
-     (if (io/resource "assets/ui/main.css")
-       [:link {:rel "stylesheet" :href "/assets/ui/main.css"}]
-       [:style {:type "text/css" :id "ornament"} (ornament/defined-styles {:preflight? true})])
+     #_(if (io/resource "assets/css/ornament.css")
+         [:link {:rel "stylesheet" :href "/assets/css/ornament.css"}]
+         [:style {:type "text/css" :id "ornament"}
+          (ornament/defined-styles {:preflight? true})])
      head]
     [:body
      {:class "font-inter antialiased bg-white text-gray-900 tracking-tight"}

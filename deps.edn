@@ -18,8 +18,7 @@
         ;; HTTP / CSS (Server-side)
         lambdaisland/webstuff {:git/url "https://github.com/lambdaisland/webstuff"
                                :sha     "5d5669e7f7829c65fdd00b19ef826565ce41b7ea"}
-        lambdaisland/ornament {:git/url "https://github.com/lambdaisland/ornament"
-                               :sha     "ee9387293a7126073b4715cc841efc7cb6cd9a6f"}
+        com.lambdaisland/ornament {:mvn/version "0.4.34"}
 
         ;; Data
         markdown-clj/markdown-clj {:mvn/version "1.11.0"}
