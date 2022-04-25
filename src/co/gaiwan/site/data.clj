@@ -43,10 +43,15 @@
                    [:p "She loves open source and photography."])}
    {:title "Mitesh Shah (Mumbai)"
     :subtitle "@oxalorg"
-    :image "https://avatars.githubusercontent.com/u/4194289?v=4"
-    :description '([:p "Mitesh learnt coding because of his desire to hack video games. This slowly turned to a passion for all things computer."]
-                   [:p "Since then he's launched multiple online products, co-founded his own e-grocery vegan startup, and consulted on various technologies and projects."]
-                   [:p "He loves video games, dabbles in moral philosophy, and is trying to go vegan."])}
+    :image (utils/img "avatars/mitesh-oxalorg.jpg")
+    :description '([:p "Mitesh learnt coding because of his desire to hack video
+                    games. This slowly turned to a passion for all things computer."]
+                   [:p "Active contributor to OSS, he was also funded by
+                    ClojuristsTogether to work on Clojurians Log V2."]
+                   [:p "He creates Clojure related screencasts on his "
+                    [:a {:class "text-indigo-600"
+                         :href "https://youtube.com/c/oxalorg"} "YouTube Channel"]
+                    "."])}
    {:title "Laurence Chen (Taipei)"
     :subtitle "@humorless"
     :image "https://avatars.githubusercontent.com/u/3061798?v=4"
