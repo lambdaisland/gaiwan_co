@@ -84,12 +84,14 @@
        [project {:client "Tidy"
                  :title "Event sourcing features, major refactoring, and test setup"
                  :description
-                 "Our team was introduced to the Tidy codebase to start adding
-                 features to their Event Sourcing system using Postgres and
-                 XTDB. We also worked to add integration tests using Kaocha,
-                 setup CI testing, and add authentication and authorization to
-                 their entire system. This involved refactoring of major parts
-                 of their system. "
+                 "Our team was introduced to help Tidy improve their codebase
+                 with Clojure best practices, to help them do Code Reviews, and
+                 to holistically work alongside their team. This included
+                 working on additional features on their Event Sourcing system
+                 using Postgres and XTDB. We also worked to add integration
+                 tests using Kaocha, setup CI testing, and add authentication
+                 and authorization to their GraphQL/Lacinia based stack. This
+                 involved refactoring of major parts of their system."
                  :cta-text nil
                  :cta-url nil
                  :image-url (utils/img "work/tidy.png")}]
