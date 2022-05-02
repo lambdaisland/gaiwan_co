@@ -15,26 +15,50 @@ We're using simple, standard, clojure tools and libraries to build this. Nothing
 All the source files are located in `src/gaiwan` directory and static resources
 in the `resources` directory.
 
-The site gets generated inside a `_site` directory. This directory is added to
+The site works as a dynamic server rendered site on localhost, then we use [reitit-jaatya](https://github.com/lambdaisland/reitit-jaatya) to create a frozen static build of this site.
+
+The frozen site gets generated inside a `_site` directory. This directory is added to
 gitingore because we don't want to mix the build and source history. Therefore
 we commit the `_site` directory to a `gh-pages` branch using a nifty feature of
 git called as worktrees.
 
-Building and deploying happens automatically by pushing to `main`.
+Building and deploying happens automatically by pushing to `main`, thanks to GH Actions.
 
 ## Local development
 
 Ensure you have Clojure CLI tools installed.
 
-Then clone the repository and run:
+Use `cider-jack-in-clj` to launch a clojure repl (or `clj`)
+
+and then run
+
+```clojure
+user => (go)
+2022-05-02 18:03:35.951 INFO  lambdaisland.webstuff.bootstrap - {:integrant/starting {:profile :default, :key nil}, :line 58}
+2022-05-02 18:03:35.961 INFO  lambdaisland.webstuff.http - {:server/starting {:port 9000, :rebuild-on-request? true}, :line 265}
+:initiated
+```
+
+This will start the server at http://localhost:9000
+
+Everything is dynamic and REPL'able. When you're satisfied you can build the site by running
+
+```clojure
+user => (require '[co.gaiwan.site :as site])
+user => (site/build)
+```
+
+or from the command line like so:
 
 ```bash
-sudo apt install inotify-tools
-make watch 
-# this will generate a `_site` folder
-# and watch the `src` and `resources` directory
-# and rebuild the site on any modifications
+make build
 ```
+
+This will run `npm run release` and generate a `_site` folder
+
+The `resources` directory is copied to the final site as is.
+
+### Frontend setup
 
 Make sure you have latest npm deps installed using `npm install` and then open
 up another terminal window and run:
@@ -46,7 +70,6 @@ npm run dev
 
 This will start postcss watches and run a local server serving the `_site` directory on http://localhost:8001
 
-The `resources` directory is copied to the final site as is.
 
 ## Deployment
 

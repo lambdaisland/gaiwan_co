@@ -11,6 +11,8 @@ build-action:
 	touch _site/.nojekyll
 
 build:
+	npm install
+	npm run release
 	clj -X:build
 	cp -r resources/* _site/
 	touch _site/.nojekyll
