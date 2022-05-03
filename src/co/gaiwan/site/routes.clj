@@ -1,19 +1,12 @@
 (ns co.gaiwan.site.routes
-  (:require [clj-rss.core :as rss]
-            [clojure.edn :as edn]
-            [clojure.java.io :as io]
-            [clojure.java.shell :as sh]
+  (:require [clojure.java.shell :as sh]
             [clojure.string :as str]
-            [co.gaiwan.site.about :as about]
-            [co.gaiwan.site.components.blog-list :as blog-list]
-            [co.gaiwan.site.db :as db]
+            [co.gaiwan.site.blog :as blog]
             [co.gaiwan.site.home :as home]
+            [co.gaiwan.site.pages :as pages]
             [co.gaiwan.site.layout :as layout]
             [co.gaiwan.site.open-graph :as og]
-            [co.gaiwan.site.work :as work])
-  (:import (java.text SimpleDateFormat)
-           (java.time Instant)
-           (java.time.format DateTimeFormatter)))
+            [co.gaiwan.site.work :as work]))
 
 (defn get-version [_]
   (let [commit (-> (sh/sh "git" "rev-parse" "HEAD") :out str/trim)]
@@ -31,47 +24,6 @@
             (og/social-tags {:image ""})
             [home/body]])})
 
-(defn get-blog [_]
-  {:status 200
-   :body {:posts (vals @db/posts)}
-   :view (fn [{:keys [posts]}]
-           [layout/layout
-            (og/social-tags {:image ""})
-            [:div
-             (blog-list/section posts)]])})
-
-(defn get-blog-rss [_]
-  {:status 200
-   :body (apply rss/channel-xml
-                {:title "Gaiwan Blog" :link "https://gaiwan.co/blog" :description "The Gaiwan Blog"}
-                (for [{:keys [meta html]} (vals @db/posts)
-                      :let [{:keys [title slug author date]} meta]]
-                  {:title title
-                   :link (str "https://gaiwan.co/blog/" slug)
-                   :description html
-                   :author author
-                   :pubDate (.toInstant date)}))})
-
-(defn get-blog-item [request]
-  (let [{:keys [slug]} (:path-params request)
-        post (get @db/posts slug)]
-    {:status 200
-     :body {:slug slug
-            :post post}
-     :view (fn [{:keys [slug post] :as data}]
-             (let [{:keys [meta html]} post]
-               [layout/layout
-                (og/social-tags {:title (:title meta)
-                                 :description ""})
-                [:div {:class "post my-8 mx-auto px-2 container prose lg:prose-lg"}
-                 [:h1 (:title meta)]
-                 [:div.post-meta
-                  "Posted on "
-                  [:span (.format (java.text.SimpleDateFormat. "MMM dd, yyyy") (:date meta))]
-                  " by "
-                  [:span (:author meta)]]
-                 [:lambdaisland.hiccup/unsafe-html html]]]))}))
-
 (defn get-work [_]
   {:status 200
    :body {}
@@ -84,24 +36,25 @@
             [work/body]])})
 
 (defn routes []
-  [["/"
-    {:name :home
-     :get {:handler get-home}}]
-   ["/blog"
-    {:name :blog
-     :get {:handler get-blog}}]
-   ["/blog.xml"
-    {:name :blog-rss
-     :get {:handler get-blog-rss}
-     :freeze-content-type :xml}]
-   ["/blog/:slug"
-    {:name :blog-item
-     :get {:handler get-blog-item}
-     :freeze-data-fn (fn []
-                       (map #(assoc {} :slug (get-in % [:meta :slug] "")) (vals @db/posts)))}]
-   ["/work"
-    {:name :work
-     :get {:handler get-work}}]
-   ["/version"
-    {:name :version
-     :get {:handler get-version}}]])
+  (into
+   [["/"
+     {:name :home
+      :get {:handler get-home}}]
+    ["/blog"
+     {:name :blog
+      :get {:handler blog/get-blog}}]
+    ["/blog.xml"
+     {:name :blog-rss
+      :get {:handler blog/get-blog-rss}
+      :freeze-content-type :xml}]
+    ["/blog/:slug"
+     {:name :blog-item
+      :get {:handler blog/get-blog-item}
+      :freeze-data-fn blog/freeze-data}]
+    ["/work"
+     {:name :work
+      :get {:handler get-work}}]
+    ["/version"
+     {:name :version
+      :get {:handler get-version}}]]
+   (pages/routes)))

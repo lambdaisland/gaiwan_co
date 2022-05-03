@@ -44,6 +44,7 @@
      [:link {:href "/assets/css/main.css", :rel "stylesheet"}]
      [:link {:href "/assets/css/sakura-ink-embed.css", :rel "stylesheet"}]
      [:link {:href "/assets/css/style.css", :rel "stylesheet"}]
+     [:link {:href "/assets/css/ornament.css", :rel "stylesheet"}]
      [:link {:rel "icon" :href "/favicon.ico" :type "image/png"}]
      [:link {:rel "apple-touch-icon" :sizes "180x180" :href "/apple-touch-icon.png"}]
      [:link {:rel "icon" :type "image/png" :sizes "32x32" :href "/favicon-32x32.png"}]

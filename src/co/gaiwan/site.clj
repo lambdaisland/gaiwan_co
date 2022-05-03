@@ -1,18 +1,19 @@
 (ns co.gaiwan.site
-  (:require [co.gaiwan.site.http :as http]
-            [clojure.java.io :as io]
-            [lambdaisland.ornament :as ornament]
-            [lambdaisland.reitit-jaatya.freeze :as freeze]))
+  (:require [clojure.java.io :as io]
+            [co.gaiwan.site.http :as http]
+            [lambdaisland.reitit-jaatya.freeze :as freeze]
+            [lambdaisland.webstuff.bootstrap :as bootstrap]))
 
 (defn build [& args]
-  #_(let [css-file "resources/assets/css/ornament.css"]
-      (io/make-parents css-file)
-      (spit css-file (ornament/defined-styles {:preflight? true})))
+  (http/spit-ornament)
   (freeze/iced
    (http/build-handler)
    {:sitemap-path "/sitemap.xml"
     :sitemap-trailing-slash true
     :base-url "https://gaiwan.co"}))
+
+(defn serve []
+  (bootstrap/go :dev))
 
 (comment
   ;; this will create a `_site` folder in `does-library`
