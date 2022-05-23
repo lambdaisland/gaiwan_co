@@ -3,7 +3,7 @@
 
 ;; defaults
 (def twitter-site "@GaiwanTeam")
-(def twitter-creator "@LambdaIsland")
+(def twitter-creator "@GaiwanTeam")
 (def title "Gaiwan - A Clojure Consultancy")
 (def description "Home for Gaiwan, a provider of technological expertise grown out of the consulting and development work of Lambda Island's Arne Brasseur")
 (def url "https://gaiwan.co")
