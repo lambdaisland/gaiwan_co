@@ -71,7 +71,7 @@
       [:h6 {:class "text-gray-800 font-medium mb-2"} "Company"]
       [:ul {:class "text-sm"}
        (for [[link caption] [["/" "Home"]
-                             ["/About/" "About us"]
+                             ;; ["/About/" "About us"]
                              ["https://gaiwan.notion.site/Gaiwan-Strategic-Objective-d40123054382433fb75422b77cc4b25e" "Company objectives"]
                              ["https://gaiwan.notion.site/Gaiwan-operating-principles-3f74a7fd1ee2425eb918879fc55dbfb8" "Company values"]
                              ["https://gaiwan.co/assets/imgs/Gaiwan-logo-transparent-bg.png" "Logo transparent"]
