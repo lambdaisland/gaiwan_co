@@ -23,7 +23,7 @@ How is it that Lisp, a super-powered programming language, was treated in these 
  
  The best technology in the world can only increase developer productivity so much. At some point, the best way to increase the rate at which you can develop new features is to grow your team. However, if the available pool of Lisp developers is smaller than the available pool of developers from some other language, and if you believe Paul Graham that "programmers rarely switch languages", then being forced to switch away from Lisp seems inevitable.
  
- "Beating the Averages" makes a compelling case that a start-up consisting of a small team of Lisp developers has a strategic advantage. It would seem to follow that a large organization of Lisp developers would, likewise, have a strategic advantage[^1]. The problem is how to get from point A to point B.
+ "Beating the Averages" makes a compelling case that a start-up consisting of a small team of Lisp developers has a strategic advantage. It would seem to follow that a large organization of Lisp developers would, likewise, have a strategic advantage. The problem is how to get from point A to point B.
  
  Another way of looking at this challenge is to consider which decision is the actual technical debt: the decision to use Lisp at the start? or in the decision to abandon it later? If technical debt is a short-cut you take in order to deliver features faster than you otherwise might, then it would seem that abandoning Lisp in order to facilitate hiring is the true technical debt. But how can this be? Teams that start off with a Lisp, but then move away from it later, don't re-implement everything in Lisp after the hiring is done. So is abandoning Lisp really technical debt?
  
@@ -41,7 +41,3 @@ Paul Graham concluded "Beating the Averages" by admitting:
 >  The purpose of this article is not to change anyone's mind, but to reassure people already interested in using Lisp -- people who know that Lisp is a powerful language, but worry because it isn't widely used.
 
 Well, the purpose of this article is, similarly to reassure anyone already interested in using Clojure, either for a start-up or for new development within a larger organization: you don't have to worry about growing your team alone. We're here to help you!
- 
- ---
- 
- [^1]: This is true so long as it can overcome the ["Lisp curse"](https://ericnormand.me/podcast/what-is-the-curse-of-lisp), something that Clojure seems to be rather good at.
