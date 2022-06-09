@@ -3,3 +3,4 @@ _site/
 .cpcache
 node_modules/
 .nrepl-port
+resources/assets/css/style.css
