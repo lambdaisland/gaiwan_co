@@ -98,7 +98,7 @@
 
 (defn get-blog [_]
   {:status 200
-   :body {:posts (vals @posts)}
+   :body {:posts (reverse (sort-by (comp :date :meta) (vals @posts)))}
    :view (fn [{:keys [posts]}]
            [layout/layout
             (og/social-tags {:image ""})

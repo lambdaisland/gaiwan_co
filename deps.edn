@@ -24,7 +24,7 @@
         ;; Data
         markdown-clj/markdown-clj {:mvn/version "1.11.0"}
         org.clojure/data.json {:mvn/version "2.4.0"}
-        io.github.nextjournal/markdown {:mvn/version "0.3.69"}
+        io.github.nextjournal/markdown {:mvn/version "0.4.109"}
 
         ;; Static site generation
         com.lambdaisland/reitit-jaatya {:mvn/version "0.0.24"}}
