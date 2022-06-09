@@ -4,6 +4,7 @@
 (def team-members
   [{:title "Arne Brasseur (Berlin)"
     :subtitle "@plexus"
+    :link "https://github.com/plexus"
     :image "https://avatars.githubusercontent.com/u/32212?v=4"
     :description '([:p "Arne has been delivering software solutions for well
     over a decade, as well as coaching individuals and teams on topics both
@@ -15,6 +16,7 @@
                    [:p "He loves a nice cup of tea, and likes to to go for runs."])}
    {:title "Felipe Barros (Recife)"
     :subtitle "@barrosfelipe"
+    :link "https://github.com/barrosfelipe"
     :image "https://avatars.githubusercontent.com/u/9657386?v=4"
     :description '([:p "While still at school, GNU/Linux liberated Felipe from
                    the shackles of digital oblivion and corporate abuse."]
@@ -29,6 +31,7 @@
                    handcrafted, artisanal work."])}
    {:title "Ariel Alexi (Rosh HaAyin)"
     :subtitle "@ArielA147"
+    :link "https://github.com/ArielA147"
     :image "https://avatars.githubusercontent.com/u/43312651?v=4"
     :description '([:p "Ariel is finishing up her last year as a Computer
                     Science student, where she built numerous projects with C++,
@@ -37,12 +40,14 @@
                     knowledge has not stopped growing. "]
                    [:p "In her free time she likes to develop video games."])}
    {:title "Alys Brooks (Madison)"
-    :subtitle "@alyssbrooks"
-    :image "https://avatars.githubusercontent.com/u/1570381?v=4"
+    :subtitle "@alysbrooks"
+    :link "https://github.com/alysbrooks"
+    :image (utils/img "avatars/alys.jpg")
     :description '([:p "Alyss is a professional writer and editor by day and a programmer by night. She has worked as a technical writer at Epic."]
                    [:p "She loves open source and photography."])}
    {:title "Mitesh Shah (Mumbai)"
     :subtitle "@oxalorg"
+    :link "https://github.com/oxalorg"
     :image (utils/img "avatars/mitesh-oxalorg.jpg")
     :description '([:p "Mitesh learnt coding because of his desire to hack video
                     games. This slowly turned to a passion for all things computer."]
@@ -54,6 +59,7 @@
                     "."])}
    {:title "Laurence Chen (Taipei)"
     :subtitle "@humorless"
+    :link "https://github.com/humorless"
     :image "https://avatars.githubusercontent.com/u/3061798?v=4"
     :description '([:p "Laurence is an experienced developer with a knack for
     understanding the needs of the customer, and delivering pragmatic solutions.
@@ -61,6 +67,7 @@
     to the LINE corporation."])}
    {:title "Joshua Ballanco (Miami)"
     :subtitle "@jballanc"
+    :link "https://github.com/jballanc"
     :image (utils/img "avatars/jballanc.jpg")
     :description
     '([:p "Josh has built operating systems with Apple, local

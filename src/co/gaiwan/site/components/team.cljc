@@ -1,6 +1,6 @@
 (ns co.gaiwan.site.components.team)
 
-(defn item [{:keys [title subtitle image description] :as member}]
+(defn item [{:keys [title subtitle link image description] :as member}]
   [:li
    [:div
     {:class "space-y-4 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-y-0 lg:gap-8"}
@@ -16,7 +16,8 @@
      [:div {:class "space-y-4"}
       [:div {:class "text-lg leading-6 font-medium space-y-1"}
        [:h3 title]
-       [:p {:class "text-indigo-600"} subtitle]]
+       [:p {:class "text-indigo-600"}
+        [:a {:href link :target "_blank"} subtitle]]]
       [:div {:class "text-sm"}
        (into
         [:div {:class "text-gray-700 flex flex-col gap-y-1"}]
