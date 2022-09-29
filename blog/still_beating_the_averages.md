@@ -1,10 +1,3 @@
----
-date: 2022-06-08
-title: "Still Beating the Averages"
-slug: "still-beating-the-averages"
-author: "Joshua Ballanco"
----
-
 It has been just over 20 years since Paul Graham published ["Beating the Averages"](http://www.paulgraham.com/avg.html), one of his more famous articles. While it is perhaps most recognized for its emphatic endorsement of Lisp, Paul Graham's larger point in the article (and source of the title) is that the "average" startup goes out of business. To be successful, he argues, you need to do something to set yourself apart -- to be "above average" -- and using Lisp is one way a startup can be above average.
 
 At Gaiwan, we definitely agree that Lisp (or, in our case, Clojure) is a super-powered programming language that can empower a team of developers to beat the average. Indeed, some of us have been using Clojure for over a decade to help both startups and large organizations succeed. That said, upon re-reading "Beating the Averages", one notices a flaw in Paul Graham's argument for choosing Lisp.

@@ -1,21 +1,15 @@
 (ns co.gaiwan.site.open-graph
-  (:require [clojure.data.json :as json]))
-
-;; defaults
-(def twitter-site "@GaiwanTeam")
-(def twitter-creator "@GaiwanTeam")
-(def title "Gaiwan - A Clojure Consultancy")
-(def description "Home for Gaiwan, a provider of technological expertise grown out of the consulting and development work of Lambda Island's Arne Brasseur")
-(def url "https://gaiwan.co")
+  (:require [clojure.data.json :as json]
+            [co.gaiwan.site.data :as data]))
 
 (defn twitter-card-tags [{:keys [tw-type tw-site tw-creator url
                                  title description image]
                           :or {tw-type "summary"
-                               tw-site twitter-site
-                               tw-creator twitter-creator
-                               title title
-                               description description
-                               url url
+                               tw-site data/tw-site
+                               tw-creator data/tw-creator
+                               title data/site-title
+                               description data/site-description
+                               url data/base-url
                                #_#_image logo-image}}]
   {"twitter:card" tw-type
    "twitter:site" tw-site
@@ -29,9 +23,9 @@
                                published-time site-name description section
                                image video-duration video-release-date]
                         :or {og-type "article"
-                             site-name title
-                             description description
-                             title title
+                             site-name data/site-title
+                             description data/site-description
+                             title data/site-title
                              #_#_image logo-image}}]
   {"og:url" url
    "og:type" og-type
@@ -46,7 +40,7 @@
    "video:release_date" video-release-date
    "video:duration" video-duration})
 
-(defn video-structured-schema [{:keys [name description upload-date thumbnail-url] :as video}]
+(defn video-structured-schema [{:keys [name description upload-date thumbnail-url] :as _video}]
   (let [schema {"@context" "https://schema.org"
                 "@type" "VideoObject"
                 "name" name
@@ -56,11 +50,11 @@
     [:script {:type "application/ld+json"} (json/write-str schema :escape-slash false)]))
 
 (defn generic-meta-tags [tags]
-  {"description" (:description tags description)})
+  {"description" (:description tags data/site-description)})
 
 (defn social-tags [tags]
   (into [:<>
-         [:title (:title tags title)]
+         [:title (:title tags data/site-title)]
          (when (:video-schema tags)
            (video-structured-schema (:video-schema tags)))]
         (comp

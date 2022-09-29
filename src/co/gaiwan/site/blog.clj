@@ -1,30 +1,27 @@
 (ns co.gaiwan.site.blog
-  (:require [clj-rss.core :as rss]
-            [co.gaiwan.site.layout :as layout]
-            [co.gaiwan.site.md-files :as md-files]
-            [co.gaiwan.site.open-graph :as og]))
+  (:require [co.gaiwan.site.layout :as layout]
+            [co.gaiwan.site.open-graph :as og]
+            [co.gaiwan.site.utils :as utils]))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Components
 
-(defn list-item [{:keys [html]
-                  {:keys [title slug author date] :or {slug ""}} :meta
-                  :as post}]
+(defn list-item [{:nuzzle/keys [title url author published]}]
   [:article {:class "flex items-center py-4 border-b border-gray-200"}
    [:div
     [:header
      [:h2 {:class "h4 mb-2"}
-      [:a {:class "hover:underline" :href (str "/blog/" slug "/")}
+      [:a {:class "hover:underline" :href url}
        title]]]
     [:div {:class "text-lg text-gray-600 mb-4"} ""]
     [:footer {:class "text-sm"}
      [:div {:class "flex items-center"}
       [:div [:span {:class "text-gray-600"} "By "]
        [:span {:class "text-gray-600 font-medium hover:underline2"}
-        author]
+        (author :name)]
        " "
-       [:span {:class "text-gray-600"} (.format (java.text.SimpleDateFormat. "MMM dd, yyyy") date)]]]]]
-   [:a {:class "block flex-shrink-0 ml-6" :href (str "/blog/" slug "/")}
+       [:span {:class "text-gray-600"} (utils/format-inst published)]]]]]
+   [:a {:class "block flex-shrink-0 ml-6" :href url}
     [:span {:class "sr-only"} "Read more"]
     [:svg
      {:class "w-4 h-4 fill-current text-blue-600",
@@ -38,7 +35,7 @@
    {:class
     "relative mt-12 md:mt-0 md:w-64 md:ml-12 lg:ml-20 md:flex-shrink-0"}])
 
-(defn section [posts]
+(defn section [{:nuzzle/keys [get-pages] :as _page}]
   [:section
    [:div {:class "max-w-6xl mx-auto px-4 sm:px-6"}
     [:div {:class "pt-24 pb-12 md:pt-32 md:pb-20"}
@@ -55,55 +52,29 @@
      [:div {:class "md:flex md:justify-between"}
       #_[:comment " Articles container "]
       [:div {:class "md:flex-grow -mt-4"}
-       (for [post posts]
-         [list-item post])]
-      [sidebar]]]]])
+       (for [post (->> (get-pages [:blog] {:children true})
+                       (sort-by :nuzzle/published)
+                       reverse)]
+         (list-item post))]
+      (sidebar)]]]])
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Routes
+(defn get-blog-item
+  [{:nuzzle/keys [author render-content published] :as page}]
+  (layout/layout
+   (og/social-tags page)
+   [:div {:class "post my-8 mx-auto px-2 container prose lg:prose-lg"}
+    [:h1 (:title meta)]
+    [:div.post-meta
+     "Posted on "
+     [:span (utils/format-inst published)]
+     " by "
+     [:span (let [{:keys [name twitter]} author]
+              (str name (when twitter (str " (" twitter ")"))))]]
+    (render-content)]))
 
-(def posts (delay (md-files/slurp-dir "blog")))
+(defn get-blog [page]
+  (layout/layout
+   (og/social-tags page)
+   [:div
+    (section page)]))
 
-(defn get-blog-rss [_]
-  {:status 200
-   :body (apply rss/channel-xml
-                {:title "Gaiwan Blog" :link "https://gaiwan.co/blog" :description "The Gaiwan Blog"}
-                (for [{:keys [meta html]} (vals @posts)
-                      :let [{:keys [title slug author date]} meta]]
-                  {:title title
-                   :link (str "https://gaiwan.co/blog/" slug)
-                   :description html
-                   :author author
-                   :pubDate (.toInstant date)}))})
-
-(defn get-blog-item [request]
-  (let [{:keys [slug]} (:path-params request)
-        post (get @posts slug)]
-    {:status 200
-     :body {:slug slug
-            :post post}
-     :view (fn [{:keys [slug post] :as data}]
-             (let [{:keys [meta hiccup]} post]
-               [layout/layout
-                (og/social-tags {:title (:title meta)
-                                 :description (:description meta "")})
-                [:div {:class "post my-8 mx-auto px-2 container prose lg:prose-lg"}
-                 [:h1 (:title meta)]
-                 [:div.post-meta
-                  "Posted on "
-                  [:span (.format (java.text.SimpleDateFormat. "MMM dd, yyyy") (:date meta))]
-                  " by "
-                  [:span (:author meta)]]
-                 hiccup]]))}))
-
-(defn get-blog [_]
-  {:status 200
-   :body {:posts (reverse (sort-by (comp :date :meta) (vals @posts)))}
-   :view (fn [{:keys [posts]}]
-           [layout/layout
-            (og/social-tags {:image ""})
-            [:div
-             (section posts)]])})
-
-(defn freeze-data []
-  (map #(do {:slug %}) (keys @posts)))

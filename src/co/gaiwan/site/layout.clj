@@ -1,6 +1,5 @@
 (ns co.gaiwan.site.layout
   (:require [clojure.java.io :as io]
-            [clojure.data.json :as json]
             [co.gaiwan.site.components.header :as header]
             [co.gaiwan.site.components.footer :as footer]
             [lambdaisland.ornament :as ornament]))
@@ -31,7 +30,7 @@
 
 (def navbar
   [:header.top-navbar
-   [:a.secondary-font.top-navbar__brand {:href "/"} "Gaiwan"]])
+   [:a.secondary-font.top-navbar__brand {:href []} "Gaiwan"]])
 
 (defn layout
   ([body]
@@ -56,7 +55,8 @@
          [:link {:rel "stylesheet" :href "/assets/css/ornament.css"}]
          [:style {:type "text/css" :id "ornament"}
           (ornament/defined-styles {:preflight? true})])
-     [:link {:rel "alternate" :type "application/rss+xml" :title "RSS Feed for the Gaiwan Blog" :href "/blog.xml"}]
+     ;; TODO change to atom
+     [:link {:rel "alternate" :type "application/atom+xml" :title "Atom Feed for the Gaiwan Blog" :href "/feed.xml"}]
      head]
     [:body
      {:class "font-inter antialiased bg-white text-gray-900 tracking-tight"}

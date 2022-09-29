@@ -23,12 +23,12 @@
         [:a
          {:class
           "text-gray-800 font-bold hover:text-gray-900 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out",
-          :href "/blog/"} "Blog"]]
+          :href [:blog]} "Blog"]]
        [:li
         [:a
          {:class
           "text-gray-800 font-bold hover:text-gray-900 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out",
-          :href "/work/"} "Work"]]
+          :href [:work]} "Work"]]
        [:li
         [:a
          {:class
@@ -81,7 +81,7 @@
         [:li
          [:a
           {:class "flex text-gray-600 hover:text-gray-900 py-2",
-           :href "/about/"} "About us"]]
+           :href [:about]} "About us"]]
         #_[:li
            [:a
             {:class "flex text-gray-600 hover:text-gray-900 py-2",
@@ -89,7 +89,7 @@
         [:li
          [:a
           {:class "flex text-gray-600 hover:text-gray-900 py-2",
-           :href "/blog/"} "Blog"]]
+           :href [:blog]} "Blog"]]
         #_[:li {:class "py-2 my-2 border-t border-b border-gray-200"}
            [:span {:class "flex text-gray-600 hover:text-gray-900 py-2"}
             "Resources"]

@@ -1,10 +1,3 @@
----
-date: 2020-11-01
-title: "Growing the Gaiwan team"
-slug: "growing-our-team"
-author: "Mitesh (@oxalorg)"
----
-
 We have some great news to share today. Our Gaiwan team has officially expanded
 to **5 team members** now!
 
