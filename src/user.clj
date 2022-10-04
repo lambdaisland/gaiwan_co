@@ -8,11 +8,14 @@
   [sym]
   `(requiring-resolve '~sym))
 
-(defn build [& args]
-  ((jit co.gaiwan.site/build)))
+(defn develop [& args]
+  ((jit co.gaiwan.site/develop)))
 
-(defn go [& args]
+(defn serve [& args]
   ((jit co.gaiwan.site/serve)))
 
+(defn publish [& args]
+  ((jit co.gaiwan.site/publish)))
+
 (defn browse []
-  ((jit clojure.java.browse/browse-url) "http://localhost:9000"))
+  ((jit clojure.java.browse/browse-url) "http://localhost:6899"))

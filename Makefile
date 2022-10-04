@@ -3,6 +3,7 @@
 repl:
 	clj
 
+# TODO I'm confused by why the action has to be in different order
 build-action:
 	clojure -X:build
 	npm install
@@ -17,9 +18,10 @@ build:
 	cp -r resources/* _site/
 	touch _site/.nojekyll
 
-watch: build
+# TODO idk what to change about this one too
+watch:
 	while true; do \
-		BUILD_ENV=development make build ; \
+		BUILD_ENV=development npm run release; \
 		inotifywait -r -e modify src/gaiwan resources; \
 	done
 
@@ -36,4 +38,7 @@ deploy: build
 	git push origin gh-pages
 
 serve:
-	cd _site && python3 -m http.server --bin 0.0.0.0 8001
+	clj -X:serve
+
+develop:
+	clj -X:develop

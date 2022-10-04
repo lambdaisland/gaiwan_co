@@ -1,13 +1,3 @@
----
-title: "Gaiwan's Clojure Dev Tooling & Docs Week"
-slug: clojure-dev-tooling-docs-checkup
-description: |-
-    Invite the Gaiwan Team over for a week improve your setup, and to help boost 
-    your team's productivity. Everything from having a good REPL experience, a solid test 
-    setup, and a reloadable workflow, up to having a kick-ass onboarding experience for 
-    the next person to join.
----
-
 # Gaiwan's Clojure Dev and Docs Week
 
 As a consultancy we get to see a lot of code bases, and it's always interesting

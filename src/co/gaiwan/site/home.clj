@@ -1,5 +1,7 @@
 (ns co.gaiwan.site.home
   (:require [co.gaiwan.site.data :as data]
+            [co.gaiwan.site.layout :as layout]
+            [co.gaiwan.site.open-graph :as og]
             [co.gaiwan.site.components.hero-home :as hero-home]
             [co.gaiwan.site.components.projects :as projects]
             [co.gaiwan.site.components.clients :as clients]
@@ -24,7 +26,7 @@
       [:p "Our job is to find a path from a business need to a technical solution that ensures we can deliver quality and reliability within time and budget. To do so we are highly opinionated when it comes to choosing the software components we build on, and we work closely with customers to come up with pragmatic solutions that work."]
       [:div.hero-nav
        "Learn more about "
-       [:a {:href "/about"} "our team."]]]]]])
+       [:a {:href [:about]} "our team."]]]]]])
 
 (def section-client-work
   [:section {:id "client-work"}
@@ -87,9 +89,11 @@
    (projects/section)
    (team/section data/team-members)
    [:div {:class "mt-12 lg:mt-32"}
-    [cta/section {:title "Get a free 20 minute consultation!"
-                  :subtitle "Let's grab a cup of e-tea and figure out how to relieve you of your business stress!"
-                  :link "mailto:contact@gaiwan.co"
-                  :button-text "Contact us!"}]]
+    (cta/section data/homepage-cta)]
    #_(features-home/features-home)
    #_(features-world/features-world)])
+
+(defn get-home [_page]
+  (layout/layout
+   (og/social-tags {:image ""})
+   (body)))

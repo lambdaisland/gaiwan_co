@@ -1,34 +1,21 @@
 {:paths ["src" "resources"]
  :deps {org.clojure/clojure        {:mvn/version "1.11.1"}
-        lambdaisland/data-printers {:mvn/version "0.7.47"}
 
         ;; Logging
         com.lambdaisland/glogi         {:mvn/version "1.1.144"}
         io.pedestal/pedestal.log       {:mvn/version "0.5.10"}
         ch.qos.logback/logback-classic {:mvn/version "1.2.11"}
 
-        ;; HTTP
-        ring/ring {:mvn/version "1.9.5"}
-        ring/ring-defaults          {:mvn/version "0.3.3"}
-        metosin/reitit-ring         {:mvn/version "0.5.18"}
-        metosin/reitit-http         {:mvn/version "0.5.18"}
-        metosin/reitit-interceptors {:mvn/version "0.5.18"}
-        ring/ring-jetty-adapter     {:mvn/version "1.9.5"}
-
         ;; HTTP / CSS (Server-side)
-        lambdaisland/webstuff {:git/url "https://github.com/lambdaisland/webstuff"
-                               :sha     "5d5669e7f7829c65fdd00b19ef826565ce41b7ea"}
         com.lambdaisland/ornament {:mvn/version "0.4.34"}
-        clj-rss/clj-rss {:mvn/version "0.3.0"}
 
         ;; Data
-        markdown-clj/markdown-clj {:mvn/version "1.11.0"}
-        org.clojure/data.json {:mvn/version "2.4.0"}
         io.github.nextjournal/markdown {:mvn/version "0.4.109"}
 
-        ;; Static site generation
-        com.lambdaisland/reitit-jaatya {:mvn/version "0.0.24"}}
+        codes.stel/nuzzle {:mvn/version "0.6.502"}
+        }
 
  :aliases
- {:build
-  {:exec-fn co.gaiwan.site/build}}}
+ {:build {:exec-fn co.gaiwan.site/publish}
+  :serve {:exec-fn co.gaiwan.site/serve}
+  :develop {:exec-fn co.gaiwan.site/develop}}}

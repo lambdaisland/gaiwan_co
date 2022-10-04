@@ -1,10 +1,3 @@
----
-date: 2021-06-01
-title: "Delivering devops enterprise summit"
-slug: "itrevolution-devops-enterprise-summit"
-author: "Mitesh (@oxalorg)"
----
-
 We have worked closely with Gene Kim and his team at [ITRevolution](https://itrevolution.com) to build and deliver the Dev Ops Enterprise Summit online conference.
 
 Up until 2019 these conferences amassed tech leaders from across the globe for an in-person conference. After the pandemic though, there was an urgent need to take this to an online venue without detracting from the experience.
