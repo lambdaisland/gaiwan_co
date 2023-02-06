@@ -48,8 +48,8 @@
                  team to be able to edit over 100 videos per conference
                  fulfilling all of their custom operations using our in-house
                  video editor frontend which uses FFMPEG DSL behind the scenes."
-                 :cta-text "Read in-depth of how we built it"
-                 :cta-url "https://itrevolution.com"
+                 ;; :cta-text "Read in-depth of how we built it"
+                 ;; :cta-url "https://itrevolution.com"
                  :image-url (utils/img "work/itrev-video-editor.png")}]
        [project {:client "re:Clojure Conf"
                  :title "Built & Redesigned the reclojure.org website"
