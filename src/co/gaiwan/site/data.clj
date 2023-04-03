@@ -78,7 +78,7 @@
    {:title "June Baco (Philippines)"
     :subtitle ""
     :link ""
-    :image (utils/img "avatars/june.jpg")
+    :image (utils/img "avatars/june.png")
     :description
     '([:p "June lights up any project with her consistent dependability and over a decade of experience!"]
       [:p "She's tech-savvy, driven, organized."]
@@ -86,7 +86,7 @@
    {:title       "Bettina Shzu-Juraschek (Berlin)"
     :subtitle    "" 
     :link        ""
-    :image       (utils/img "avatars/bettina.jpeg")
+    :image       (utils/img "avatars/bettina.png")
     :description 
     '([:p "As a product manager / owner, Bettina has helped users relocate, learn languages, and get shopping deals online and in mobile apps."]
       [:p "People have told her that her deep user insight and pragmatic approach to technical solutions are her superpowers."] 
