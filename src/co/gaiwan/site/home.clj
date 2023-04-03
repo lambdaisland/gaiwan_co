@@ -5,6 +5,7 @@
             [co.gaiwan.site.components.clients :as clients]
             [co.gaiwan.site.components.team :as team]
             [co.gaiwan.site.components.cta :as cta]
+            [co.gaiwan.site.components.lambda-island-open-source :as lambdaisland-section]
             [co.gaiwan.site.components.features-home :as features-home]
             [co.gaiwan.site.components.features-world :as features-world]))
 
@@ -83,13 +84,13 @@
   [:div
    (hero-home/hero-home)
    (clients/testimonial)
-   ;; (clients/logo-cloud)
+   (lambdaisland-section/lambdaisland-componnent)
    (projects/section)
    (team/section data/team-members)
    [:div {:class "mt-12 lg:mt-32"}
-    [cta/section {:title "Get a free 20 minute consultation!"
-                  :subtitle "Let's grab a cup of e-tea and figure out how to relieve you of your business stress!"
-                  :link "mailto:contact@gaiwan.co"
+    [cta/section {:title       "Get a free 20 minute consultation!"
+                  :subtitle    "Let's grab a cup of e-tea and figure out how to relieve you of your business stress!"
+                  :link        "mailto:contact@gaiwan.co"
                   :button-text "Contact us!"}]]
    #_(features-home/features-home)
    #_(features-world/features-world)])
