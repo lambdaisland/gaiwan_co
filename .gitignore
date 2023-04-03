@@ -1,6 +1,9 @@
 _site/
 .store
 .cpcache
+.calva
+.clj-kondo
+.lsp
 node_modules/
 .nrepl-port
 resources/assets/css/style.css
