@@ -33,12 +33,12 @@
     :subtitle "@ArielA147"
     :link "https://github.com/ArielA147"
     :image "https://avatars.githubusercontent.com/u/43312651?v=4"
-    :description '([:p "Ariel is finishing up her last year as a Computer
-                    Science student, where she built numerous projects with C++,
-                    Java, Javascript, and Go. We introduced her to Clojure,
-                    which she took to like fish takes to water. Her thirst for
-                    knowledge has not stopped growing. "]
-                   [:p "In her free time she likes to develop video games."])}
+    :description '([:p "Ariel is a master's student with an insatiable thirst for knowledge.
+                        She's always eager to explore new programming languages
+                        like Python, C++, Java, and Clojure (which we introduced 
+                        her to and she fell in love with), having built numerous projects with them."]
+                   [:p  "Oh, and one more thing: if you challenge her to a 
+                         game of Mario Kart, be prepared for a fierce competition!."])}
    {:title "Alys Brooks (Madison)"
     :subtitle "@alysbrooks"
     :link "https://github.com/alysbrooks"
