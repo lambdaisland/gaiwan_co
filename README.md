@@ -37,6 +37,8 @@ user => (go)
 2022-05-02 18:03:35.951 INFO  lambdaisland.webstuff.bootstrap - {:integrant/starting {:profile :default, :key nil}, :line 58}
 2022-05-02 18:03:35.961 INFO  lambdaisland.webstuff.http - {:server/starting {:port 9000, :rebuild-on-request? true}, :line 265}
 :initiated
+user => (browse)
+true
 ```
 
 This will start the server at http://localhost:9000
