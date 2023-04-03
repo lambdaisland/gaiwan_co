@@ -14,7 +14,7 @@
                    instinct to break down highly complex problems and explain
                    them as a series of simple solutions."]
                    [:p "He loves a nice cup of tea, and likes to to go for runs."])}
-   {:title "Felipe Barros (Recife)"
+   #_{:title "Felipe Barros (Recife)"
     :subtitle "@barrosfelipe"
     :link "https://github.com/barrosfelipe"
     :image "https://avatars.githubusercontent.com/u/9657386?v=4"
@@ -74,7 +74,23 @@
        news sites with AOL, and served as the Chief Scientist for a
        world-wide distributed team of programming and design consultants."]
       [:p "He even managed to complete his Ph.D. in Computational Evolutionary Dynamics along the way."]
-      [:p "He currently works remotely from his home in Miami where he lives with his beautiful wife and two young kids."])}])
+      [:p "He currently works remotely from his home in Miami where he lives with his beautiful wife and two young kids."])}
+   {:title "June Baco (Philippines)"
+    :subtitle ""
+    :link ""
+    :image (utils/img "avatars/june.jpg")
+    :description
+    '([:p "June lights up any project with her consistent dependability and over a decade of experience!"]
+      [:p "She's tech-savvy, driven, organized."]
+      [:p "Plus she loves helping others - so whether it be streamlining your processes or tackling something new, June is always happy to jump in and help you reach success faster."])}
+   {:title       "Bettina Shzu-Juraschek (Berlin)"
+    :subtitle    "" 
+    :link        ""
+    :image       (utils/img "avatars/bettina.jpeg")
+    :description 
+    '([:p "As a product manager / owner, Bettina has helped users relocate, learn languages, and get shopping deals online and in mobile apps."]
+      [:p "People have told her that her deep user insight and pragmatic approach to technical solutions are her superpowers."] 
+      [:p "To balance all the screen time, Bettina practices yoga and meditate."])}])
 
 (def faqs [{:question ""}])
 
