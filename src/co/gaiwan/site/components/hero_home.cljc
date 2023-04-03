@@ -5,7 +5,7 @@
   [:section {:class "relative"}
    [:div {:style (str "background-image: url(" (utils/img "pattern.svg")");z-index: -1")
           :class "bg-repeat absolute w-full h-full top-0 pointer-events-none opacity-10"}]
-   [:div {:class "max-w-6xl mx-auto px-4 sm:px-6 z-10"}
+   [:div {:class "max-w-6xl mx-auto pt-16 px-4 sm:px-6 z-10 "}
     #_[:comment " Hero content "]
     [:div {:class "pt-16 pb-12 md:pt-32 md:pb-24"}
      #_[:comment " Section header "]

@@ -4,7 +4,7 @@
 (defn top []
   [:header
    {:class
-    "relative w-full z-30 bg-white shadow-lg transition duration-300 ease-in-out",
+    "fixed w-full z-30 bg-white shadow-lg transition duration-300 ease-in-out",
     :x-data "{ top: true }"}
    [:div {:class "max-w-6xl mx-auto px-5 sm:px-6"}
     [:div {:class "flex items-center justify-between h-16 md:h-20 text-gray-800"}
@@ -28,7 +28,7 @@
         [:a
          {:class
           "text-gray-800 font-bold hover:text-gray-900 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out",
-          :href "/work/"} "Work"]]
+          :href "/work/"} "Case studies"]]
        [:li
         [:a
          {:class
