@@ -88,7 +88,7 @@
                 (og/social-tags {:title (:title meta)
                                  :description (:description meta "")})
                 [:div {:class "post my-8 mx-auto px-2 container prose lg:prose-lg"}
-                 [:h1 (:title meta)]
+                 [:h1 {:class "title pt-24"} (:title meta)]
                  [:div.post-meta
                   "Posted on "
                   [:span (.format (java.text.SimpleDateFormat. "MMM dd, yyyy") (:date meta))]
