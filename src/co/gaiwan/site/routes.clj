@@ -35,6 +35,18 @@
                              problems for our clients."})
             [work/body]])})
 
+(defn get-talk-to-us [_]
+  {:status 200
+   :body {:redirect-to "https://calendly.com/gaiwanteam/30min"}
+   :view (fn [{:keys [redirect-to]}]
+           [:html {:lang "en"}
+            [:head [:meta {:charset "utf-8"}]
+             [:meta {:http-equiv "refresh" :content (str "0;url=" redirect-to)}]
+             [:link {:rel "canonical" :href redirect-to}]]
+            [:body
+             [:p "You are being redirected to "
+              [:a {:href redirect-to} redirect-to]]]])})
+
 (defn routes []
   (into
    [["/"
@@ -56,5 +68,8 @@
       :get {:handler get-work}}]
     ["/version"
      {:name :version
-      :get {:handler get-version}}]]
+      :get {:handler get-version}}]
+    ["/talk-to-us"
+     {:name :talk-to-us
+      :get {:handler get-talk-to-us}}]]
    (pages/routes)))
