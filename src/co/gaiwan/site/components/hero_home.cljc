@@ -26,10 +26,10 @@
         "Gaiwan seeks to improve upon common IT industry practices, by making
         deliberate technological choices and focusing on simplicity. They use
         Clojure, a language known for its high developer productivity. Gaiwan
-        develops several popular Clojure libraries, benefiting their own
-        projects and the wider Clojure community, and making the language itself
-        more attractive. By strengthening Clojure and its ecosystem, Gaiwan
-        contributes to enhancing the IT industry as a whole."]
+        develops several popular Clojure libraries, benefiting their clients,
+        their own projects, and the wider Clojure community, and making the
+        language itself more attractive. By strengthening Clojure and its
+        ecosystem, Gaiwan contributes to enhancing the IT industry as a whole."]
        [:div
         {:class "max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center",
          :data-aos "zoom-y-out",
