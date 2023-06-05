@@ -23,11 +23,13 @@
         {:class "text-xl text-gray-600 mt-8 mb-12",
          :data-aos "zoom-y-out",
          :data-aos-delay "150"}
-        "We partner with startups and SMEs to provide technical
-          expertise in quick prototyping and building MVPs, APIs
-          and " [:span.whitespace-nowrap "3rd-party integrations"] ".
-          Reap new opportunities without distractions from your core
-          business."]
+        "Gaiwan seeks to improve upon common IT industry practices, by making
+        deliberate technological choices and focusing on simplicity. They use
+        Clojure, a language known for its high developer productivity. Gaiwan
+        develops several popular Clojure libraries, benefiting their own
+        projects and the wider Clojure community, and making the language itself
+        more attractive. By strengthening Clojure and its ecosystem, Gaiwan
+        contributes to enhancing the IT industry as a whole."]
        [:div
         {:class "max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center",
          :data-aos "zoom-y-out",
