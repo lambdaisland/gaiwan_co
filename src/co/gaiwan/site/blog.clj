@@ -1,8 +1,10 @@
 (ns co.gaiwan.site.blog
-  (:require [clj-rss.core :as rss]
-            [co.gaiwan.site.layout :as layout]
-            [co.gaiwan.site.md-files :as md-files]
-            [co.gaiwan.site.open-graph :as og]))
+  (:require
+   [clj-rss.core :as rss]
+   [co.gaiwan.site.layout :as layout]
+   [co.gaiwan.site.md-files :as md-files]
+   [co.gaiwan.site.open-graph :as og]
+   [lambdaisland.hiccup :as hiccup]))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Components
@@ -65,16 +67,25 @@
 (def posts (delay (md-files/slurp-dir "blog")))
 
 (defn get-blog-rss [_]
-  {:status 200
-   :body (apply rss/channel-xml
-                {:title "Gaiwan Blog" :link "https://gaiwan.co/blog" :description "The Gaiwan Blog"}
-                (for [{:keys [meta html]} (vals @posts)
-                      :let [{:keys [title slug author date]} meta]]
-                  {:title title
-                   :link (str "https://gaiwan.co/blog/" slug)
-                   :description html
-                   :author author
-                   :pubDate (.toInstant date)}))})
+  (let [posts (vals @posts)]
+    {:status 200
+     :body (rss/channel-xml
+            {:title "Gaiwan Blog"
+             :link "https://gaiwan.co/blog"
+             :description "The Gaiwan Blog"
+             :language "en-us"
+             :copyright (str "© " (+ 1900 (.getYear (java.util.Date.))) " Gaiwan GmbH")
+             :pubDate (.toInstant (last (sort (map (comp :date :meta) posts))))
+             :image "https://gaiwan.co/assets/imgs/Gaiwan-logo-transparent-bg.png"}
+            (for [{:keys [meta hiccup]} posts
+                  :let [{:keys [title slug author date]} meta]]
+              {:title title
+               :link (str "https://gaiwan.co/blog/" slug)
+               :description (str "<![CDATA["
+                                 (hiccup/render hiccup {:doctype? false})
+                                 "]]>")
+               :author author
+               :pubDate (.toInstant date)}))}))
 
 (defn get-blog-item [request]
   (let [{:keys [slug]} (:path-params request)

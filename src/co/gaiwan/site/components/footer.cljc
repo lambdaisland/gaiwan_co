@@ -74,8 +74,8 @@
                              ;; ["/About/" "About us"]
                              ["https://gaiwan.notion.site/Gaiwan-Strategic-Objective-d40123054382433fb75422b77cc4b25e" "Company objectives"]
                              ["https://gaiwan.notion.site/Gaiwan-operating-principles-3f74a7fd1ee2425eb918879fc55dbfb8" "Company values"]
-                             #_["https://gaiwan.co/assets/imgs/Gaiwan-logo-transparent-bg.png" "Logo transparent"]
-                             #_["https://gaiwan.co/assets/imgs/Gaiwan-logo-white-bg-with-border.png" "Logo white"]]]
+                             ["https://gaiwan.co/assets/imgs/Gaiwan-logo-transparent-bg.png" "Logo transparent"]
+                             ["https://gaiwan.co/assets/imgs/Gaiwan-logo-white-bg-with-border.png" "Logo white"]]]
          [:li {:class "mb-2"}
           [:a {:class "text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out" :href link}
            caption]])]]

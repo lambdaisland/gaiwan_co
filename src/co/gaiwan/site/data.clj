@@ -3,7 +3,7 @@
 
 (def team-members
   [{:title "Arne Brasseur (Berlin)"
-    :subtitle "@plexus"
+    :subtitle "@plexus@toot.cat"
     :link "https://github.com/plexus"
     :image "https://avatars.githubusercontent.com/u/32212?v=4"
     :description '([:p "Arne has been delivering software solutions for well
@@ -15,22 +15,22 @@
                    them as a series of simple solutions."]
                    [:p "He loves a nice cup of tea, and likes to to go for runs."])}
    #_{:title "Felipe Barros (Recife)"
-    :subtitle "@barrosfelipe"
-    :link "https://github.com/barrosfelipe"
-    :image "https://avatars.githubusercontent.com/u/9657386?v=4"
-    :description '([:p "While still at school, GNU/Linux liberated Felipe from
+      :subtitle "@barrosfelipe"
+      :link "https://github.com/barrosfelipe"
+      :image "https://avatars.githubusercontent.com/u/9657386?v=4"
+      :description '([:p "While still at school, GNU/Linux liberated Felipe from
                    the shackles of digital oblivion and corporate abuse."]
-                   [:p "Being a keyboard enthusiast who follows the Dvorak
+                     [:p "Being a keyboard enthusiast who follows the Dvorak
                    branch of the Emacs faith, he already manipulated text in Vim
                    and Emacs way before his renewed interest in computer
                    programming and cherry-picked the Clojure/ClojureScript path
                    after falling in love with Rich Hickey’s capillary
                    parentheses/curls."]
-                   #_[:p "An arts person, likes to spend free time writing or
+                     #_[:p "An arts person, likes to spend free time writing or
                    drawing and can often be caught talking about interfaces as
                    handcrafted, artisanal work."])}
    {:title "Ariel Alexi (Rosh HaAyin)"
-    :subtitle "@ArielA147"
+    :subtitle "@ArielA147@twitter.com"
     :link "https://github.com/ArielA147"
     :image "https://avatars.githubusercontent.com/u/43312651?v=4"
     :description '([:p "Ariel is a master's student with an insatiable thirst for knowledge.
@@ -40,13 +40,13 @@
                    [:p  "Oh, and one more thing: if you challenge her to a 
                          game of Mario Kart, be prepared for a fierce competition!."])}
    {:title "Alys Brooks (Madison)"
-    :subtitle "@alysbrooks"
+    :subtitle "@alysbrooks@journa.host"
     :link "https://github.com/alysbrooks"
     :image (utils/img "avatars/alys.jpg")
     :description '([:p "Alyss is a professional writer and editor by day and a programmer by night. She has worked as a technical writer at Epic."]
                    [:p "She loves open source and photography."])}
    {:title "Mitesh Shah (Mumbai)"
-    :subtitle "@oxalorg"
+    :subtitle "@oxalorg@twitter.com"
     :link "https://github.com/oxalorg"
     :image (utils/img "avatars/mitesh-oxalorg.jpg")
     :description '([:p "Mitesh learnt coding because of his desire to hack video
@@ -58,7 +58,7 @@
                          :href "https://youtube.com/c/oxalorg"} "YouTube Channel"]
                     "."])}
    {:title "Laurence Chen (Taipei)"
-    :subtitle "@humorless"
+    :subtitle "@replware@g0v.social"
     :link "https://github.com/humorless"
     :image "https://avatars.githubusercontent.com/u/3061798?v=4"
     :description '([:p "Laurence is an experienced developer with a knack for
@@ -66,7 +66,7 @@
     He has created bespoke systems for Taiwan-based SMBs, and offers consulting
     to the LINE corporation."])}
    {:title "Joshua Ballanco (Miami)"
-    :subtitle "@jballanc"
+    :subtitle "@jballanc@twitter.com"
     :link "https://github.com/jballanc"
     :image (utils/img "avatars/jballanc.jpg")
     :description
@@ -90,7 +90,12 @@
     :description 
     '([:p "As a product manager / owner, Bettina has helped users relocate, learn languages, and get shopping deals online and in mobile apps."]
       [:p "People have told her that her deep user insight and pragmatic approach to technical solutions are her superpowers."] 
-      [:p "To balance all the screen time, Bettina practices yoga and meditate."])}])
+      [:p "To balance all the screen time, Bettina practices yoga and meditate."])}
+   {:title "Gabriel do Nascimento Ribeiro"
+    :subtitle ""
+    :link ""
+    :image ""
+    :description '()}])
 
 (def faqs [{:question ""}])
 
