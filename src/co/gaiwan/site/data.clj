@@ -35,9 +35,9 @@
     :image "https://avatars.githubusercontent.com/u/43312651?v=4"
     :description '([:p "Ariel is a master's student with an insatiable thirst for knowledge.
                         She's always eager to explore new programming languages
-                        like Python, C++, Java, and Clojure (which we introduced 
+                        like Python, C++, Java, and Clojure (which we introduced
                         her to and she fell in love with), having built numerous projects with them."]
-                   [:p  "Oh, and one more thing: if you challenge her to a 
+                   [:p  "Oh, and one more thing: if you challenge her to a
                          game of Mario Kart, be prepared for a fierce competition!."])}
    {:title "Alys Brooks (Madison)"
     :subtitle "@alysbrooks@journa.host"
@@ -84,18 +84,20 @@
       [:p "She's tech-savvy, driven, organized."]
       [:p "Plus she loves helping others - so whether it be streamlining your processes or tackling something new, June is always happy to jump in and help you reach success faster."])}
    {:title       "Bettina Shzu-Juraschek (Berlin)"
-    :subtitle    "" 
+    :subtitle    ""
     :link        ""
     :image       (utils/img "avatars/bettina.png")
-    :description 
+    :description
     '([:p "As a product manager / owner, Bettina has helped users relocate, learn languages, and get shopping deals online and in mobile apps."]
-      [:p "People have told her that her deep user insight and pragmatic approach to technical solutions are her superpowers."] 
+      [:p "People have told her that her deep user insight and pragmatic approach to technical solutions are her superpowers."]
       [:p "To balance all the screen time, Bettina practices yoga and meditate."])}
-   {:title "Gabriel do Nascimento Ribeiro"
+   {:title "Gabriel Ribeiro (Sao Paulo)"
     :subtitle ""
     :link ""
-    :image ""
-    :description '()}])
+    :image (utils/img "avatars/gabriel.jpg")
+    :description '([:p "Gabriel is a professional software developer with over 12 years of experience."]
+                   [:p "From C to Clojure and from PLC's to large web distributed systems, he had seen a lot but not enough to lose the excitement to learn new things and solve new challenges."]
+                   [:p "When not online, Gabriel enjoys books, sports and music."])}])
 
 (def faqs [{:question ""}])
 
